@@ -14,6 +14,7 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		7B79901B1744F414732E0FAA /* Pods_LKPostingQueueManager_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6312D7F2E88E475F400AF57 /* Pods_LKPostingQueueManager_Tests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		BC8CD45D1B19AA4500EEBC61 /* SampleEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8CD45C1B19AA4500EEBC61 /* SampleEntry.swift */; };
 		DF1ECB90E5EB0E0C26743B14 /* Pods_LKPostingQueueManager_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7216604F27DBCDC40CF9F1E8 /* Pods_LKPostingQueueManager_Example.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -39,11 +40,12 @@
 		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		607FACE51AFB9204008FA782 /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = Tests.xctest; path = LKPostingQueueManager_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		607FACE51AFB9204008FA782 /* LKPostingQueueManager_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LKPostingQueueManager_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		7216604F27DBCDC40CF9F1E8 /* Pods_LKPostingQueueManager_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LKPostingQueueManager_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93486456CBF2578D9025F884 /* Pods-LKPostingQueueManager_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LKPostingQueueManager_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LKPostingQueueManager_Tests/Pods-LKPostingQueueManager_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		BC8CD45C1B19AA4500EEBC61 /* SampleEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleEntry.swift; sourceTree = "<group>"; };
 		D6312D7F2E88E475F400AF57 /* Pods_LKPostingQueueManager_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LKPostingQueueManager_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFAA2AD0DEEB9D8BBD2BD75F /* Pods-LKPostingQueueManager_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LKPostingQueueManager_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LKPostingQueueManager_Tests/Pods-LKPostingQueueManager_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		EFB6C883294E7669AC570B70 /* LKPostingQueueManager.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LKPostingQueueManager.podspec; path = ../LKPostingQueueManager.podspec; sourceTree = "<group>"; };
@@ -85,7 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				607FACD01AFB9204008FA782 /* LKPostingQueueManager_Example.app */,
-				607FACE51AFB9204008FA782 /* Tests.xctest */,
+				607FACE51AFB9204008FA782 /* LKPostingQueueManager_Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,6 +97,7 @@
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				BC8CD45C1B19AA4500EEBC61 /* SampleEntry.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -200,7 +203,7 @@
 			);
 			name = LKPostingQueueManager_Tests;
 			productName = Tests;
-			productReference = 607FACE51AFB9204008FA782 /* Tests.xctest */;
+			productReference = 607FACE51AFB9204008FA782 /* LKPostingQueueManager_Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -360,6 +363,7 @@
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				BC8CD45D1B19AA4500EEBC61 /* SampleEntry.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

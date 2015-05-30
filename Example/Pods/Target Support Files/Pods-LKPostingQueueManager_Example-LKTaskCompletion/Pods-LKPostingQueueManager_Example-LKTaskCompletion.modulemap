@@ -1,0 +1,6 @@
+framework module LKTaskCompletion {
+  umbrella header "Pods-LKPostingQueueManager_Example-LKTaskCompletion-umbrella.h"
+
+  export *
+  module * { export * }
+}

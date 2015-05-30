@@ -10,18 +10,15 @@
 Pod::Spec.new do |s|
   s.name             = "LKPostingQueueManager"
   s.version          = "0.1.0"
-  s.summary          = "A short description of LKPostingQueueManager."
+  s.summary          = "Queue manager for posting"
   s.description      = <<-DESC
-                       An optional longer description of LKPostingQueueManager
-
-                       * Markdown format.
-                       * Don't worry about the indent, we strip it!
+  Queue manager for posting
                        DESC
-  s.homepage         = "https://github.com/<GITHUB_USERNAME>/LKPostingQueueManager"
+  s.homepage         = "https://github.com/lakesoft/LKPostingQueueManager"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "Hiroshi Hashiguchi" => "xcatsan@mac.com" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/LKPostingQueueManager.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/lakesoft/LKPostingQueueManager.git", :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.platform     = :ios, '8.0'
@@ -34,5 +31,8 @@ Pod::Spec.new do |s|
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'LKQueue'
+  s.dependency 'LKTaskCompletion'
+  s.dependency 'FBNetworkReachability'
+  s.dependency 'LKCodingObject'
 end

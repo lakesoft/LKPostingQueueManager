@@ -1,0 +1,6 @@
+framework module LKQueue {
+  umbrella header "Pods-LKPostingQueueManager_Example-LKQueue-umbrella.h"
+
+  export *
+  module * { export * }
+}

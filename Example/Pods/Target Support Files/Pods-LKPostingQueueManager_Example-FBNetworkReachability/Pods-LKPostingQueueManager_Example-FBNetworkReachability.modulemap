@@ -1,0 +1,6 @@
+framework module FBNetworkReachability {
+  umbrella header "Pods-LKPostingQueueManager_Example-FBNetworkReachability-umbrella.h"
+
+  export *
+  module * { export * }
+}
