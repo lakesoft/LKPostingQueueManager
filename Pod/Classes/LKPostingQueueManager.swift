@@ -168,9 +168,24 @@ public class LKPostingQueueManager: NSObject {
     func updatedNetwork(notification:NSNotification) {
         NSLog("[INFO] network changed: %@", notification)
     }
+    
+    // MARK: GUI
+    public func instantiateViewController() -> LKPostingQueueTableViewController {
+        let storyboard = UIStoryboard(name: "LKPostingQueueManager", bundle: postingQueueManagerBundle())
+        let viewController = storyboard.instantiateInitialViewController() as! LKPostingQueueTableViewController
+        viewController.postingQueueManager = self
+        return viewController
+    }
 }
 
 // MARK: - Functions
+public func postingQueueManagerBundle() -> NSBundle {
+    let frameworkBundle = NSBundle(forClass: LKPostingQueueManager.self)
+    let path = frameworkBundle.pathForResource("LKPostingQueueManager", ofType: "bundle")!
+    let bundle = NSBundle(path: path)!
+    return bundle
+}
+
 func notify(name:String) {
     dispatch_async(dispatch_get_main_queue(), { () -> Void in
         NSNotificationCenter.defaultCenter().postNotificationName(name, object: nil)

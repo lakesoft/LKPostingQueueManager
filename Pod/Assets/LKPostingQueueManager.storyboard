@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2dw-XL-Zlb">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Posting Queue Table View Controller-->
+        <scene sceneID="tdg-FV-9YB">
+            <objects>
+                <tableViewController id="2dw-XL-Zlb" customClass="LKPostingQueueTableViewController" customModule="LKPostingQueueManager" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="PKr-ua-Gbe">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="LKPostingQueueTableViewCell" id="REJ-6c-V2z" customClass="LKPostingQueueTableViewCell" customModule="LKPostingQueueManager" customModuleProvider="target">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="REJ-6c-V2z" id="pwP-Fh-ZAH">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="hfV-Pd-Zqc">
+                                            <rect key="frame" x="8" y="11" width="518" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="Vd0-XR-8s3"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="BoK-1a-h6h">
+                                            <rect key="frame" x="534" y="11" width="20" height="20"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="20" id="hZn-5V-rVR"/>
+                                                <constraint firstAttribute="height" constant="20" id="tGg-wW-xnN"/>
+                                            </constraints>
+                                        </activityIndicatorView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="centerY" secondItem="BoK-1a-h6h" secondAttribute="centerY" id="2ei-bC-gLM"/>
+                                        <constraint firstAttribute="trailing" secondItem="BoK-1a-h6h" secondAttribute="trailing" constant="13" id="Lw1-Pu-m1U"/>
+                                        <constraint firstItem="BoK-1a-h6h" firstAttribute="leading" secondItem="hfV-Pd-Zqc" secondAttribute="trailing" constant="8" id="U8T-C8-VFi"/>
+                                        <constraint firstItem="hfV-Pd-Zqc" firstAttribute="leading" secondItem="pwP-Fh-ZAH" secondAttribute="leading" constant="8" id="rYD-1H-OHK"/>
+                                        <constraint firstAttribute="centerY" secondItem="hfV-Pd-Zqc" secondAttribute="centerY" id="uyX-25-GmD"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="indicator" destination="BoK-1a-h6h" id="Lk4-9E-yIe"/>
+                                    <outlet property="label" destination="hfV-Pd-Zqc" id="5Yg-fH-gzB"/>
+                                    <segue destination="RYv-Ox-jlM" kind="show" id="BMr-Ph-yir"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="2dw-XL-Zlb" id="ySd-nG-BiZ"/>
+                            <outlet property="delegate" destination="2dw-XL-Zlb" id="Ju5-ba-NL3"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jCb-9d-nXc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="831" y="440"/>
+        </scene>
+        <!--Posting Queue Log View Controller-->
+        <scene sceneID="7Qh-B9-VEO">
+            <objects>
+                <viewController id="RYv-Ox-jlM" customClass="LKPostingQueueLogViewController" customModule="LKPostingQueueManager" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="B6G-Lb-QQU"/>
+                        <viewControllerLayoutGuide type="bottom" id="Qui-4G-rlD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0tf-Hg-jhb">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vj0-lD-xIb">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="iJN-ol-ezV"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem title="Send mail" id="2ct-en-cYp">
+                                        <connections>
+                                            <action selector="onSendMail:" destination="RYv-Ox-jlM" id="IDo-oH-kxa"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="flexibleSpace" id="VCj-WD-1Hx"/>
+                                    <barButtonItem title="Copy log" id="DWe-8U-0jm">
+                                        <connections>
+                                            <action selector="onCopy:" destination="RYv-Ox-jlM" id="h3G-19-cqV"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TGn-AQ-qdx">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TGn-AQ-qdx" firstAttribute="top" secondItem="0tf-Hg-jhb" secondAttribute="topMargin" id="Na6-bF-Kub"/>
+                            <constraint firstItem="vj0-lD-xIb" firstAttribute="leading" secondItem="0tf-Hg-jhb" secondAttribute="leadingMargin" constant="-16" id="OfA-7W-znn"/>
+                            <constraint firstItem="Qui-4G-rlD" firstAttribute="top" secondItem="vj0-lD-xIb" secondAttribute="bottom" id="TC9-Ly-FUU"/>
+                            <constraint firstItem="vj0-lD-xIb" firstAttribute="top" secondItem="TGn-AQ-qdx" secondAttribute="bottom" id="Tbp-oL-H5a"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="TGn-AQ-qdx" secondAttribute="trailing" constant="-16" id="Vef-BS-Zrz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vj0-lD-xIb" secondAttribute="trailing" constant="-16" id="dUH-eV-vWi"/>
+                            <constraint firstItem="TGn-AQ-qdx" firstAttribute="leading" secondItem="0tf-Hg-jhb" secondAttribute="leadingMargin" constant="-16" id="pr0-dI-zQp"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yGD-PM-lTV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1591" y="440"/>
+        </scene>
+    </scenes>
+</document>

@@ -29,7 +29,7 @@ class ViewController: UIViewController {
         println(postingQueueManager.postingEntries)
 
         var entries = [SampleEntry]()
-        for i in 0..<5 {
+        for i in 0..<3 {
             let entry = SampleEntry()
             entry.title = NSString(format: "entry-%@-%02d", NSDate().description, i) as String
             entries += [entry]
@@ -47,5 +47,9 @@ class ViewController: UIViewController {
         println(n)
     }
 
+    @IBAction func openView(sender: AnyObject) {
+        let viewController = postingQueueManager.instantiateViewController()
+        self.navigationController?.pushViewController(viewController, animated: true)
+    }
 }
 

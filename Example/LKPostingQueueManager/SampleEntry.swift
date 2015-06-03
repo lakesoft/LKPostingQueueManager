@@ -11,8 +11,6 @@ import LKPostingQueueManager
 
 class SampleEntry: LKPostingEntry {
 
-    var title:String?
-    
     override func cleanup() {
         println("cleanup...")
     }

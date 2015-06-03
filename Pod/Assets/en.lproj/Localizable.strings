@@ -1,0 +1,29 @@
+/* 
+  Localized.strings
+  Pods
+
+  Created by Hiroshi Hashiguchi on 2015/06/02.
+
+*/
+
+"Cancel" = "Cancel";
+"Ok" = "OK";
+"Error" = "Error";
+"Remove" = "Remove";
+"Reset" = "Reset";
+
+"Notification" = "Notification";
+"Confirmation" = "Confirmation";
+
+"Resume" = "Resume";
+"RemoveTitle" = "Remove Post";
+
+"CopiedLog" = "Copied log";
+
+"Mail.Open" = "Lauch Mailer";
+
+"Mail.Message" = "If you can not send, you back up the contents using mail. Then you should remove this entry on previous list.";
+
+
+"ListTitle" = "Posting List";
+"LogTitle" = "Log";

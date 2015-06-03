@@ -1,0 +1,29 @@
+/* 
+  Localized.strings
+  Pods
+
+  Created by Hiroshi Hashiguchi on 2015/06/02.
+
+*/
+
+"Cancel" = "キャンセル";
+"Ok" = "OK";
+"Error" = "エラー";
+"Remove" = "削除";
+"Reset" = "リセット";
+
+"Notification" = "通知";
+"Confirmation" = "確認";
+
+"Resume" = "再開";
+"RemoveTitle" = "送信を削除";
+
+"CopiedLog" = "ログをコピー";
+
+"Mail.Open" = "メール送信";
+
+"Mail.Message" = "送信がうまくいかない場合、メールでバックアップ送信した後に問題の行を削除してください。";
+
+
+"ListTitle" = "送信リスト";
+"LogTitle" = "ログ";
