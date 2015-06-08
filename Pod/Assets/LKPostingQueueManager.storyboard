@@ -20,7 +20,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="hfV-Pd-Zqc">
-                                            <rect key="frame" x="8" y="11" width="518" height="21"/>
+                                            <rect key="frame" x="8" y="11" width="430" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="Vd0-XR-8s3"/>
                                             </constraints>
@@ -35,11 +35,23 @@
                                                 <constraint firstAttribute="height" constant="20" id="tGg-wW-xnN"/>
                                             </constraints>
                                         </activityIndicatorView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="nK2-HF-Fxe">
+                                            <rect key="frame" x="466" y="11" width="60" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="60" id="Wr6-tg-CKh"/>
+                                                <constraint firstAttribute="height" constant="21" id="g5Z-bB-fxn"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="centerY" secondItem="BoK-1a-h6h" secondAttribute="centerY" id="2ei-bC-gLM"/>
+                                        <constraint firstAttribute="centerY" secondItem="nK2-HF-Fxe" secondAttribute="centerY" id="CEk-bB-cEO"/>
                                         <constraint firstAttribute="trailing" secondItem="BoK-1a-h6h" secondAttribute="trailing" constant="13" id="Lw1-Pu-m1U"/>
-                                        <constraint firstItem="BoK-1a-h6h" firstAttribute="leading" secondItem="hfV-Pd-Zqc" secondAttribute="trailing" constant="8" id="U8T-C8-VFi"/>
+                                        <constraint firstItem="BoK-1a-h6h" firstAttribute="leading" secondItem="hfV-Pd-Zqc" secondAttribute="trailing" constant="96" id="U8T-C8-VFi"/>
+                                        <constraint firstItem="BoK-1a-h6h" firstAttribute="leading" secondItem="nK2-HF-Fxe" secondAttribute="trailing" constant="8" id="pce-SG-LwE"/>
                                         <constraint firstItem="hfV-Pd-Zqc" firstAttribute="leading" secondItem="pwP-Fh-ZAH" secondAttribute="leading" constant="8" id="rYD-1H-OHK"/>
                                         <constraint firstAttribute="centerY" secondItem="hfV-Pd-Zqc" secondAttribute="centerY" id="uyX-25-GmD"/>
                                     </constraints>
@@ -47,6 +59,7 @@
                                 <connections>
                                     <outlet property="indicator" destination="BoK-1a-h6h" id="Lk4-9E-yIe"/>
                                     <outlet property="label" destination="hfV-Pd-Zqc" id="5Yg-fH-gzB"/>
+                                    <outlet property="sizelabel" destination="nK2-HF-Fxe" id="wvl-LL-Oi1"/>
                                     <segue destination="RYv-Ox-jlM" kind="show" id="BMr-Ph-yir"/>
                                 </connections>
                             </tableViewCell>

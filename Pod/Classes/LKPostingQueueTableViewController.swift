@@ -56,7 +56,12 @@ public class LKPostingQueueTableViewController: UITableViewController, UIActionS
         let cell = tableView.dequeueReusableCellWithIdentifier("LKPostingQueueTableViewCell", forIndexPath: indexPath) as! LKPostingQueueTableViewCell
         
         let postingEntry = postingQueueManager.postingEntries[indexPath.row]
-        cell.label!.text = postingEntry.title
+        cell.label.text = postingEntry.title
+        if postingEntry.size == 0 {
+            cell.sizelabel.text = ""
+        } else {
+            cell.sizelabel.text = NSByteCountFormatter.stringFromByteCount(postingEntry.size, countStyle: .File)
+        }
         
         let proccessing = indexPath.row == 0 && postingQueueManager.running
         
@@ -95,7 +100,7 @@ public class LKPostingQueueTableViewController: UITableViewController, UIActionS
     
     // MARK: - Privates (UI)
     func updateUI() {
-        rightButtonItem.enabled = postingQueueManager.count > 0
+        rightButtonItem.enabled = !postingQueueManager.running && postingQueueManager.count > 0
     }
     
     // MARK: - Privates (Notification)

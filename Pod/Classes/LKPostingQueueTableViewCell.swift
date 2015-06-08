@@ -11,6 +11,7 @@ import UIKit
 class LKPostingQueueTableViewCell: UITableViewCell {
 
     @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var sizelabel: UILabel!
     @IBOutlet weak var indicator: UIActivityIndicatorView!
     
     override func awakeFromNib() {

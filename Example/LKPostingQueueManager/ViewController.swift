@@ -31,6 +31,9 @@ class ViewController: UIViewController {
         var entries = [SampleEntry]()
         for i in 0..<3 {
             let entry = SampleEntry()
+            if i == 0 {
+                entry.size = 10000
+            }
             entry.title = NSString(format: "entry-%@-%02d", NSDate().description, i) as String
             entries += [entry]
         }
@@ -50,6 +53,11 @@ class ViewController: UIViewController {
     @IBAction func openView(sender: AnyObject) {
         let viewController = postingQueueManager.instantiateViewController()
         self.navigationController?.pushViewController(viewController, animated: true)
+    }
+    @IBAction func openView2(sender: AnyObject) {
+        let viewController = postingQueueManager.instantiateViewController()
+        let naviController = UINavigationController(rootViewController: viewController)
+        self.presentViewController(naviController, animated: true, completion: nil)
     }
 }
 

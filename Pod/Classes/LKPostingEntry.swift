@@ -11,7 +11,8 @@ import LKCodingObject
 
 public class LKPostingEntry: LKCodingObject {
    
-    public var title: String!
+    public var title: String?
+    public var size: Int64 = 0
 
     public func cleanup() {
         // should be overridden
