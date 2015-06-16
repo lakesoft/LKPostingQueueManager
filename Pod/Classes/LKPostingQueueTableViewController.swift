@@ -94,7 +94,10 @@ public class LKPostingQueueTableViewController: UITableViewController, UIActionS
         
         let appearance = postingQueueManager.appearance
         if let color = appearance.cellTextColor {
-            cell.textLabel?.textColor = color
+            cell.label?.textColor = color
+            cell.sizelabel?.textColor = color
+            cell.label?.textColor = color
+            cell.indicator.tintColor = color
         }
         if let color = appearance.cellColor {
             cell.backgroundColor = color
