@@ -107,7 +107,7 @@
                             </toolbar>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TGn-AQ-qdx">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -123,6 +123,12 @@
                             <constraint firstItem="TGn-AQ-qdx" firstAttribute="leading" secondItem="0tf-Hg-jhb" secondAttribute="leadingMargin" constant="-16" id="pr0-dI-zQp"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="copyLogButtonItem" destination="DWe-8U-0jm" id="cZB-eJ-NE9"/>
+                        <outlet property="mailButtonItem" destination="2ct-en-cYp" id="L3g-zo-Fas"/>
+                        <outlet property="textView" destination="TGn-AQ-qdx" id="Ftd-kS-mI6"/>
+                        <outlet property="toolbar" destination="vj0-lD-xIb" id="lTW-gn-xqh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yGD-PM-lTV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

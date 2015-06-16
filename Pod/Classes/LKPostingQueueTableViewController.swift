@@ -14,6 +14,20 @@ public class LKPostingQueueTableViewController: UITableViewController, UIActionS
     var selectedIndexPath: NSIndexPath!
     var postingQueueManager: LKPostingQueueManager!
     
+    func setupAppearance() {
+        let appearance = postingQueueManager.appearance
+        
+        if let color = appearance.backColor {
+            view.backgroundColor = color
+        }
+        if let color = appearance.tableColor {
+            tableView.backgroundColor = appearance.tableColor
+        }
+        if let color = appearance.tableSeparatorColor {
+            tableView.separatorColor = appearance.tableSeparatorColor
+        }
+    }
+    
     override public func viewDidLoad() {
         super.viewDidLoad()
         
@@ -28,6 +42,7 @@ public class LKPostingQueueTableViewController: UITableViewController, UIActionS
         rightButtonItem = UIBarButtonItem(title: NSLocalizedString("Resume", bundle:postingQueueManagerBundle(), comment:""), style: UIBarButtonItemStyle.Plain, target: self, action: "resume:")
         navigationItem.rightBarButtonItem = rightButtonItem
         
+        setupAppearance()
         updateUI()
     }
     
@@ -76,6 +91,15 @@ public class LKPostingQueueTableViewController: UITableViewController, UIActionS
             }
             cell.indicator.stopAnimating()
         }
+        
+        let appearance = postingQueueManager.appearance
+        if let color = appearance.cellTextColor {
+            cell.textLabel?.textColor = color
+        }
+        if let color = appearance.cellColor {
+            cell.backgroundColor = color
+        }
+        
         return cell
     }
     

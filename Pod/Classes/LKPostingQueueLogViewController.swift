@@ -12,10 +12,27 @@ import MessageUI
 class LKPostingQueueLogViewController: UIViewController, MFMailComposeViewControllerDelegate {
 
     @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var toolbar: UIToolbar!
+    @IBOutlet weak var mailButtonItem: UIBarButtonItem!
+    @IBOutlet weak var copyLogButtonItem: UIBarButtonItem!
     
     var postingQueueManager: LKPostingQueueManager!
     
     var index: Int = 0
+    
+    func setupAppearance() {
+        let appearance = postingQueueManager.appearance
+        if let color = appearance.backColor {
+            view.backgroundColor = color
+        }
+        if let color = appearance.barColor {
+            toolbar.tintColor = color
+        }
+        if let color = appearance.buttonColor {
+            mailButtonItem.tintColor = color
+            copyLogButtonItem.tintColor = color
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -11,6 +11,23 @@ public let kLKPostingQueueManagerNotificationFinished = "LKPostingQueueManagerNo
 
 public class LKPostingQueueManager: NSObject {
     
+    //
+    public class Appearance {
+        public var backColor:UIColor?
+        public var barColor:UIColor?
+        public var titleColor:UIColor?
+        public var buttonColor:UIColor?
+
+        public var tableColor:UIColor?
+        public var tableSeparatorColor:UIColor?
+        public var cellColor:UIColor?
+        public var cellTextColor:UIColor?
+        
+        public init() {
+        }
+    }
+    public var appearance:Appearance = Appearance()
+
     // MARK: Definitions
     public enum Result {
         case NotFinished, Succeeded, Failed
