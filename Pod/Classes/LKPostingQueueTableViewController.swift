@@ -58,6 +58,7 @@ public class LKPostingQueueTableViewController: UITableViewController, UIActionS
         let controller = segue.destinationViewController as! LKPostingQueueLogViewController
         let indexPath = tableView.indexPathForCell(sender as! LKPostingQueueTableViewCell)!
         controller.index = indexPath.row
+        controller.postingQueueManager = postingQueueManager
     }
     
     override public func shouldPerformSegueWithIdentifier(identifier: String?, sender: AnyObject?) -> Bool {
