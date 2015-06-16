@@ -26,6 +26,10 @@ public class LKPostingQueueTableViewController: UITableViewController, UIActionS
         if let color = appearance.tableSeparatorColor {
             tableView.separatorColor = appearance.tableSeparatorColor
         }
+        
+        if let color = appearance.titleColor {
+            LKPostingQueueTableViewCell.appearance().tintColor = color
+        }
     }
     
     override public func viewDidLoad() {
@@ -97,7 +101,7 @@ public class LKPostingQueueTableViewController: UITableViewController, UIActionS
             cell.label?.textColor = color
             cell.sizelabel?.textColor = color
             cell.label?.textColor = color
-            cell.indicator.tintColor = color
+            cell.indicator.color = color
         }
         if let color = appearance.cellColor {
             cell.backgroundColor = color
