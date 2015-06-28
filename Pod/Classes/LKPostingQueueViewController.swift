@@ -60,7 +60,7 @@ public class LKPostingQueueViewController: UIViewController, UITableViewDataSour
         tableView.registerNib(UINib(nibName: "LKPostingQueueTableViewCell", bundle: postingQueueManagerBundle()), forCellReuseIdentifier: "LKPostingQueueTableViewCell")
         
         let nc = NSNotificationCenter.defaultCenter()
-        nc.addObserver(self, selector: "updated:", name: kLKPostingQueueManagerNotificationUpdated, object: nil)
+        nc.addObserver(self, selector: "updated:", name: kLKPostingQueueManagerNotificationUpdatedEntries, object: nil)
         nc.addObserver(self, selector: "posted:", name: kLKPostingQueueManagerNotificationPostedEntry, object: nil)
         nc.addObserver(self, selector: "added:", name: kLKPostingQueueManagerNotificationAddedEntry, object: nil)
         nc.addObserver(self, selector: "finished:", name: kLKPostingQueueManagerNotificationFinished, object: nil)
@@ -204,7 +204,7 @@ public class LKPostingQueueViewController: UIViewController, UITableViewDataSour
                     tableView.deleteRowsAtIndexPaths([selectedIndexPath], withRowAnimation: .Left)
                     selectedIndexPath = nil
                     
-                    NSNotificationCenter.defaultCenter().postNotificationName(kLKPostingQueueManagerNotificationUpdated, object: nil)
+                    NSNotificationCenter.defaultCenter().postNotificationName(kLKPostingQueueManagerNotificationUpdatedEntries, object: nil)
                 }
             }
         }

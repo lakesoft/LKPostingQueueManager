@@ -36,7 +36,7 @@ class ViewController: UIViewController {
         postingQueueManager.appearance = appearance
 
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "did:", name: kLKPostingQueueManagerNotificationFinished, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "did:", name: kLKPostingQueueManagerNotificationUpdated, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "did:", name: kLKPostingQueueManagerNotificationUpdatedEntries, object: nil)
         
         println(postingQueueManager.postingEntries)
 
