@@ -3,9 +3,10 @@ import FBNetworkReachability
 import LKTaskCompletion
 import LKQueue
 
-public let kLKPostingQueueManagerNotificationUpdated = "LKPostingQueueManagerNotificationUpdated"
+public let kLKPostingQueueManagerNotificationUpdatedEntries = "LKPostingQueueManagerNotificationUpdatedEntrries"
 public let kLKPostingQueueManagerNotificationPostedEntry = "LKPostingQueueManagerNotificationPostedEntry"
 public let kLKPostingQueueManagerNotificationAddedEntry = "LKPostingQueueManagerNotificationAddedEntry"
+public let kLKPostingQueueManagerNotificationStarted = "LKPostingQueueManagerNotificationStarted"
 public let kLKPostingQueueManagerNotificationFinished = "LKPostingQueueManagerNotificationFinished"
 
 
@@ -114,6 +115,7 @@ public class LKPostingQueueManager: NSObject {
             queue.addEntryWithInfo(postingEntry, tagName: nil)
         }
         notify(kLKPostingQueueManagerNotificationAddedEntry)
+        notify(kLKPostingQueueManagerNotificationUpdatedEntries)
     }
     
     func isContinute(forced:Bool) -> Bool {
@@ -149,8 +151,8 @@ public class LKPostingQueueManager: NSObject {
         // initializations
         running = true
         queue.resumeAllEntries()
-        notify(kLKPostingQueueManagerNotificationUpdated)
         UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+        notify(kLKPostingQueueManagerNotificationStarted)
         
         // start posting
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
@@ -166,6 +168,7 @@ public class LKPostingQueueManager: NSObject {
                             self.queue.changeEntry(queueEntry, toState: LKQueueEntryStateFinished)
                             self.queue.removeEntry(queueEntry)
                             notify(kLKPostingQueueManagerNotificationPostedEntry)
+                            notify(kLKPostingQueueManagerNotificationUpdatedEntries)
                         },
                         failure:{ (error:NSError)->Void in
                             NSLog("[ERROR] %@", error.description)
@@ -191,7 +194,6 @@ public class LKPostingQueueManager: NSObject {
             // end posting
             LKTaskCompletion.sharedInstance().endBackgroundTask()
             self.running = false
-            notify(kLKPostingQueueManagerNotificationUpdated)
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                 UIApplication.sharedApplication().networkActivityIndicatorVisible = false;
             });

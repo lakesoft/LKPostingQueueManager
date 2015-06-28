@@ -21,7 +21,6 @@ public class LKPostingQueueViewController: UIViewController, UITableViewDataSour
     var rightButtonItem: UIBarButtonItem!
     
     // tool bar
-    @IBOutlet weak var modeLabel: UILabel!
     @IBOutlet weak var toolbarView: UIView!
     @IBOutlet weak var modeSegment: UISegmentedControl!
     
@@ -49,7 +48,6 @@ public class LKPostingQueueViewController: UIViewController, UITableViewDataSour
         
         if let color = appearance.textColor {
             modeSegment.tintColor = color;
-            modeLabel.textColor = color;
         }
 
     }
@@ -70,7 +68,6 @@ public class LKPostingQueueViewController: UIViewController, UITableViewDataSour
         rightButtonItem = UIBarButtonItem(title: NSLocalizedString("Resume", bundle:postingQueueManagerBundle(), comment:""), style: UIBarButtonItemStyle.Plain, target: self, action: "resume:")
         navigationItem.rightBarButtonItem = rightButtonItem
         
-        modeLabel.text = NSLocalizedString("Mode.Title", bundle:postingQueueManagerBundle(), comment:"")
         modeSegment.setTitle(LKPostingQueueTransmitMode.Auto.description(), forSegmentAtIndex: 0)
         modeSegment.setTitle(LKPostingQueueTransmitMode.Wifi.description(), forSegmentAtIndex: 1)
         modeSegment.setTitle(LKPostingQueueTransmitMode.Manual.description(), forSegmentAtIndex: 2)
