@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "83AE4D3532FB8F4D016A1AE2"
+               BlueprintIdentifier = "D8FD099913845A9E1FDFF7B9"
                BuildableName = "LKPostingQueueManager.bundle"
                BlueprintName = "Pods-LKPostingQueueManager_Tests-LKPostingQueueManager-LKPostingQueueManager"
                ReferencedContainer = "container:Pods.xcodeproj">

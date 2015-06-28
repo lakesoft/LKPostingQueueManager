@@ -17,6 +17,7 @@ public class LKPostingQueueManager: NSObject {
         public var barColor:UIColor?
         public var titleColor:UIColor?
         public var buttonColor:UIColor?
+        public var textColor:UIColor?
 
         public var tableColor:UIColor?
         public var tableSeparatorColor:UIColor?
@@ -115,19 +116,33 @@ public class LKPostingQueueManager: NSObject {
         notify(kLKPostingQueueManagerNotificationAddedEntry)
     }
     
-    public func start(forced:Bool) {
+    func isContinute(forced:Bool) -> Bool {
+        if (!FBNetworkReachability.sharedInstance().reachable) {
+            return false;
+        }
+
+        if forced {
+            return true;
+        } else {
+            switch LKPostingQueueTransmitMode.defaultMode() {
+            case .Auto:
+                return true
+            case .Wifi:
+                if FBNetworkReachability.sharedInstance().connectionMode == FBNetworkReachabilityConnectionMode.ReachableWiFi {
+                    return true;
+                }
+                break
+            case .Manual:
+                break
+            }
+        }
+        return false;
+    }
+    
+    public func start(forced:Bool=false) {
         
         // cheking status
-        if (!FBNetworkReachability.sharedInstance().reachable) {
-            return;
-        }
-        if queue.count() == 0 {
-            return;
-        }
-        if result == .Failed && !forced {
-            return
-        }
-        if running {
+        if queue.count() == 0 || (result == .Failed && !forced) || running || !isContinute(forced) {
             return
         }
         
@@ -167,7 +182,10 @@ public class LKPostingQueueManager: NSObject {
                 if self.result == .Failed {
                     break
                 }
-                sleep(3)
+                sleep(1)
+                if !self.isContinute(forced) {
+                    break
+                }
             }
             
             // end posting
@@ -187,9 +205,9 @@ public class LKPostingQueueManager: NSObject {
     }
     
     // MARK: GUI
-    public func instantiateViewController() -> LKPostingQueueTableViewController {
+    public func instantiateViewController() -> LKPostingQueueViewController {
         let storyboard = UIStoryboard(name: "LKPostingQueueManager", bundle: postingQueueManagerBundle())
-        let viewController = storyboard.instantiateInitialViewController() as! LKPostingQueueTableViewController
+        let viewController = storyboard.instantiateInitialViewController() as! LKPostingQueueViewController
         viewController.postingQueueManager = self
         return viewController
     }

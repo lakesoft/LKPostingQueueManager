@@ -28,3 +28,8 @@
 
 "ListTitle" = "Posting List";
 "LogTitle" = "Log";
+
+"Mode.Title" = "Transmit Mode";
+"Mode.Manual" = "Manual";
+"Mode.Wifi" = "Wifi Only";
+"Mode.Auto" = "Auto";

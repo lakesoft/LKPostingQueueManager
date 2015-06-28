@@ -8,12 +8,24 @@
 
 import UIKit
 
-public class LKPostingQueueTableViewController: UITableViewController, UIActionSheetDelegate{
+public class LKPostingQueueViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIActionSheetDelegate{
     
-    var rightButtonItem: UIBarButtonItem!
+    // models
     var selectedIndexPath: NSIndexPath!
     var postingQueueManager: LKPostingQueueManager!
+
+    // tableview
+    @IBOutlet weak var tableView: UITableView!
     
+    // navigation bar
+    var rightButtonItem: UIBarButtonItem!
+    
+    // tool bar
+    @IBOutlet weak var modeLabel: UILabel!
+    @IBOutlet weak var toolbarView: UIView!
+    @IBOutlet weak var modeSegment: UISegmentedControl!
+    
+
     func setupAppearance() {
         let appearance = postingQueueManager.appearance
         
@@ -30,12 +42,24 @@ public class LKPostingQueueTableViewController: UITableViewController, UIActionS
         if let color = appearance.titleColor {
             LKPostingQueueTableViewCell.appearance().tintColor = color
         }
+        
+        if let color = appearance.barColor {
+            toolbarView.backgroundColor = color
+        }
+        
+        if let color = appearance.textColor {
+            modeSegment.tintColor = color;
+            modeLabel.textColor = color;
+        }
+
     }
     
     override public func viewDidLoad() {
         super.viewDidLoad()
         
         title = NSLocalizedString("ListTitle", bundle:postingQueueManagerBundle(), comment:"")
+        
+        tableView.registerNib(UINib(nibName: "LKPostingQueueTableViewCell", bundle: postingQueueManagerBundle()), forCellReuseIdentifier: "LKPostingQueueTableViewCell")
         
         let nc = NSNotificationCenter.defaultCenter()
         nc.addObserver(self, selector: "updated:", name: kLKPostingQueueManagerNotificationUpdated, object: nil)
@@ -46,6 +70,13 @@ public class LKPostingQueueTableViewController: UITableViewController, UIActionS
         rightButtonItem = UIBarButtonItem(title: NSLocalizedString("Resume", bundle:postingQueueManagerBundle(), comment:""), style: UIBarButtonItemStyle.Plain, target: self, action: "resume:")
         navigationItem.rightBarButtonItem = rightButtonItem
         
+        modeLabel.text = NSLocalizedString("Mode.Title", bundle:postingQueueManagerBundle(), comment:"")
+        modeSegment.setTitle(LKPostingQueueTransmitMode.Auto.description(), forSegmentAtIndex: 0)
+        modeSegment.setTitle(LKPostingQueueTransmitMode.Wifi.description(), forSegmentAtIndex: 1)
+        modeSegment.setTitle(LKPostingQueueTransmitMode.Manual.description(), forSegmentAtIndex: 2)
+        modeSegment.selectedSegmentIndex = LKPostingQueueTransmitMode.defaultMode().rawValue
+        
+
         setupAppearance()
         updateUI()
     }
@@ -68,11 +99,11 @@ public class LKPostingQueueTableViewController: UITableViewController, UIActionS
     
     // MARK: - Table view data source
     
-    override public func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    public func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return postingQueueManager.count
     }
     
-    override public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("LKPostingQueueTableViewCell", forIndexPath: indexPath) as! LKPostingQueueTableViewCell
         
         let postingEntry = postingQueueManager.postingEntries[indexPath.row]
@@ -101,7 +132,6 @@ public class LKPostingQueueTableViewController: UITableViewController, UIActionS
         if let color = appearance.cellTextColor {
             cell.label?.textColor = color
             cell.sizelabel?.textColor = color
-            cell.label?.textColor = color
             cell.indicator.color = color
         }
         if let color = appearance.cellColor {
@@ -111,7 +141,7 @@ public class LKPostingQueueTableViewController: UITableViewController, UIActionS
         return cell
     }
     
-    override public func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+    public func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
             selectedIndexPath = indexPath
             let actionSheet = UIActionSheet(title: NSLocalizedString("RemoveTitle", bundle:postingQueueManagerBundle(), comment:""), delegate: self, cancelButtonTitle: NSLocalizedString("Cancel", bundle:postingQueueManagerBundle(), comment:""), destructiveButtonTitle: NSLocalizedString("Remove", bundle:postingQueueManagerBundle(), comment:""))
@@ -119,12 +149,14 @@ public class LKPostingQueueTableViewController: UITableViewController, UIActionS
         }
     }
     
-    override public func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+    public func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         return !postingQueueManager.running
     }
     
     // MARK: - Table view delegate
-    override public func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    public func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let cell = tableView.cellForRowAtIndexPath(indexPath)
+        performSegueWithIdentifier("LKPostingQueueLogViewController", sender: cell)
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
     
@@ -158,7 +190,7 @@ public class LKPostingQueueTableViewController: UITableViewController, UIActionS
     
     // MARK: - Privates (Action)
     func resume(sender:UIBarButtonItem) {
-        postingQueueManager.start(true)
+        postingQueueManager.start(forced:true)
         updateUI()
     }
     
@@ -180,4 +212,12 @@ public class LKPostingQueueTableViewController: UITableViewController, UIActionS
             }
         }
     }
+    
+    // MARK: - Actions
+    @IBAction func onModeSegment(segment: UISegmentedControl) {
+        if let mode = LKPostingQueueTransmitMode(rawValue: segment.selectedSegmentIndex) {
+            mode.saveAsDefault()
+        }
+    }
+    
 }

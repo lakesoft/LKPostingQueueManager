@@ -22,7 +22,7 @@
 #define COCOAPODS_POD_AVAILABLE_LKPostingQueueManager
 #define COCOAPODS_VERSION_MAJOR_LKPostingQueueManager 0
 #define COCOAPODS_VERSION_MINOR_LKPostingQueueManager 1
-#define COCOAPODS_VERSION_PATCH_LKPostingQueueManager 0
+#define COCOAPODS_VERSION_PATCH_LKPostingQueueManager 6
 
 // LKQueue
 #define COCOAPODS_POD_AVAILABLE_LKQueue

@@ -23,6 +23,18 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
      
+        var appearance = LKPostingQueueManager.Appearance()
+        appearance.backColor = UIColor.blackColor()
+        appearance.barColor = UIColor.blackColor()
+        appearance.titleColor = UIColor.whiteColor()
+        appearance.buttonColor = UIColor.whiteColor()
+        appearance.textColor = UIColor.whiteColor()
+        appearance.cellColor = UIColor.clearColor()
+        appearance.cellTextColor = UIColor.lightGrayColor()
+        appearance.tableColor = UIColor.blackColor()
+        appearance.tableSeparatorColor = UIColor.darkGrayColor()
+        postingQueueManager.appearance = appearance
+
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "did:", name: kLKPostingQueueManagerNotificationFinished, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "did:", name: kLKPostingQueueManagerNotificationUpdated, object: nil)
         
@@ -38,7 +50,7 @@ class ViewController: UIViewController {
             entries += [entry]
         }
         postingQueueManager.addPostingEntries(entries)
-        postingQueueManager.start(true)
+        postingQueueManager.start()
     }
 
     override func didReceiveMemoryWarning() {
