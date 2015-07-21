@@ -131,6 +131,10 @@ public class LKPostingQueueViewController: UIViewController, UITableViewDataSour
             cell.sizelabel?.textColor = color
             cell.indicator.color = color
         }
+        if let color = appearance.selectedCellColor {
+            cell.selectedBackgroundView = UIView()
+            cell.selectedBackgroundView.backgroundColor = color
+        }
         if let color = appearance.cellColor {
             cell.backgroundColor = color
         }
@@ -156,7 +160,9 @@ public class LKPostingQueueViewController: UIViewController, UITableViewDataSour
         performSegueWithIdentifier("LKPostingQueueLogViewController", sender: cell)
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
-    
+    public func tableView(tableView: UITableView, shouldHighlightRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return indexPath.row == 0 && postingQueueManager.hasLogExisted(indexPath.row)
+    }
     
     
     // MARK: - Privates (UI)

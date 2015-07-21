@@ -24,6 +24,7 @@ public class LKPostingQueueManager: NSObject {
         public var tableSeparatorColor:UIColor?
         public var cellColor:UIColor?
         public var cellTextColor:UIColor?
+        public var selectedCellColor:UIColor?
         
         public init() {
         }
