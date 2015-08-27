@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4eF-Zd-762">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4eF-Zd-762">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -105,28 +105,29 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TGn-AQ-qdx">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Log" translatesAutoresizingMaskIntoConstraints="NO" id="KYa-Og-Y1S">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="TGn-AQ-qdx" firstAttribute="top" secondItem="0tf-Hg-jhb" secondAttribute="topMargin" id="Na6-bF-Kub"/>
+                            <constraint firstAttribute="trailing" secondItem="KYa-Og-Y1S" secondAttribute="trailing" id="3cu-hc-Yof"/>
+                            <constraint firstItem="KYa-Og-Y1S" firstAttribute="leading" secondItem="0tf-Hg-jhb" secondAttribute="leading" id="Ma8-cS-7K3"/>
                             <constraint firstItem="vj0-lD-xIb" firstAttribute="leading" secondItem="0tf-Hg-jhb" secondAttribute="leadingMargin" constant="-16" id="OfA-7W-znn"/>
                             <constraint firstItem="Qui-4G-rlD" firstAttribute="top" secondItem="vj0-lD-xIb" secondAttribute="bottom" id="TC9-Ly-FUU"/>
-                            <constraint firstItem="vj0-lD-xIb" firstAttribute="top" secondItem="TGn-AQ-qdx" secondAttribute="bottom" id="Tbp-oL-H5a"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="TGn-AQ-qdx" secondAttribute="trailing" constant="-16" id="Vef-BS-Zrz"/>
                             <constraint firstAttribute="trailingMargin" secondItem="vj0-lD-xIb" secondAttribute="trailing" constant="-16" id="dUH-eV-vWi"/>
-                            <constraint firstItem="TGn-AQ-qdx" firstAttribute="leading" secondItem="0tf-Hg-jhb" secondAttribute="leadingMargin" constant="-16" id="pr0-dI-zQp"/>
+                            <constraint firstItem="KYa-Og-Y1S" firstAttribute="top" secondItem="0tf-Hg-jhb" secondAttribute="top" id="fnE-Ju-Nqo"/>
+                            <constraint firstItem="vj0-lD-xIb" firstAttribute="top" secondItem="KYa-Og-Y1S" secondAttribute="bottom" id="wan-jH-WbI"/>
                         </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <connections>
                         <outlet property="copyLogButtonItem" destination="DWe-8U-0jm" id="cZB-eJ-NE9"/>
                         <outlet property="mailButtonItem" destination="2ct-en-cYp" id="L3g-zo-Fas"/>
-                        <outlet property="textView" destination="TGn-AQ-qdx" id="Ftd-kS-mI6"/>
+                        <outlet property="textView" destination="KYa-Og-Y1S" id="Vig-OG-uIS"/>
                         <outlet property="toolbar" destination="vj0-lD-xIb" id="lTW-gn-xqh"/>
                     </connections>
                 </viewController>

@@ -6,6 +6,7 @@ import LKQueue
 public let kLKPostingQueueManagerNotificationUpdatedEntries = "LKPostingQueueManagerNotificationUpdatedEntrries"
 public let kLKPostingQueueManagerNotificationPostedEntry = "LKPostingQueueManagerNotificationPostedEntry"
 public let kLKPostingQueueManagerNotificationAddedEntry = "LKPostingQueueManagerNotificationAddedEntry"
+public let kLKPostingQueueManagerNotificationFailed = "LKPostingQueueManagerNotificationFailed"
 public let kLKPostingQueueManagerNotificationStarted = "LKPostingQueueManagerNotificationStarted"
 public let kLKPostingQueueManagerNotificationFinished = "LKPostingQueueManagerNotificationFinished"
 
@@ -176,6 +177,7 @@ public class LKPostingQueueManager: NSObject {
                             self.result = .Failed
                             queueEntry.logs = [error.localizedDescription]
                             self.queue.changeEntry(queueEntry, toState: LKQueueEntryStateSuspending)
+                            notify(kLKPostingQueueManagerNotificationFailed)
                         }
                     )
                 }

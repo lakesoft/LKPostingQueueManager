@@ -63,6 +63,8 @@ public class LKPostingQueueViewController: UIViewController, UITableViewDataSour
         nc.addObserver(self, selector: "updated:", name: kLKPostingQueueManagerNotificationUpdatedEntries, object: nil)
         nc.addObserver(self, selector: "posted:", name: kLKPostingQueueManagerNotificationPostedEntry, object: nil)
         nc.addObserver(self, selector: "added:", name: kLKPostingQueueManagerNotificationAddedEntry, object: nil)
+        nc.addObserver(self, selector: "failed:", name: kLKPostingQueueManagerNotificationFailed, object: nil)
+        nc.addObserver(self, selector: "started:", name: kLKPostingQueueManagerNotificationStarted, object: nil)
         nc.addObserver(self, selector: "finished:", name: kLKPostingQueueManagerNotificationFinished, object: nil)
         
         rightButtonItem = UIBarButtonItem(title: NSLocalizedString("Resume", bundle:postingQueueManagerBundle(), comment:""), style: UIBarButtonItemStyle.Plain, target: self, action: "resume:")
@@ -187,7 +189,16 @@ public class LKPostingQueueViewController: UIViewController, UITableViewDataSour
         tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Fade)
         updateUI()
     }
+    func failed(notification:NSNotification) {
+        tableView.reloadData()
+        updateUI()
+    }
+    func started(notification:NSNotification) {
+        tableView.reloadData()
+        updateUI()
+    }
     func finished(notification:NSNotification) {
+        tableView.reloadData()
         updateUI()
     }
     

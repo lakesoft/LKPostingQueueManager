@@ -36,7 +36,7 @@ class LKPostingQueueLogViewController: UIViewController, MFMailComposeViewContro
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setupAppearance()
         textView.text = postingQueueManager.log(index)
         title = NSLocalizedString("LogTitle", bundle:postingQueueManagerBundle(), comment: "")
     }

@@ -16,7 +16,9 @@ class ViewController: UIViewController {
         if let entry = postingEntry as? SampleEntry {
             println("Processing: \(entry.title)")
             sleep(1)
-            completion()
+//            completion()
+            var err:NSError = NSError(domain: "error", code: 12, userInfo: [NSLocalizedDescriptionKey:"Local"])
+            failure(err)
         }
     }
 
