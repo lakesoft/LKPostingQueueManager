@@ -165,6 +165,11 @@ public class LKPostingQueueManager: NSObject {
         UIApplication.sharedApplication().networkActivityIndicatorVisible = true
         notify(kLKPostingQueueManagerNotificationStarted)
         
+        NSLog("start")
+        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            NSNotificationCenter.defaultCenter().postNotificationName(kLKPostingQueueManagerNotificationStarted, object: nil)
+        })
+        
         // start posting
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
             
@@ -180,6 +185,11 @@ public class LKPostingQueueManager: NSObject {
                         processingIndex++
                     }
                     notify(kLKPostingQueueManagerNotificationWillPostEntry, processingIndex)
+                    NSLog("will post")
+                    dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                        NSNotificationCenter.defaultCenter().postNotificationName(kLKPostingQueueManagerNotificationWillPostEntry, object: processingIndex)
+                    })
+
 
                     let postingEntry = queueEntry.info as! LKPostingEntry
                     self.handler(postingEntry,
@@ -195,6 +205,10 @@ public class LKPostingQueueManager: NSObject {
                             queueEntry.addLog(error.description)
                             self.queue.changeEntry(queueEntry, toState: LKQueueEntryStateSuspending)
                             notify(kLKPostingQueueManagerNotificationFailed, processingIndex)
+                            NSLog("failed")
+                            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                                NSNotificationCenter.defaultCenter().postNotificationName(kLKPostingQueueManagerNotificationFailed, object: processingIndex)
+                            })
                             if self.runningMode == .StopWhenFailed {
                                 stop = true
                             }
