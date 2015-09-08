@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import LKQueue
 
 public class LKPostingQueueViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIActionSheetDelegate{
     
@@ -61,8 +62,9 @@ public class LKPostingQueueViewController: UIViewController, UITableViewDataSour
         
         let nc = NSNotificationCenter.defaultCenter()
         nc.addObserver(self, selector: "updated:", name: kLKPostingQueueManagerNotificationUpdatedEntries, object: nil)
-        nc.addObserver(self, selector: "posted:", name: kLKPostingQueueManagerNotificationPostedEntry, object: nil)
-        nc.addObserver(self, selector: "added:", name: kLKPostingQueueManagerNotificationAddedEntry, object: nil)
+        nc.addObserver(self, selector: "willPost:", name: kLKPostingQueueManagerNotificationWillPostEntry, object: nil)
+        nc.addObserver(self, selector: "didPost:", name: kLKPostingQueueManagerNotificationDidPostEntry, object: nil)
+        nc.addObserver(self, selector: "didAdd:", name: kLKPostingQueueManagerNotificationDidAddEntry, object: nil)
         nc.addObserver(self, selector: "failed:", name: kLKPostingQueueManagerNotificationFailed, object: nil)
         nc.addObserver(self, selector: "started:", name: kLKPostingQueueManagerNotificationStarted, object: nil)
         nc.addObserver(self, selector: "finished:", name: kLKPostingQueueManagerNotificationFinished, object: nil)
@@ -113,7 +115,8 @@ public class LKPostingQueueViewController: UIViewController, UITableViewDataSour
             cell.sizelabel.text = NSByteCountFormatter.stringFromByteCount(postingEntry.size, countStyle: .File)
         }
         
-        let proccessing = indexPath.row == 0 && postingQueueManager.running
+        let queueEntry:LKQueueEntry = postingQueueManager.queue.entryAtIndex(indexPath.row)
+        let proccessing = (queueEntry.state.value == LKQueueEntryStateProcessing.value)
         
         if (proccessing) {
             cell.accessoryType = UITableViewCellAccessoryType.None;
@@ -176,21 +179,29 @@ public class LKPostingQueueViewController: UIViewController, UITableViewDataSour
     func updated(notification:NSNotification) {
         tableView.reloadData()
     }
-    func posted(notification:NSNotification) {
-        let indexPath = NSIndexPath(forRow: 0, inSection: 0)
-        tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Right)
-        if postingQueueManager.count > 0 {
+    func willPost(notification:NSNotification) {
+        if let index = notification.object as? Int {
+            let indexPath = NSIndexPath(forRow: index, inSection: 0)
             tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Fade)
+        }
+    }
+    func didPost(notification:NSNotification) {
+        if let index = notification.object as? Int {
+            let indexPath = NSIndexPath(forRow: index, inSection: 0)
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Right)
         }
         updateUI()
     }
-    func added(notification:NSNotification) {
+    func didAdd(notification:NSNotification) {
         let indexPath = NSIndexPath(forRow: postingQueueManager.count-1, inSection: 0)
         tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Fade)
         updateUI()
     }
     func failed(notification:NSNotification) {
-        tableView.reloadData()
+        if let index = notification.object as? Int {
+            let indexPath = NSIndexPath(forRow: index, inSection: 0)
+            tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Fade)
+        }
         updateUI()
     }
     func started(notification:NSNotification) {

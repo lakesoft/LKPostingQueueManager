@@ -4,8 +4,9 @@ import LKTaskCompletion
 import LKQueue
 
 public let kLKPostingQueueManagerNotificationUpdatedEntries = "LKPostingQueueManagerNotificationUpdatedEntrries"
-public let kLKPostingQueueManagerNotificationPostedEntry = "LKPostingQueueManagerNotificationPostedEntry"
-public let kLKPostingQueueManagerNotificationAddedEntry = "LKPostingQueueManagerNotificationAddedEntry"
+public let kLKPostingQueueManagerNotificationWillPostEntry = "LKPostingQueueManagerNotificationWillPostEntry"
+public let kLKPostingQueueManagerNotificationDidPostEntry = "LKPostingQueueManagerNotificationDidPostEntry"
+public let kLKPostingQueueManagerNotificationDidAddEntry = "LKPostingQueueManagerNotificationDidAddEntry"
 public let kLKPostingQueueManagerNotificationFailed = "LKPostingQueueManagerNotificationFailed"
 public let kLKPostingQueueManagerNotificationStarted = "LKPostingQueueManagerNotificationStarted"
 public let kLKPostingQueueManagerNotificationFinished = "LKPostingQueueManagerNotificationFinished"
@@ -13,7 +14,9 @@ public let kLKPostingQueueManagerNotificationFinished = "LKPostingQueueManagerNo
 
 public class LKPostingQueueManager: NSObject {
     
-    //
+    //---------------
+    // MARK: - Appearance
+    //---------------
     public class Appearance {
         public var backColor:UIColor?
         public var barColor:UIColor?
@@ -32,13 +35,19 @@ public class LKPostingQueueManager: NSObject {
     }
     public var appearance:Appearance = Appearance()
 
-    // MARK: Definitions
-    public enum Result {
-        case NotFinished, Succeeded, Failed
+    // TODO: エラー表示があった方がわかりやすい
+    // TODO: (2) エラーログ、２行目以降がタップしても反応しない
+    // TODO: (2) 個別送信への対応
+    
+    //---------------
+    // MARK: - Definitions
+    //---------------
+    public enum RunningMode {
+        case SkipFailedEntry, StopWhenFailed
     }
     
     // MARK: Members
-    public var result: Result = .NotFinished
+    public var runningMode: RunningMode = .SkipFailedEntry
 
     private var _running: Bool = false
     public var running: Bool {
@@ -116,7 +125,7 @@ public class LKPostingQueueManager: NSObject {
         for postingEntry in postingEntries {
             queue.addEntryWithInfo(postingEntry, tagName: nil)
         }
-        notify(kLKPostingQueueManagerNotificationAddedEntry)
+        notify(kLKPostingQueueManagerNotificationDidAddEntry)
         notify(kLKPostingQueueManagerNotificationUpdatedEntries)
     }
     
@@ -146,7 +155,7 @@ public class LKPostingQueueManager: NSObject {
     public func start(forced:Bool=false) {
         
         // cheking status
-        if queue.count() == 0 || (result == .Failed && !forced) || running || !isContinute(forced) {
+        if queue.count() == 0 || running || !isContinute(forced) {
             return
         }
         
@@ -158,38 +167,46 @@ public class LKPostingQueueManager: NSObject {
         
         // start posting
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
-            while self.queue.count() > 0 {
-                self.result = .NotFinished
-                
+            
+            var stop: Bool = false
+
+            while !stop {
                 if let queueEntry = self.queue.getEntryForProcessing() {
+                    var processingIndex:Int = 0
+                    for queueEntry in self.queue.entries() {
+                        if queueEntry.state.value == LKQueueEntryStateProcessing.value {
+                            break
+                        }
+                        processingIndex++
+                    }
+                    notify(kLKPostingQueueManagerNotificationWillPostEntry, processingIndex)
+
                     let postingEntry = queueEntry.info as! LKPostingEntry
                     self.handler(postingEntry,
                         completion:{ ()->Void in
-                            self.result = .Succeeded
                             postingEntry.cleanup()
                             self.queue.changeEntry(queueEntry, toState: LKQueueEntryStateFinished)
                             self.queue.removeEntry(queueEntry)
-                            notify(kLKPostingQueueManagerNotificationPostedEntry)
+                            notify(kLKPostingQueueManagerNotificationDidPostEntry, processingIndex)
                             notify(kLKPostingQueueManagerNotificationUpdatedEntries)
                         },
                         failure:{ (error:NSError)->Void in
                             NSLog("[ERROR] %@", error.description)
-                            self.result = .Failed
-                            queueEntry.logs = [error.localizedDescription]
+                            queueEntry.addLog(error.description)
                             self.queue.changeEntry(queueEntry, toState: LKQueueEntryStateSuspending)
-                            notify(kLKPostingQueueManagerNotificationFailed)
+                            notify(kLKPostingQueueManagerNotificationFailed, processingIndex)
+                            if self.runningMode == .StopWhenFailed {
+                                stop = true
+                            }
                         }
                     )
-                }
-                
-                while self.result == .NotFinished {
-                    sleep(1)
-                }
-                if self.result == .Failed {
+                } else {
+                    stop = true
                     break
                 }
-                sleep(1)
+                
                 if !self.isContinute(forced) {
+                    stop = true
                     break
                 }
             }
@@ -229,6 +246,12 @@ public func postingQueueManagerBundle() -> NSBundle {
 func notify(name:String) {
     dispatch_async(dispatch_get_main_queue(), { () -> Void in
         NSNotificationCenter.defaultCenter().postNotificationName(name, object: nil)
+    })
+}
+
+func notify(name:String, index:Int) {
+    dispatch_async(dispatch_get_main_queue(), { () -> Void in
+        NSNotificationCenter.defaultCenter().postNotificationName(name, object: index)
     })
 }
 

@@ -13,12 +13,16 @@ class ViewController: UIViewController {
     
     let postingQueueManager = LKPostingQueueManager { (postingEntry, completion, failure) -> Void in
         
+        let r = arc4random() % 3
         if let entry = postingEntry as? SampleEntry {
             println("Processing: \(entry.title)")
             sleep(1)
-//            completion()
-            var err:NSError = NSError(domain: "error", code: 12, userInfo: [NSLocalizedDescriptionKey:"Local"])
-            failure(err)
+            if r == 0 {
+                var err:NSError = NSError(domain: "error", code: 12, userInfo: [NSLocalizedDescriptionKey:"Local"])
+                failure(err)
+            } else {
+                completion()
+            }
         }
     }
 
@@ -54,7 +58,7 @@ class ViewController: UIViewController {
         println(postingQueueManager.postingEntries)
 
         var entries = [SampleEntry]()
-        for i in 0..<3 {
+        for i in 0..<20 {
             let entry = SampleEntry()
             if i == 0 {
                 entry.size = 10000
@@ -63,6 +67,7 @@ class ViewController: UIViewController {
             entries += [entry]
         }
         postingQueueManager.addPostingEntries(entries)
+//        postingQueueManager.runningMode = .StopWhenFailed
         postingQueueManager.start()
     }
 
