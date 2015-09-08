@@ -244,13 +244,17 @@ public func postingQueueManagerBundle() -> NSBundle {
 }
 
 func notify(name:String) {
+    NSLog("nofity(1): %@", name)
     dispatch_async(dispatch_get_main_queue(), { () -> Void in
+        NSLog("in main")
         NSNotificationCenter.defaultCenter().postNotificationName(name, object: nil)
     })
 }
 
 func notify(name:String, index:Int) {
+    NSLog("nofity(2): %@", name)
     dispatch_async(dispatch_get_main_queue(), { () -> Void in
+        NSLog("in main")
         NSNotificationCenter.defaultCenter().postNotificationName(name, object: index)
     })
 }
