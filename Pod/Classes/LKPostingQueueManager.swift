@@ -243,7 +243,7 @@ public func postingQueueManagerBundle() -> NSBundle {
     return bundle
 }
 
-func notify(name:String) {
+public func notify(name:String) {
     NSLog("nofity(1): %@", name)
     dispatch_async(dispatch_get_main_queue(), { () -> Void in
         NSLog("in main")
@@ -251,7 +251,7 @@ func notify(name:String) {
     })
 }
 
-func notify(name:String, index:Int) {
+public func notify(name:String, index:Int) {
     NSLog("nofity(2): %@", name)
     dispatch_async(dispatch_get_main_queue(), { () -> Void in
         NSLog("in main")
