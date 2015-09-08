@@ -120,6 +120,22 @@ public class LKPostingQueueManager: NSObject {
         NSNotificationCenter.defaultCenter().removeObserver(self)
     }
     
+    //
+    
+    public func notify(name:String) {
+        NSLog("notify");
+        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            NSNotificationCenter.defaultCenter().postNotificationName(name, object: nil)
+        })
+    }
+    
+    public func notify(name:String, index:Int) {
+        NSLog("notify:name:");
+        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            NSNotificationCenter.defaultCenter().postNotificationName(name, object: index)
+        })
+    }
+
     // MARK: API
     public func addPostingEntries(postingEntries:[LKPostingEntry]) {
         for postingEntry in postingEntries {
@@ -179,7 +195,7 @@ public class LKPostingQueueManager: NSObject {
                         }
                         processingIndex++
                     }
-                    notify(kLKPostingQueueManagerNotificationWillPostEntry, processingIndex)
+                    self.notify(kLKPostingQueueManagerNotificationWillPostEntry, index:processingIndex)
 
                     let postingEntry = queueEntry.info as! LKPostingEntry
                     self.handler(postingEntry,
@@ -187,14 +203,14 @@ public class LKPostingQueueManager: NSObject {
                             postingEntry.cleanup()
                             self.queue.changeEntry(queueEntry, toState: LKQueueEntryStateFinished)
                             self.queue.removeEntry(queueEntry)
-                            notify(kLKPostingQueueManagerNotificationDidPostEntry, processingIndex)
-                            notify(kLKPostingQueueManagerNotificationUpdatedEntries)
+                            self.notify(kLKPostingQueueManagerNotificationDidPostEntry, index:processingIndex)
+                            self.notify(kLKPostingQueueManagerNotificationUpdatedEntries)
                         },
                         failure:{ (error:NSError)->Void in
                             NSLog("[ERROR] %@", error.description)
                             queueEntry.addLog(error.description)
                             self.queue.changeEntry(queueEntry, toState: LKQueueEntryStateSuspending)
-                            notify(kLKPostingQueueManagerNotificationFailed, processingIndex)
+                            self.notify(kLKPostingQueueManagerNotificationFailed, index:processingIndex)
                             if self.runningMode == .StopWhenFailed {
                                 stop = true
                             }
@@ -217,7 +233,7 @@ public class LKPostingQueueManager: NSObject {
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                 UIApplication.sharedApplication().networkActivityIndicatorVisible = false;
             });
-            notify(kLKPostingQueueManagerNotificationFinished)
+            self.notify(kLKPostingQueueManagerNotificationFinished)
         })
     }
     
@@ -243,19 +259,17 @@ public func postingQueueManagerBundle() -> NSBundle {
     return bundle
 }
 
-public func notify(name:String) {
-    NSLog("nofity(1): %@", name)
+/*
+func notify(name:String) {
     dispatch_async(dispatch_get_main_queue(), { () -> Void in
-        NSLog("in main")
         NSNotificationCenter.defaultCenter().postNotificationName(name, object: nil)
     })
 }
 
-public func notify(name:String, index:Int) {
-    NSLog("nofity(2): %@", name)
+func notify(name:String, index:Int) {
     dispatch_async(dispatch_get_main_queue(), { () -> Void in
-        NSLog("in main")
         NSNotificationCenter.defaultCenter().postNotificationName(name, object: index)
     })
 }
+*/
 
