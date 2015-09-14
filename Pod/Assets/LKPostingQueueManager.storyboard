@@ -107,7 +107,7 @@
                             </toolbar>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Log" translatesAutoresizingMaskIntoConstraints="NO" id="KYa-Og-Y1S">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="492"/>
-                                <color key="backgroundColor" red="0.4313725531" green="0.72941178080000002" blue="0.2156862766" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
