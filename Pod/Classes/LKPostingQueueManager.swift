@@ -154,24 +154,30 @@ public class LKPostingQueueManager: NSObject {
     
     public func start(forced:Bool=false) {
         
+        NSLog("start:1")
+        
         // cheking status
         if queue.count() == 0 || running || !isContinute(forced) {
             return
         }
-        
+
+        NSLog("start:2")
+
         // initializations
         running = true
         queue.resumeAllEntries()
         UIApplication.sharedApplication().networkActivityIndicatorVisible = true
         notify(kLKPostingQueueManagerNotificationStarted)
         
-        NSLog("start")
+        NSLog("start:3")
         dispatch_async(dispatch_get_main_queue(), { () -> Void in
             NSNotificationCenter.defaultCenter().postNotificationName(kLKPostingQueueManagerNotificationStarted, object: nil)
         })
         
         // start posting
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
+            
+            NSLog("start:4")
             
             var stop: Bool = false
 
