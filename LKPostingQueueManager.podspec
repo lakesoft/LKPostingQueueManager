@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "LKPostingQueueManager"
-  s.version          = "0.2.8"
+  s.version          = "0.2.9"
   s.summary          = "Queue manager for posting"
   s.description      = <<-DESC
   Queue manager for posting
