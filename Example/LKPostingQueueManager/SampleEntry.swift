@@ -12,7 +12,7 @@ import LKPostingQueueManager
 class SampleEntry: LKPostingEntry {
 
     override func cleanup() {
-        println("cleanup...")
+        print("cleanup...")
     }
     
 }

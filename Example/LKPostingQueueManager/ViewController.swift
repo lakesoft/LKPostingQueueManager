@@ -15,7 +15,7 @@ class ViewController: UIViewController {
         
         let r = arc4random() % 3
         if let entry = postingEntry as? SampleEntry {
-            println("Processing: \(entry.title)")
+            print("Processing: \(entry.title)")
             sleep(1)
             if r == 0 {
                 var err:NSError = NSError(domain: "error", code: 12, userInfo: [NSLocalizedDescriptionKey:"Local"])
@@ -29,7 +29,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
      
-        var appearance = LKPostingQueueManager.Appearance()
+        let appearance = LKPostingQueueManager.Appearance()
 //        appearance.backColor = UIColor.blackColor()
 //        appearance.barColor = UIColor.blackColor()
 //        appearance.titleColor = UIColor.whiteColor()
@@ -55,7 +55,7 @@ class ViewController: UIViewController {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "did:", name: kLKPostingQueueManagerNotificationFinished, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "did:", name: kLKPostingQueueManagerNotificationUpdatedEntries, object: nil)
         
-        println(postingQueueManager.postingEntries)
+        print(postingQueueManager.postingEntries)
 
         var entries = [SampleEntry]()
         for i in 0..<20 {
@@ -77,7 +77,7 @@ class ViewController: UIViewController {
     }
     
     func did(n:NSNotification) {
-        println(n)
+        print(n)
     }
 
     @IBAction func openView(sender: AnyObject) {

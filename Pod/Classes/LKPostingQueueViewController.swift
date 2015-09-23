@@ -9,8 +9,8 @@
 import UIKit
 import LKQueue
 
-public class LKPostingQueueViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIActionSheetDelegate{
-    
+public class LKPostingQueueViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+
     // models
     var selectedIndexPath: NSIndexPath!
     var postingQueueManager: LKPostingQueueManager!
@@ -33,10 +33,10 @@ public class LKPostingQueueViewController: UIViewController, UITableViewDataSour
             view.backgroundColor = color
         }
         if let color = appearance.tableColor {
-            tableView.backgroundColor = appearance.tableColor
+            tableView.backgroundColor = color
         }
         if let color = appearance.tableSeparatorColor {
-            tableView.separatorColor = appearance.tableSeparatorColor
+            tableView.separatorColor = color
         }
         
         if let color = appearance.titleColor {
@@ -93,7 +93,7 @@ public class LKPostingQueueViewController: UIViewController, UITableViewDataSour
         controller.postingQueueManager = postingQueueManager
     }
     
-    override public func shouldPerformSegueWithIdentifier(identifier: String?, sender: AnyObject?) -> Bool {
+    override public func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
         let indexPath = tableView.indexPathForCell(sender as! LKPostingQueueTableViewCell)!
         return postingQueueManager.hasLogExisted(indexPath.row)
     }
@@ -116,7 +116,7 @@ public class LKPostingQueueViewController: UIViewController, UITableViewDataSour
         }
         
         let queueEntry:LKQueueEntry = postingQueueManager.queue.entryAtIndex(indexPath.row)
-        let proccessing = (queueEntry.state.value == LKQueueEntryStateProcessing.value)
+        let proccessing = (queueEntry.state.rawValue == LKQueueEntryStateProcessing.rawValue)
         
         if (proccessing) {
             cell.accessoryType = UITableViewCellAccessoryType.None;
@@ -138,7 +138,7 @@ public class LKPostingQueueViewController: UIViewController, UITableViewDataSour
         }
         if let color = appearance.selectedCellColor {
             cell.selectedBackgroundView = UIView()
-            cell.selectedBackgroundView.backgroundColor = color
+            cell.selectedBackgroundView!.backgroundColor = color
         }
         if let color = appearance.cellColor {
             cell.backgroundColor = color
@@ -150,8 +150,28 @@ public class LKPostingQueueViewController: UIViewController, UITableViewDataSour
     public func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
             selectedIndexPath = indexPath
-            let actionSheet = UIActionSheet(title: NSLocalizedString("RemoveTitle", bundle:postingQueueManagerBundle(), comment:""), delegate: self, cancelButtonTitle: NSLocalizedString("Cancel", bundle:postingQueueManagerBundle(), comment:""), destructiveButtonTitle: NSLocalizedString("Remove", bundle:postingQueueManagerBundle(), comment:""))
-            actionSheet.showInView(view)
+            
+            let alertController = UIAlertController(title: NSLocalizedString("RemoveTitle", bundle:postingQueueManagerBundle(), comment:""), message: nil, preferredStyle: .Alert)
+
+            alertController.addAction(UIAlertAction(title: NSLocalizedString("Cancel", bundle: postingQueueManagerBundle(), comment:""), style: .Default, handler:nil))
+            
+            alertController.addAction(UIAlertAction(title: NSLocalizedString("Remove", bundle:postingQueueManagerBundle(), comment:""), style: .Default, handler: { (alertAction) -> Void in
+                tableView.editing = false
+                let queue = self.postingQueueManager.queue
+                if let queueEntry = queue.entryAtIndex(self.selectedIndexPath.row) {
+                    if let postingEntry = queueEntry.info as? LKPostingEntry {
+                        postingEntry.cleanup()
+                        queue.removeEntry(queueEntry)
+                        
+                        tableView.deleteRowsAtIndexPaths([self.selectedIndexPath], withRowAnimation: .Left)
+                        self.selectedIndexPath = nil
+                        
+                        NSNotificationCenter.defaultCenter().postNotificationName(kLKPostingQueueManagerNotificationUpdatedEntries, object: nil)
+                    }
+                }
+            }))
+            
+            presentViewController(alertController, animated: true, completion: nil)
         }
     }
     
@@ -215,27 +235,8 @@ public class LKPostingQueueViewController: UIViewController, UITableViewDataSour
     
     // MARK: - Privates (Action)
     func resume(sender:UIBarButtonItem) {
-        postingQueueManager.start(forced:true)
+        postingQueueManager.start(true)
         updateUI()
-    }
-    
-    // MARK: - UIActionSeetDelete
-    public func actionSheet(actionSheet: UIActionSheet, clickedButtonAtIndex buttonIndex: Int) {
-        tableView.editing = false
-        if actionSheet.cancelButtonIndex != buttonIndex {
-            let queue = postingQueueManager.queue
-            if let queueEntry = queue.entryAtIndex(selectedIndexPath.row) {
-                if let postingEntry = queueEntry.info as? LKPostingEntry {
-                    postingEntry.cleanup()
-                    queue.removeEntry(queueEntry)
-                    
-                    tableView.deleteRowsAtIndexPaths([selectedIndexPath], withRowAnimation: .Left)
-                    selectedIndexPath = nil
-                    
-                    NSNotificationCenter.defaultCenter().postNotificationName(kLKPostingQueueManagerNotificationUpdatedEntries, object: nil)
-                }
-            }
-        }
     }
     
     // MARK: - Actions

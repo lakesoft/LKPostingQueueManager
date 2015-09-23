@@ -9,6 +9,18 @@
 import UIKit
 import MessageUI
 
+extension String {
+    func stringByAppendingPathComponent(path: String) -> String {
+        return (self as NSString).stringByAppendingPathComponent(path)
+    }
+    var pathExtension: String {
+        return (self as NSString).pathExtension
+    }
+    var lastPathComponent: String {
+        return (self as NSString).lastPathComponent
+    }
+}
+
 class LKPostingQueueLogViewController: UIViewController, MFMailComposeViewControllerDelegate {
 
     @IBOutlet weak var textView: UITextView!
@@ -82,7 +94,7 @@ class LKPostingQueueLogViewController: UIViewController, MFMailComposeViewContro
             
             let controller = MFMailComposeViewController()
             controller.mailComposeDelegate = self
-            controller.setSubject(postingEntry.title)
+            controller.setSubject(postingEntry.title!)
             controller.setMessageBody("", isHTML: false)
 
             // TODO:
@@ -114,16 +126,16 @@ class LKPostingQueueLogViewController: UIViewController, MFMailComposeViewContro
     }
     
     // MARK: - MFMailComposeViewControllerDelegate
-    func mailComposeController(controller: MFMailComposeViewController!, didFinishWithResult result: MFMailComposeResult, error: NSError!) {
+    func mailComposeController(controller: MFMailComposeViewController, didFinishWithResult result: MFMailComposeResult, error: NSError?) {
         
-        switch result.value {
-        case MFMailComposeResultCancelled.value:
+        switch result.rawValue {
+        case MFMailComposeResultCancelled.rawValue:
             break
-        case MFMailComposeResultSaved.value:
+        case MFMailComposeResultSaved.rawValue:
             break
-        case MFMailComposeResultSent.value:
+        case MFMailComposeResultSent.rawValue:
             break
-        case MFMailComposeResultFailed.value:
+        case MFMailComposeResultFailed.rawValue:
             break
         default:
             break
