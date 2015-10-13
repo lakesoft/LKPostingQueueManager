@@ -39,6 +39,13 @@ public class LKPostingQueueManager: NSObject {
     // TODO: (2) エラーログ、２行目以降がタップしても反応しない
     // TODO: (2) 個別送信への対応
     
+    // 0.3.2: 2015-10-13 ↓修正（残：確認）
+    // ＊＊10/13 複数同時に　activeになっている原因を調査（インジゲータが全部くるくる回る
+    
+    // TODO: ネット接続時に自動的に再送信する（ON/OFF制御できるようにする）
+    // READMEを書くべし!!（自分のため）
+
+    
     //---------------
     // MARK: - Definitions
     //---------------
@@ -186,33 +193,42 @@ public class LKPostingQueueManager: NSObject {
                         processingIndex++
                     }
                     notify(kLKPostingQueueManagerNotificationWillPostEntry, index: processingIndex)
-                    dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                        NSNotificationCenter.defaultCenter().postNotificationName(kLKPostingQueueManagerNotificationWillPostEntry, object: processingIndex)
-                    })
+//                    dispatch_async(dispatch_get_main_queue(), { () -> Void in
+//                        NSNotificationCenter.defaultCenter().postNotificationName(kLKPostingQueueManagerNotificationWillPostEntry, object: processingIndex)
+//                    })
 
 
-                    let postingEntry = queueEntry.info as! LKPostingEntry
-                    self.handler(postingEntry,
-                        completion:{ ()->Void in
-                            postingEntry.cleanup()
-                            self.queue.changeEntry(queueEntry, toState: LKQueueEntryStateFinished)
-                            self.queue.removeEntry(queueEntry)
-                            notify(kLKPostingQueueManagerNotificationDidPostEntry, index: processingIndex)
-                            notify(kLKPostingQueueManagerNotificationUpdatedEntries)
-                        },
-                        failure:{ (error:NSError)->Void in
-                            NSLog("[ERROR] %@", error.description)
-                            queueEntry.addLog(error.description)
-                            self.queue.changeEntry(queueEntry, toState: LKQueueEntryStateSuspending)
-                            notify(kLKPostingQueueManagerNotificationFailed, index: processingIndex)
-                            dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                                NSNotificationCenter.defaultCenter().postNotificationName(kLKPostingQueueManagerNotificationFailed, object: processingIndex)
-                            })
-                            if self.runningMode == .StopWhenFailed {
-                                stop = true
+                    if let postingEntry = queueEntry.info as? LKPostingEntry {
+                        var wait:Bool = true
+                        self.handler(postingEntry,
+                            completion:{ ()->Void in
+                                postingEntry.cleanup()
+                                self.queue.changeEntry(queueEntry, toState: LKQueueEntryStateFinished)
+                                self.queue.removeEntry(queueEntry)
+                                notify(kLKPostingQueueManagerNotificationDidPostEntry, index: processingIndex)
+                                notify(kLKPostingQueueManagerNotificationUpdatedEntries)
+                                wait = false
+                            },
+                            failure:{ (error:NSError)->Void in
+                                NSLog("[ERROR] %@", error.description)
+                                queueEntry.addLog(error.description)
+                                self.queue.changeEntry(queueEntry, toState: LKQueueEntryStateSuspending)
+                                notify(kLKPostingQueueManagerNotificationFailed, index: processingIndex)
+                                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                                    NSNotificationCenter.defaultCenter().postNotificationName(kLKPostingQueueManagerNotificationFailed, object: processingIndex)
+                                })
+                                if self.runningMode == .StopWhenFailed {
+                                    stop = true
+                                }
+                                wait = false
                             }
+                        )
+                        while wait {
+                            NSRunLoop.currentRunLoop().runUntilDate(NSDate(timeIntervalSinceNow: 0.1))
                         }
-                    )
+                    } else {
+                        NSLog("[ERROR] queueEntry.info is not as LKPostingEntry")
+                    }
                 } else {
                     stop = true
                     break
