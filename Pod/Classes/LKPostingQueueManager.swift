@@ -1,3 +1,19 @@
+// backlog
+// - display error label
+// - send any queue
+
+// TODO:
+// シチュエーション
+// ・詳細を開いている間に、そのキューが送信対象となる
+// ・削除ボタンを開いている時に、そのキューが送信対象となる
+// → 送信対象になった時に下記を実施
+//    1. 削除ボタンを閉じる
+//    2. 詳細画面を閉じる
+// ・ネット接続時に自動的に再送信する（ON/OFF制御できるようにする）
+//
+// READMEを書くべし!!（自分のため）
+    
+    
 import Foundation
 import FBNetworkReachability
 import LKTaskCompletion
@@ -35,17 +51,6 @@ public class LKPostingQueueManager: NSObject {
     }
     public var appearance:Appearance = Appearance()
 
-    // TODO: エラー表示があった方がわかりやすい
-    // TODO: (2) エラーログ、２行目以降がタップしても反応しない
-    // TODO: (2) 個別送信への対応
-    
-    // 0.3.2: 2015-10-13 ↓修正（残：確認）
-    // ＊＊10/13 複数同時に　activeになっている原因を調査（インジゲータが全部くるくる回る
-    
-    // TODO: ネット接続時に自動的に再送信する（ON/OFF制御できるようにする）
-    // READMEを書くべし!!（自分のため）
-
-    
     //---------------
     // MARK: - Definitions
     //---------------
@@ -121,6 +126,13 @@ public class LKPostingQueueManager: NSObject {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "updatedNetwork:", name: FBNetworkReachabilityDidChangeNotification, object: nil)
         
         FBNetworkReachability.sharedInstance().startNotifier()
+        
+        let nc = NSNotificationCenter.defaultCenter()
+        nc.addObserver(self, selector: "updated:", name: kLKPostingQueueManagerNotificationUpdatedEntries, object: nil)
+    }
+    
+    func updated(notification:NSNotification) {
+        UIApplication.sharedApplication().applicationIconBadgeNumber = NSInteger(queue.count())
     }
 
     deinit {
@@ -128,6 +140,13 @@ public class LKPostingQueueManager: NSObject {
     }
     
     // MARK: API
+    public static func setup() {
+        let settings = UIUserNotificationSettings(
+            forTypes: UIUserNotificationType.Badge,
+            categories: nil)
+        UIApplication.sharedApplication().registerUserNotificationSettings(settings);
+    }
+
     public func addPostingEntries(postingEntries:[LKPostingEntry]) {
         for postingEntry in postingEntries {
             queue.addEntryWithInfo(postingEntry, tagName: nil)
@@ -211,7 +230,7 @@ public class LKPostingQueueManager: NSObject {
                             },
                             failure:{ (error:NSError)->Void in
                                 NSLog("[ERROR] %@", error.description)
-                                queueEntry.addLog(error.description)
+                                queueEntry.addLog(error.localizedDescription)
                                 self.queue.changeEntry(queueEntry, toState: LKQueueEntryStateSuspending)
                                 notify(kLKPostingQueueManagerNotificationFailed, index: processingIndex)
                                 dispatch_async(dispatch_get_main_queue(), { () -> Void in

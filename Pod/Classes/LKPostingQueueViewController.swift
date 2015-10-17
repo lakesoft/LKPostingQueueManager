@@ -186,7 +186,7 @@ public class LKPostingQueueViewController: UIViewController, UITableViewDataSour
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
     public func tableView(tableView: UITableView, shouldHighlightRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        return indexPath.row == 0 && postingQueueManager.hasLogExisted(indexPath.row)
+        return postingQueueManager.hasLogExisted(indexPath.row)
     }
     
     
