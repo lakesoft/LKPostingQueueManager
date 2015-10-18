@@ -225,6 +225,9 @@ public class LKPostingQueueViewController: UIViewController, UITableViewDataSour
         updateUI()
     }
     func started(notification:NSNotification) {
+        for cell in tableView.visibleCells {
+            cell.setEditing(false, animated: true)
+        }
         tableView.reloadData()
         updateUI()
     }

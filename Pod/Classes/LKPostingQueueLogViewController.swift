@@ -51,8 +51,16 @@ class LKPostingQueueLogViewController: UIViewController, MFMailComposeViewContro
         setupAppearance()
         textView.text = postingQueueManager.log(index)
         title = NSLocalizedString("LogTitle", bundle:postingQueueManagerBundle(), comment: "")
+        
+        let nc = NSNotificationCenter.defaultCenter()
+        nc.addObserver(self, selector: "started:", name: kLKPostingQueueManagerNotificationStarted, object: nil)
+
     }
     
+    func started(notification:NSNotification) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
