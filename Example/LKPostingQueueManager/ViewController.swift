@@ -30,40 +30,46 @@ class ViewController: UIViewController {
         super.viewDidLoad()
      
         let appearance = LKPostingQueueManager.Appearance()
-//        appearance.backColor = UIColor.blackColor()
-//        appearance.barColor = UIColor.blackColor()
-//        appearance.titleColor = UIColor.whiteColor()
-//        appearance.buttonColor = UIColor.whiteColor()
-//        appearance.textColor = UIColor.whiteColor()
-//        appearance.cellColor = UIColor.clearColor()
-//        appearance.cellTextColor = UIColor.lightGrayColor()
-//        appearance.selectedCellColor = UIColor.blueColor()
-//        appearance.tableColor = UIColor.blackColor()
-//        appearance.tableSeparatorColor = UIColor.darkGrayColor()
-        appearance.backColor = UIColor(red: 0.5, green: 0.5, blue: 0.0, alpha: 0.5)
-        appearance.barColor = UIColor(red: 0.5, green: 0.5, blue: 0.0, alpha: 0.75)
+        appearance.backColor = UIColor.blackColor()
+        appearance.barColor = UIColor.blackColor()
         appearance.titleColor = UIColor.whiteColor()
         appearance.buttonColor = UIColor.whiteColor()
         appearance.textColor = UIColor.whiteColor()
-        appearance.cellColor = UIColor(red: 0.5, green: 0.5, blue: 0.0, alpha: 0.5)
+        appearance.cellColor = UIColor.clearColor()
         appearance.cellTextColor = UIColor.whiteColor()
-        appearance.selectedCellColor = UIColor(red: 0.5, green: 0.5, blue: 0.0, alpha: 0.75)
+        appearance.cellDetailTextColor = UIColor.lightGrayColor()
+        appearance.selectedCellColor = UIColor.blueColor()
         appearance.tableColor = UIColor.blackColor()
-        appearance.tableSeparatorColor = UIColor.darkGrayColor()
+//        appearance.tableSeparatorColor = UIColor.darkGrayColor()
+//        appearance.backColor = UIColor(red: 0.5, green: 0.5, blue: 0.0, alpha: 0.5)
+//        appearance.barColor = UIColor(red: 0.5, green: 0.5, blue: 0.0, alpha: 0.75)
+//        appearance.titleColor = UIColor.whiteColor()
+//        appearance.buttonColor = UIColor.whiteColor()
+//        appearance.textColor = UIColor.whiteColor()
+//        appearance.cellColor = UIColor(red: 0.5, green: 0.5, blue: 0.0, alpha: 0.5)
+//        appearance.cellTextColor = UIColor.whiteColor()
+//        appearance.selectedCellColor = UIColor(red: 0.5, green: 0.5, blue: 0.0, alpha: 0.75)
+//        appearance.tableColor = UIColor.blackColor()
+//        appearance.tableSeparatorColor = UIColor.darkGrayColor()
         postingQueueManager.appearance = appearance
 
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "did:", name: kLKPostingQueueManagerNotificationFinished, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "did:", name: kLKPostingQueueManagerNotificationUpdatedEntries, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.did(_:)), name: kLKPostingQueueManagerNotificationFinished, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.did(_:)), name: kLKPostingQueueManagerNotificationUpdatedEntries, object: nil)
         
         print(postingQueueManager.postingEntries)
-
+        
         var entries = [SampleEntry]()
-        for i in 0..<20 {
+        for i in 0..<5 {
             let entry = SampleEntry()
             if i == 0 {
                 entry.size = 10000
             }
             entry.title = NSString(format: "entry-%@-%02d", NSDate().description, i) as String
+            entry.subTitle = "Sub Title .."
+            
+            if let path = NSBundle.mainBundle().pathForResource("test", ofType: "jpg") {
+                entry.imagePath = path
+            }
             entries += [entry]
         }
         postingQueueManager.addPostingEntries(entries)

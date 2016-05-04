@@ -33,3 +33,6 @@
 "Mode.Manual" = "手動";
 "Mode.Wifi" = "Wifi時のみ";
 "Mode.Auto" = "自動";
+
+"Empty.Title" = "送信待ちはありません";
+

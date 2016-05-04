@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4eF-Zd-762">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4eF-Zd-762">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -17,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="kja-L4-3XX">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="64" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="kja-L4-3XX">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -51,12 +52,45 @@
                                     <constraint firstAttribute="height" constant="44" id="Qn6-E6-Gea"/>
                                 </constraints>
                             </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X3B-IB-U6o">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WWm-G3-LL7">
+                                        <rect key="frame" x="180" y="228" width="240" height="100"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="IconEmpty.png" translatesAutoresizingMaskIntoConstraints="NO" id="qsz-bh-usJ">
+                                                <rect key="frame" x="88" y="36" width="64" height="64"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="送信待ちはありません" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kda-xW-67F">
+                                                <rect key="frame" x="8" y="15" width="224" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="240" id="BUX-jM-jOt"/>
+                                            <constraint firstAttribute="height" constant="100" id="aSo-rP-YoT"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="WWm-G3-LL7" firstAttribute="centerX" secondItem="X3B-IB-U6o" secondAttribute="centerX" id="6tp-4B-FC0"/>
+                                    <constraint firstItem="WWm-G3-LL7" firstAttribute="centerY" secondItem="X3B-IB-U6o" secondAttribute="centerY" id="Bq5-QY-eQp"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="X3B-IB-U6o" secondAttribute="trailing" id="CUp-eR-0Ca"/>
                             <constraint firstAttribute="trailing" secondItem="kja-L4-3XX" secondAttribute="trailing" id="EHd-cU-OoF"/>
+                            <constraint firstItem="X3B-IB-U6o" firstAttribute="leading" secondItem="UYK-m5-4e4" secondAttribute="leading" id="FLZ-bN-hMu"/>
                             <constraint firstItem="kja-L4-3XX" firstAttribute="top" secondItem="UYK-m5-4e4" secondAttribute="top" id="Hsb-Yb-v9b"/>
                             <constraint firstItem="COu-Qz-hwr" firstAttribute="top" secondItem="kja-L4-3XX" secondAttribute="bottom" id="Mne-Cl-nAu"/>
+                            <constraint firstItem="X3B-IB-U6o" firstAttribute="top" secondItem="UYK-m5-4e4" secondAttribute="top" id="XZA-dA-8lY"/>
+                            <constraint firstItem="gFx-WO-QhO" firstAttribute="top" secondItem="X3B-IB-U6o" secondAttribute="bottom" id="eOT-AN-QZa"/>
                             <constraint firstAttribute="trailing" secondItem="gFx-WO-QhO" secondAttribute="trailing" id="eU7-E7-MSC"/>
                             <constraint firstItem="gFx-WO-QhO" firstAttribute="leading" secondItem="UYK-m5-4e4" secondAttribute="leading" id="lw6-55-DEl"/>
                             <constraint firstItem="kja-L4-3XX" firstAttribute="leading" secondItem="UYK-m5-4e4" secondAttribute="leading" id="q5C-tb-rRT"/>
@@ -64,6 +98,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="emptyLabel" destination="Kda-xW-67F" id="AJs-5G-0UM"/>
+                        <outlet property="emptyView" destination="X3B-IB-U6o" id="0RF-uF-eBy"/>
                         <outlet property="modeSegment" destination="iSe-TY-Uq7" id="krb-O6-cLx"/>
                         <outlet property="tableView" destination="kja-L4-3XX" id="hNh-8e-ge2"/>
                         <outlet property="toolbarView" destination="gFx-WO-QhO" id="xUo-k3-TX1"/>
@@ -83,11 +119,11 @@
                         <viewControllerLayoutGuide type="bottom" id="Qui-4G-rlD"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="0tf-Hg-jhb">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vj0-lD-xIb">
-                                <rect key="frame" x="0.0" y="492" width="600" height="44"/>
+                                <rect key="frame" x="4" y="492" width="592" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="iJN-ol-ezV"/>
                                 </constraints>
@@ -138,4 +174,7 @@
             <point key="canvasLocation" x="913" y="440"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="IconEmpty.png" width="64" height="64"/>
+    </resources>
 </document>

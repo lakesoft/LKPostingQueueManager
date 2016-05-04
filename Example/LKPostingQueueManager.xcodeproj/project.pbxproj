@@ -15,6 +15,7 @@
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		7B79901B1744F414732E0FAA /* Pods_LKPostingQueueManager_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6312D7F2E88E475F400AF57 /* Pods_LKPostingQueueManager_Tests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		BC8CD45D1B19AA4500EEBC61 /* SampleEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8CD45C1B19AA4500EEBC61 /* SampleEntry.swift */; };
+		BCEE23741CD98A2C00B0A3EB /* test.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BCEE23731CD98A2C00B0A3EB /* test.jpg */; };
 		DF1ECB90E5EB0E0C26743B14 /* Pods_LKPostingQueueManager_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7216604F27DBCDC40CF9F1E8 /* Pods_LKPostingQueueManager_Example.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -46,6 +47,8 @@
 		7216604F27DBCDC40CF9F1E8 /* Pods_LKPostingQueueManager_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LKPostingQueueManager_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93486456CBF2578D9025F884 /* Pods-LKPostingQueueManager_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LKPostingQueueManager_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LKPostingQueueManager_Tests/Pods-LKPostingQueueManager_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		BC8CD45C1B19AA4500EEBC61 /* SampleEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleEntry.swift; sourceTree = "<group>"; };
+		BCEE23731CD98A2C00B0A3EB /* test.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test.jpg; sourceTree = "<group>"; };
+		BCEE23761CD990B600B0A3EB /* IconEmpty.pxm */ = {isa = PBXFileReference; lastKnownFileType = file; path = IconEmpty.pxm; sourceTree = "<group>"; };
 		D6312D7F2E88E475F400AF57 /* Pods_LKPostingQueueManager_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LKPostingQueueManager_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFAA2AD0DEEB9D8BBD2BD75F /* Pods-LKPostingQueueManager_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LKPostingQueueManager_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LKPostingQueueManager_Tests/Pods-LKPostingQueueManager_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		EFB6C883294E7669AC570B70 /* LKPostingQueueManager.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LKPostingQueueManager.podspec; path = ../LKPostingQueueManager.podspec; sourceTree = "<group>"; };
@@ -74,6 +77,7 @@
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
+				BCEE23751CD990AA00B0A3EB /* Resources */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for LKPostingQueueManager */,
 				607FACE81AFB9204008FA782 /* Tests */,
@@ -111,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				607FACD41AFB9204008FA782 /* Info.plist */,
+				BCEE23731CD98A2C00B0A3EB /* test.jpg */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -160,6 +165,14 @@
 				D6312D7F2E88E475F400AF57 /* Pods_LKPostingQueueManager_Tests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BCEE23751CD990AA00B0A3EB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BCEE23761CD990B600B0A3EB /* IconEmpty.pxm */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,6 +266,7 @@
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
+				BCEE23741CD98A2C00B0A3EB /* test.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

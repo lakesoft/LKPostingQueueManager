@@ -25,6 +25,10 @@ public class LKPostingQueueViewController: UIViewController, UITableViewDataSour
     @IBOutlet weak var toolbarView: UIView!
     @IBOutlet weak var modeSegment: UISegmentedControl!
     
+    // empty view
+    @IBOutlet weak var emptyView: UIView!
+    @IBOutlet weak var emptyLabel: UILabel!
+    
 
     func setupAppearance() {
         let appearance = postingQueueManager.appearance
@@ -41,6 +45,7 @@ public class LKPostingQueueViewController: UIViewController, UITableViewDataSour
         
         if let color = appearance.titleColor {
             LKPostingQueueTableViewCell.appearance().tintColor = color
+            emptyLabel.textColor = color
         }
         
         if let color = appearance.barColor {
@@ -77,8 +82,13 @@ public class LKPostingQueueViewController: UIViewController, UITableViewDataSour
         modeSegment.setTitle(LKPostingQueueTransmitMode.Manual.description(), forSegmentAtIndex: 2)
         modeSegment.selectedSegmentIndex = LKPostingQueueTransmitMode.defaultMode().rawValue
         
+        emptyLabel.text = NSLocalizedString("Empty.Title", bundle:postingQueueManagerBundle(), comment: "")
 
         setupAppearance()
+        updateUI()
+    }
+    
+    override public func viewWillAppear(animated: Bool) {
         updateUI()
     }
     
@@ -104,15 +114,26 @@ public class LKPostingQueueViewController: UIViewController, UITableViewDataSour
         return postingQueueManager.count
     }
     
+    
     public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("LKPostingQueueTableViewCell", forIndexPath: indexPath) as! LKPostingQueueTableViewCell
         
         let postingEntry = postingQueueManager.postingEntries[indexPath.row]
         cell.label.text = postingEntry.title
+        cell.detailLabel.text = postingEntry.subTitle
         if postingEntry.size == 0 {
             cell.sizelabel.text = ""
         } else {
             cell.sizelabel.text = NSByteCountFormatter.stringFromByteCount(postingEntry.size, countStyle: .File)
+        }
+        if let imagePath = postingEntry.imagePath {
+            if let image = UIImage(contentsOfFile: imagePath) {
+                cell.backImageView.image = image
+            } else {
+                cell.backImageView.image = nil
+            }
+        } else {
+            cell.backImageView.image = nil
         }
         
         let queueEntry:LKQueueEntry = postingQueueManager.queue.entryAtIndex(indexPath.row)
@@ -136,6 +157,10 @@ public class LKPostingQueueViewController: UIViewController, UITableViewDataSour
             cell.sizelabel?.textColor = color
             cell.indicator.color = color
         }
+        if let color = appearance.cellDetailTextColor {
+            cell.detailLabel?.textColor = color
+        }
+
         if let color = appearance.selectedCellColor {
             cell.selectedBackgroundView = UIView()
             cell.selectedBackgroundView!.backgroundColor = color
@@ -193,11 +218,13 @@ public class LKPostingQueueViewController: UIViewController, UITableViewDataSour
     // MARK: - Privates (UI)
     func updateUI() {
         rightButtonItem.enabled = !postingQueueManager.running && postingQueueManager.count > 0
+        emptyView.hidden = postingQueueManager.count > 0
     }
     
     // MARK: - Privates (Notification)
     func updated(notification:NSNotification) {
         tableView.reloadData()
+        updateUI()
     }
     func willPost(notification:NSNotification) {
         if let index = notification.object as? Int {

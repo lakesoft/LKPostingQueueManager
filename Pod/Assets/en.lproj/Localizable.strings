@@ -33,3 +33,6 @@
 "Mode.Manual" = "Manual";
 "Mode.Wifi" = "Wifi Only";
 "Mode.Auto" = "Auto";
+
+"Empty.Title" = "There is no entry to send";
+

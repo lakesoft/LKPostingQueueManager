@@ -72,6 +72,8 @@
 		BC19CF0D1B378A1E00F7CE2B /* LKPostingQueueTransmitMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC19CF0C1B378A1E00F7CE2B /* LKPostingQueueTransmitMode.swift */; };
 		BC19CF0E1B378A1E00F7CE2B /* LKPostingQueueTransmitMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC19CF0C1B378A1E00F7CE2B /* LKPostingQueueTransmitMode.swift */; };
 		BC459A1EE5C2F3ECD7B76A0F /* en.lproj in Resources */ = {isa = PBXBuildFile; fileRef = ED320F54B4A4CB5CEC0530E5 /* en.lproj */; };
+		BCEE237C1CD9917600B0A3EB /* IconEmpty@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCEE237B1CD9917600B0A3EB /* IconEmpty@3x.png */; };
+		BCEE237D1CD9917600B0A3EB /* IconEmpty@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCEE237B1CD9917600B0A3EB /* IconEmpty@3x.png */; };
 		BE0B7425A2EBEEF2E5CFB569 /* LKPostingQueueManager.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61AA182D7EF7D198DB4302D5 /* LKPostingQueueManager.storyboard */; };
 		BE5C530E73C337B09261D7D3 /* Pods-LKPostingQueueManager_Tests-FBNetworkReachability-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 915A6C8F6F9E882D1C54E3BD /* Pods-LKPostingQueueManager_Tests-FBNetworkReachability-dummy.m */; };
 		BF0D62AFABC56A3439315F83 /* LKQueueManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C0C333F34167A8FA79226F /* LKQueueManager.m */; };
@@ -350,6 +352,7 @@
 		B75F26784862AB5B4D7FDECC /* FBNetworkReachability.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FBNetworkReachability.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B777443288E83980E1427A3A /* Pods-LKPostingQueueManager_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LKPostingQueueManager_Tests-resources.sh"; sourceTree = "<group>"; };
 		BC19CF0C1B378A1E00F7CE2B /* LKPostingQueueTransmitMode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LKPostingQueueTransmitMode.swift; sourceTree = "<group>"; };
+		BCEE237B1CD9917600B0A3EB /* IconEmpty@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "IconEmpty@3x.png"; sourceTree = "<group>"; };
 		BD2DACB84E60B0F69F3579B8 /* LKQueue.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LKQueue.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE1B45A8F997B8B736C4C3DC /* Pods-LKPostingQueueManager_Example-FBNetworkReachability.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-LKPostingQueueManager_Example-FBNetworkReachability.modulemap"; sourceTree = "<group>"; };
 		C07E116852B55377B2CEB44A /* Pods_LKPostingQueueManager_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LKPostingQueueManager_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -634,6 +637,7 @@
 		77EFEFC8DE2A1A54D0AA8E9B /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				BCEE237B1CD9917600B0A3EB /* IconEmpty@3x.png */,
 				61AA182D7EF7D198DB4302D5 /* LKPostingQueueManager.storyboard */,
 				69CF5DA19290AEB55FCA02CC /* LKPostingQueueTableViewCell.xib */,
 				ED320F54B4A4CB5CEC0530E5 /* en.lproj */,
@@ -1270,6 +1274,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCEE237D1CD9917600B0A3EB /* IconEmpty@3x.png in Resources */,
 				B93743A3FDC29FC05DB6149F /* LKPostingQueueManager.storyboard in Resources */,
 				113C74DC99C0980E11FD0756 /* LKPostingQueueTableViewCell.xib in Resources */,
 				BC459A1EE5C2F3ECD7B76A0F /* en.lproj in Resources */,
@@ -1281,6 +1286,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCEE237C1CD9917600B0A3EB /* IconEmpty@3x.png in Resources */,
 				BE0B7425A2EBEEF2E5CFB569 /* LKPostingQueueManager.storyboard in Resources */,
 				9E036F7C26320813021A764D /* LKPostingQueueTableViewCell.xib in Resources */,
 				749C2A5097F6E320FC1E4802 /* en.lproj in Resources */,

@@ -44,6 +44,7 @@ public class LKPostingQueueManager: NSObject {
         public var tableSeparatorColor:UIColor?
         public var cellColor:UIColor?
         public var cellTextColor:UIColor?
+        public var cellDetailTextColor:UIColor?
         public var selectedCellColor:UIColor?
         
         public init() {
@@ -271,7 +272,23 @@ public class LKPostingQueueManager: NSObject {
     
     // MARK: Privates (Notification)
     func updatedNetwork(notification:NSNotification) {
-        NSLog("[INFO] network changed: %@", notification)
+        print("[INFO] network changed:\(notification.object)")
+
+        if let r = notification.object as? FBNetworkReachability {
+            let mode = LKPostingQueueTransmitMode.defaultMode()
+            switch r.connectionMode {
+            case .ReachableWiFi:
+                if mode == .Wifi || mode == .Auto {
+                    start()
+                }
+            case .ReachableWWAN:
+                if mode == .Auto {
+                    start()
+                }
+            default:
+                break
+            }
+        }
     }
     
     // MARK: GUI
