@@ -34,5 +34,6 @@
 "Mode.Wifi" = "Wifi Only";
 "Mode.Auto" = "Auto";
 
+"Cell.NoTitle" = "No title";
 "Empty.Title" = "There is no entry to send";
 

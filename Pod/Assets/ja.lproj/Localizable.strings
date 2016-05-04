@@ -34,5 +34,6 @@
 "Mode.Wifi" = "Wifi時のみ";
 "Mode.Auto" = "自動";
 
+"Cell.NoTitle" = "無題";
 "Empty.Title" = "送信待ちはありません";
 

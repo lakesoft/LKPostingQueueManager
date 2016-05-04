@@ -119,7 +119,11 @@ public class LKPostingQueueViewController: UIViewController, UITableViewDataSour
         let cell = tableView.dequeueReusableCellWithIdentifier("LKPostingQueueTableViewCell", forIndexPath: indexPath) as! LKPostingQueueTableViewCell
         
         let postingEntry = postingQueueManager.postingEntries[indexPath.row]
-        cell.label.text = postingEntry.title
+        if let title = postingEntry.title {
+            cell.label.text = title
+        } else {
+            cell.label.text = NSLocalizedString("Cell.NoTitle", bundle:postingQueueManagerBundle(), comment:"")
+        }
         cell.detailLabel.text = postingEntry.subTitle
         if postingEntry.size == 0 {
             cell.sizelabel.text = ""

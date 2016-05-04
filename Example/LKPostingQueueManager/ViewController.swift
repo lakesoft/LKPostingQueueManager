@@ -64,7 +64,7 @@ class ViewController: UIViewController {
             if i == 0 {
                 entry.size = 10000
             }
-            entry.title = NSString(format: "entry-%@-%02d", NSDate().description, i) as String
+//            entry.title = NSString(format: "entry-%@-%02d", NSDate().description, i) as String
             entry.subTitle = "Sub Title .."
             
             if let path = NSBundle.mainBundle().pathForResource("test", ofType: "jpg") {
