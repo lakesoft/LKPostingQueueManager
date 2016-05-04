@@ -28,14 +28,14 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="TYc-n0-5mn">
-                        <rect key="frame" x="534" y="12" width="20" height="20"/>
+                        <rect key="frame" x="534" y="22" width="20" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="1mm-Oz-3vo"/>
                             <constraint firstAttribute="width" constant="20" id="UEX-rM-gUn"/>
                         </constraints>
                     </activityIndicatorView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="2xr-hv-eHG">
-                        <rect key="frame" x="464" y="11" width="60" height="21"/>
+                        <rect key="frame" x="464" y="21" width="60" height="21"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="60" id="cFf-ak-pon"/>
                             <constraint firstAttribute="height" constant="21" id="hkU-t2-kmQ"/>
@@ -63,8 +63,8 @@
                     <constraint firstItem="TYc-n0-5mn" firstAttribute="leading" secondItem="cEw-pr-1S5" secondAttribute="trailing" constant="70" id="MAO-Rr-81w"/>
                     <constraint firstItem="4hL-hV-3cZ" firstAttribute="centerY" secondItem="gnL-Xw-Vx1" secondAttribute="centerY" constant="13" id="NIj-RR-Vyz"/>
                     <constraint firstItem="cEw-pr-1S5" firstAttribute="leading" secondItem="gnL-Xw-Vx1" secondAttribute="leading" constant="20" id="VEZ-jt-NSf"/>
-                    <constraint firstAttribute="centerY" secondItem="TYc-n0-5mn" secondAttribute="centerY" constant="10" id="eQ1-az-46J"/>
-                    <constraint firstAttribute="centerY" secondItem="2xr-hv-eHG" secondAttribute="centerY" constant="10" id="jc4-wl-VGe"/>
+                    <constraint firstAttribute="centerY" secondItem="TYc-n0-5mn" secondAttribute="centerY" id="eQ1-az-46J"/>
+                    <constraint firstAttribute="centerY" secondItem="2xr-hv-eHG" secondAttribute="centerY" id="jc4-wl-VGe"/>
                     <constraint firstItem="ZCX-p4-4Ee" firstAttribute="top" secondItem="gnL-Xw-Vx1" secondAttribute="top" id="mfm-ue-GK0"/>
                     <constraint firstItem="ZCX-p4-4Ee" firstAttribute="leading" secondItem="gnL-Xw-Vx1" secondAttribute="leading" id="pFP-6a-zxr"/>
                     <constraint firstItem="TYc-n0-5mn" firstAttribute="leading" secondItem="4hL-hV-3cZ" secondAttribute="trailing" constant="70" id="usN-qo-Cko"/>
