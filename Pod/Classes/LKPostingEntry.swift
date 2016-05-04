@@ -14,7 +14,7 @@ public class LKPostingEntry: LKCodingObject {
     public var title: String?
     public var subTitle: String?
     public var size: Int64 = 0
-    public var imagePath: String?
+    public var backImagePath: String?
 
     public func cleanup() {
         // should be overridden

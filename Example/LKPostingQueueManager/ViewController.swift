@@ -68,7 +68,7 @@ class ViewController: UIViewController {
             entry.subTitle = "Sub Title .."
             
             if let path = NSBundle.mainBundle().pathForResource("test", ofType: "jpg") {
-                entry.imagePath = path
+                entry.backImagePath = path
             }
             entries += [entry]
         }

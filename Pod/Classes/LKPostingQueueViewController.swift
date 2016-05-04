@@ -130,8 +130,8 @@ public class LKPostingQueueViewController: UIViewController, UITableViewDataSour
         } else {
             cell.sizelabel.text = NSByteCountFormatter.stringFromByteCount(postingEntry.size, countStyle: .File)
         }
-        if let imagePath = postingEntry.imagePath {
-            if let image = UIImage(contentsOfFile: imagePath) {
+        if let backImagePath = postingEntry.backImagePath {
+            if let image = UIImage(contentsOfFile: backImagePath) {
                 cell.backImageView.image = image
             } else {
                 cell.backImageView.image = nil
