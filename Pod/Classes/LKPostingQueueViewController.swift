@@ -269,7 +269,7 @@ public class LKPostingQueueViewController: UIViewController, UITableViewDataSour
     
     // MARK: - Privates (Action)
     func resume(sender:UIBarButtonItem) {
-        postingQueueManager.start(true)
+        postingQueueManager.resume(true)
         updateUI()
     }
     

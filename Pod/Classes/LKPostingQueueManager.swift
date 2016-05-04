@@ -58,9 +58,17 @@ public class LKPostingQueueManager: NSObject {
     public enum RunningMode {
         case SkipFailedEntry, StopWhenFailed
     }
+    public enum State {
+        case Operating, Stopping
+    }
     
     // MARK: Members
     public var runningMode: RunningMode = .SkipFailedEntry
+
+    private var _state: State = .Stopping
+    public var state: State {
+        return _state
+    }
 
     private var _running: Bool = false
     public var running: Bool {
@@ -179,7 +187,20 @@ public class LKPostingQueueManager: NSObject {
         return false;
     }
     
-    public func start(forced:Bool=false) {
+    public func start() {
+        _state = .Operating
+        resume()
+    }
+    public func stop() {
+        _state = .Stopping
+    }
+    
+    public func resume(forced:Bool=false) {
+        
+        // checking state
+        if _state == .Stopping {
+            return
+        }
         
         // cheking status
         if queue.count() == 0 || running || !isContinute(forced) {
@@ -279,11 +300,11 @@ public class LKPostingQueueManager: NSObject {
             switch r.connectionMode {
             case .ReachableWiFi:
                 if mode == .Wifi || mode == .Auto {
-                    start()
+                    resume()
                 }
             case .ReachableWWAN:
                 if mode == .Auto {
-                    start()
+                    resume()
                 }
             default:
                 break
