@@ -86,6 +86,8 @@ public class LKPostingQueueManager: NSObject {
         }
     }
     
+    public var toolbarHidden: Bool = false
+    
     public var postingEntries:[LKPostingEntry] {
         var postingEntries = [LKPostingEntry]()
         for queueEntry in queue.entries() {

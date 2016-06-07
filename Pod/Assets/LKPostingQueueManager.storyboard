@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4eF-Zd-762">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4eF-Zd-762">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -102,6 +102,7 @@
                         <outlet property="emptyView" destination="X3B-IB-U6o" id="0RF-uF-eBy"/>
                         <outlet property="modeSegment" destination="iSe-TY-Uq7" id="krb-O6-cLx"/>
                         <outlet property="tableView" destination="kja-L4-3XX" id="hNh-8e-ge2"/>
+                        <outlet property="toolbarHeightCOnstraint" destination="Qn6-E6-Gea" id="eFh-Cd-jaB"/>
                         <outlet property="toolbarView" destination="gFx-WO-QhO" id="xUo-k3-TX1"/>
                         <segue destination="RYv-Ox-jlM" kind="show" identifier="LKPostingQueueLogViewController" id="aKI-AK-QaI"/>
                     </connections>

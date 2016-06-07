@@ -75,6 +75,8 @@ class ViewController: UIViewController {
         postingQueueManager.addPostingEntries(entries)
 //        postingQueueManager.runningMode = .StopWhenFailed
         postingQueueManager.start()
+        
+        postingQueueManager.toolbarHidden = true
     }
 
     override func didReceiveMemoryWarning() {

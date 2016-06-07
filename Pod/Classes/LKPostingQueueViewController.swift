@@ -24,6 +24,7 @@ public class LKPostingQueueViewController: UIViewController, UITableViewDataSour
     // tool bar
     @IBOutlet weak var toolbarView: UIView!
     @IBOutlet weak var modeSegment: UISegmentedControl!
+    @IBOutlet weak var toolbarHeightCOnstraint: NSLayoutConstraint!
     
     // empty view
     @IBOutlet weak var emptyView: UIView!
@@ -64,6 +65,11 @@ public class LKPostingQueueViewController: UIViewController, UITableViewDataSour
         title = NSLocalizedString("ListTitle", bundle:postingQueueManagerBundle(), comment:"")
         
         tableView.registerNib(UINib(nibName: "LKPostingQueueTableViewCell", bundle: postingQueueManagerBundle()), forCellReuseIdentifier: "LKPostingQueueTableViewCell")
+        
+        
+        toolbarHeightCOnstraint.constant = postingQueueManager.toolbarHidden ? 0.0 : 44.0
+        toolbarView.hidden = postingQueueManager.toolbarHidden
+        view.layoutIfNeeded()
         
         let nc = NSNotificationCenter.defaultCenter()
         nc.addObserver(self, selector: "updated:", name: kLKPostingQueueManagerNotificationUpdatedEntries, object: nil)
