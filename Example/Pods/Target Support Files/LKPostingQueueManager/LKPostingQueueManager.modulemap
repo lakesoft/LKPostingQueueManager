@@ -1,0 +1,6 @@
+framework module LKPostingQueueManager {
+  umbrella header "LKPostingQueueManager-umbrella.h"
+
+  export *
+  module * { export * }
+}

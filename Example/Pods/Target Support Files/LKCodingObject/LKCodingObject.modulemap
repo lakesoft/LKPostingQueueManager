@@ -1,0 +1,6 @@
+framework module LKCodingObject {
+  umbrella header "LKCodingObject-umbrella.h"
+
+  export *
+  module * { export * }
+}

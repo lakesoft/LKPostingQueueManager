@@ -1,8 +1,8 @@
 {
   "name": "LKPostingQueueManager",
-  "version": "0.1.6",
+  "version": "0.4.5",
   "summary": "Queue manager for posting",
-  "description": "  Queue manager for posting\n",
+  "description": "Queue manager for posting",
   "homepage": "https://github.com/lakesoft/LKPostingQueueManager",
   "license": "MIT",
   "authors": {
@@ -10,10 +10,10 @@
   },
   "source": {
     "git": "https://github.com/lakesoft/LKPostingQueueManager.git",
-    "tag": "0.1.6"
+    "tag": "0.4.5"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "9.0"
   },
   "requires_arc": true,
   "source_files": "Pod/Classes/**/*",

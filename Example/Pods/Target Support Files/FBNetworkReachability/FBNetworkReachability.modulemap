@@ -1,0 +1,6 @@
+framework module FBNetworkReachability {
+  umbrella header "FBNetworkReachability-umbrella.h"
+
+  export *
+  module * { export * }
+}

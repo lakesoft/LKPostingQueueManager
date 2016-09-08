@@ -11,18 +11,29 @@ import LKPostingQueueManager
 
 class ViewController: UIViewController {
     
-    let postingQueueManager = LKPostingQueueManager { (postingEntry, completion, failure) -> Void in
+    let postingQueueManager = LKPostingQueueManager { (postingEntries, completion, failure) -> Void in
         
+        sleep(1)
+
         let r = arc4random() % 3
-        if let entry = postingEntry as? SampleEntry {
-            print("Processing: \(entry.title)")
-            sleep(1)
-            if r == 0 {
-                var err:NSError = NSError(domain: "error", code: 12, userInfo: [NSLocalizedDescriptionKey:"Local"])
-                failure(err)
-            } else {
-                completion()
+        if r == 0 {
+            var err:NSError = NSError(domain: "error", code: 12, userInfo: [NSLocalizedDescriptionKey:"Local"])
+            failure(err)
+            
+        } else {
+            var skippedPostingEntries = [LKPostingEntry]()
+            var completed:Int = 0
+            postingEntries.forEach { (postingEntry) in
+                if let postingEntry = postingEntry as? SampleEntry {
+                    if r == 1 {
+                        skippedPostingEntries += [postingEntry]
+                    } else {
+                        completed += 1
+                    }
+                }
             }
+            print("---- processed: \(completed)/\(postingEntries.count)")
+            completion(skippedPostingEntries)
         }
     }
 
@@ -59,12 +70,12 @@ class ViewController: UIViewController {
         print(postingQueueManager.postingEntries)
         
         var entries = [SampleEntry]()
-        for i in 0..<5 {
+        for i in 0..<15 {
             let entry = SampleEntry()
             if i == 0 {
                 entry.size = 10000
             }
-//            entry.title = NSString(format: "entry-%@-%02d", NSDate().description, i) as String
+            entry.title = NSString(format: "entry-%@-%02d", NSDate().description, i) as String
             entry.subTitle = "Sub Title .."
             
             if let path = NSBundle.mainBundle().pathForResource("test", ofType: "jpg") {
@@ -72,6 +83,7 @@ class ViewController: UIViewController {
             }
             entries += [entry]
         }
+        postingQueueManager.processingUnit = 3
         postingQueueManager.addPostingEntries(entries)
 //        postingQueueManager.runningMode = .StopWhenFailed
         postingQueueManager.start()

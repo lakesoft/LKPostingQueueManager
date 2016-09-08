@@ -1,5 +1,0 @@
-#import <Foundation/Foundation.h>
-@interface PodsDummy_Pods_LKPostingQueueManager_Example_LKTaskCompletion : NSObject
-@end
-@implementation PodsDummy_Pods_LKPostingQueueManager_Example_LKTaskCompletion
-@end

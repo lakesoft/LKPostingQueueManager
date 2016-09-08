@@ -73,9 +73,9 @@ public class LKPostingQueueViewController: UIViewController, UITableViewDataSour
         
         let nc = NSNotificationCenter.defaultCenter()
         nc.addObserver(self, selector: "updated:", name: kLKPostingQueueManagerNotificationUpdatedEntries, object: nil)
-        nc.addObserver(self, selector: "willPost:", name: kLKPostingQueueManagerNotificationWillPostEntry, object: nil)
-        nc.addObserver(self, selector: "didPost:", name: kLKPostingQueueManagerNotificationDidPostEntry, object: nil)
-        nc.addObserver(self, selector: "didAdd:", name: kLKPostingQueueManagerNotificationDidAddEntry, object: nil)
+        nc.addObserver(self, selector: "willPost:", name: kLKPostingQueueManagerNotificationWillPostEntries, object: nil)
+        nc.addObserver(self, selector: "didPost:", name: kLKPostingQueueManagerNotificationDidPostEntries, object: nil)
+        nc.addObserver(self, selector: "didAdd:", name: kLKPostingQueueManagerNotificationDidAddEntries, object: nil)
         nc.addObserver(self, selector: "failed:", name: kLKPostingQueueManagerNotificationFailed, object: nil)
         nc.addObserver(self, selector: "started:", name: kLKPostingQueueManagerNotificationStarted, object: nil)
         nc.addObserver(self, selector: "finished:", name: kLKPostingQueueManagerNotificationFinished, object: nil)
@@ -237,15 +237,19 @@ public class LKPostingQueueViewController: UIViewController, UITableViewDataSour
         updateUI()
     }
     func willPost(notification:NSNotification) {
-        if let index = notification.object as? Int {
-            let indexPath = NSIndexPath(forRow: index, inSection: 0)
-            tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Fade)
+        if let indexes = notification.object as? [Int] {
+            let indexPaths = indexes.map({ (index) -> NSIndexPath in
+                NSIndexPath(forRow: index, inSection: 0)
+            })
+            tableView.reloadRowsAtIndexPaths(indexPaths, withRowAnimation: UITableViewRowAnimation.Fade)
         }
     }
     func didPost(notification:NSNotification) {
-        if let index = notification.object as? Int {
-            let indexPath = NSIndexPath(forRow: index, inSection: 0)
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Right)
+        if let indexes = notification.object as? [Int] {
+            let indexPaths = indexes.map({ (index) -> NSIndexPath in
+                NSIndexPath(forRow: index, inSection: 0)
+            })
+            tableView.deleteRowsAtIndexPaths(indexPaths, withRowAnimation: UITableViewRowAnimation.Right)
         }
         updateUI()
     }
@@ -255,9 +259,11 @@ public class LKPostingQueueViewController: UIViewController, UITableViewDataSour
         updateUI()
     }
     func failed(notification:NSNotification) {
-        if let index = notification.object as? Int {
-            let indexPath = NSIndexPath(forRow: index, inSection: 0)
-            tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Fade)
+        if let indexes = notification.object as? [Int] {
+            let indexPaths = indexes.map({ (index) -> NSIndexPath in
+                NSIndexPath(forRow: index, inSection: 0)
+            })
+            tableView.reloadRowsAtIndexPaths(indexPaths, withRowAnimation: UITableViewRowAnimation.Fade)
         }
         updateUI()
     }

@@ -1,0 +1,6 @@
+framework module LKTaskCompletion {
+  umbrella header "LKTaskCompletion-umbrella.h"
+
+  export *
+  module * { export * }
+}

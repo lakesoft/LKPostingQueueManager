@@ -1,6 +1,0 @@
-framework module LKCodingObject {
-  umbrella header "Pods-LKPostingQueueManager_Example-LKCodingObject-umbrella.h"
-
-  export *
-  module * { export * }
-}

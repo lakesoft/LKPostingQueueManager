@@ -1,12 +1,12 @@
 PODS:
   - FBNetworkReachability (1.0.1)
   - LKCodingObject (1.3.2)
-  - LKPostingQueueManager (0.1.6):
+  - LKPostingQueueManager (0.4.5):
     - FBNetworkReachability
     - LKCodingObject
     - LKQueue
     - LKTaskCompletion
-  - LKQueue (1.0.0)
+  - LKQueue (1.1.1)
   - LKTaskCompletion (1.0.1)
 
 DEPENDENCIES:
@@ -19,8 +19,8 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   FBNetworkReachability: 8afc4a2a1d6d24a5fd78db732b48fce9351519f9
   LKCodingObject: a169ae32ca086f39c5bcc581830e43e3babfee2c
-  LKPostingQueueManager: e66fc1b7d4b7a37d9308cc9aaaf78b90979fe8f2
-  LKQueue: 5235738249d71980c7872f9646efeb37dbda59d5
+  LKPostingQueueManager: 5a27eda91b2a4d15a938ff6f5088fef1946cd2c2
+  LKQueue: af1ab35be3ec164c468891e157016d02885a23ae
   LKTaskCompletion: 371c7a7e14ee4e4a9142f5b5a09af47e6a47b824
 
-COCOAPODS: 0.37.2
+COCOAPODS: 0.39.0
