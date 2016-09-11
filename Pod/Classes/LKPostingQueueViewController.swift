@@ -249,15 +249,17 @@ public class LKPostingQueueViewController: UIViewController, UITableViewDataSour
             let indexPaths = indexes.map({ (index) -> NSIndexPath in
                 NSIndexPath(forRow: index, inSection: 0)
             })
-            tableView.deleteRowsAtIndexPaths(indexPaths, withRowAnimation: UITableViewRowAnimation.Right)
+            tableView.deleteRowsAtIndexPaths(indexPaths, withRowAnimation: UITableViewRowAnimation.Automatic)
         }
         updateUI()
     }
     func didAdd(notification:NSNotification) {
-        let indexPath = NSIndexPath(forRow: postingQueueManager.count-1, inSection: 0)
-        tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Fade)
+//        let indexPath = NSIndexPath(forRow: postingQueueManager.count-1, inSection: 0)
+//        tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Fade)
+        tableView.reloadData()
         updateUI()
     }
+
     func failed(notification:NSNotification) {
         if let indexes = notification.object as? [Int] {
             let indexPaths = indexes.map({ (index) -> NSIndexPath in
