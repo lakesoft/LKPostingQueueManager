@@ -41,16 +41,16 @@ class ViewController: UIViewController {
         super.viewDidLoad()
      
         let appearance = LKPostingQueueManager.Appearance()
-        appearance.backColor = UIColor.blackColor()
-        appearance.barColor = UIColor.blackColor()
-        appearance.titleColor = UIColor.whiteColor()
-        appearance.buttonColor = UIColor.whiteColor()
-        appearance.textColor = UIColor.whiteColor()
-        appearance.cellColor = UIColor.clearColor()
-        appearance.cellTextColor = UIColor.whiteColor()
-        appearance.cellDetailTextColor = UIColor.lightGrayColor()
-        appearance.selectedCellColor = UIColor.blueColor()
-        appearance.tableColor = UIColor.blackColor()
+        appearance.backColor = UIColor.black
+        appearance.barColor = UIColor.black
+        appearance.titleColor = UIColor.white
+        appearance.buttonColor = UIColor.white
+        appearance.textColor = UIColor.white
+        appearance.cellColor = UIColor.clear
+        appearance.cellTextColor = UIColor.white
+        appearance.cellDetailTextColor = UIColor.lightGray
+        appearance.selectedCellColor = UIColor.blue
+        appearance.tableColor = UIColor.black
 //        appearance.tableSeparatorColor = UIColor.darkGrayColor()
 //        appearance.backColor = UIColor(red: 0.5, green: 0.5, blue: 0.0, alpha: 0.5)
 //        appearance.barColor = UIColor(red: 0.5, green: 0.5, blue: 0.0, alpha: 0.75)
@@ -64,8 +64,8 @@ class ViewController: UIViewController {
 //        appearance.tableSeparatorColor = UIColor.darkGrayColor()
         postingQueueManager.appearance = appearance
 
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.did(_:)), name: kLKPostingQueueManagerNotificationFinished, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.did(_:)), name: kLKPostingQueueManagerNotificationUpdatedEntries, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.did(n:)), name: NSNotification.Name(rawValue: kLKPostingQueueManagerNotificationFinished), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.did(n:)), name: NSNotification.Name(rawValue: kLKPostingQueueManagerNotificationUpdatedEntries), object: nil)
         
         print(postingQueueManager.postingEntries)
         
@@ -78,7 +78,7 @@ class ViewController: UIViewController {
             entry.title = NSString(format: "entry-%@-%02d", NSDate().description, i) as String
             entry.subTitle = "Sub Title .."
             
-            if let path = NSBundle.mainBundle().pathForResource("test", ofType: "jpg") {
+            if let path = Bundle.main.path(forResource: "test", ofType: "jpg") {
                 entry.backImagePath = path
             }
             entries += [entry]
@@ -107,7 +107,7 @@ class ViewController: UIViewController {
     @IBAction func openView2(sender: AnyObject) {
         let viewController = postingQueueManager.instantiateViewController()
         let naviController = UINavigationController(rootViewController: viewController)
-        self.presentViewController(naviController, animated: true, completion: nil)
+        self.present(naviController, animated: true, completion: nil)
     }
 }
 

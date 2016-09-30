@@ -1,12 +1,19 @@
 source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
 
-target 'LKPostingQueueManager_Example', :exclusive => true do
-  pod "LKPostingQueueManager", :path => "../"
+target 'LKPostingQueueManager_Example' do
+  pod 'LKPostingQueueManager', :path => '../'
 end
 
-target 'LKPostingQueueManager_Tests', :exclusive => true do
-  pod "LKPostingQueueManager", :path => "../"
+target 'LKPostingQueueManager_Tests' do
+  pod 'LKPostingQueueManager', :path => '../'
 
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |configuration|
+      configuration.build_settings['SWIFT_VERSION'] = '3.0'
+    end
+  end
+end
   
 end

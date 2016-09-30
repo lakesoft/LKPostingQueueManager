@@ -1,6 +1,6 @@
 {
   "name": "LKPostingQueueManager",
-  "version": "0.4.5",
+  "version": "1.0.0",
   "summary": "Queue manager for posting",
   "description": "Queue manager for posting",
   "homepage": "https://github.com/lakesoft/LKPostingQueueManager",
@@ -10,7 +10,7 @@
   },
   "source": {
     "git": "https://github.com/lakesoft/LKPostingQueueManager.git",
-    "tag": "0.4.5"
+    "tag": "1.0.0"
   },
   "platforms": {
     "ios": "9.0"

@@ -1,7 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cjk-iD-Avb">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="cjk-iD-Avb">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -29,37 +31,35 @@
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sIE-Ul-TA4">
-                                <rect key="frame" x="207" y="77" width="187" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="7O0-2R-JEm"/>
                                     <constraint firstAttribute="width" constant="187" id="z9a-k0-mr2"/>
                                 </constraints>
                                 <state key="normal" title="open queue list 1">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="openView:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="eVs-Jf-f1K"/>
+                                    <action selector="openViewWithSender:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="vbh-S5-vaA"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CkY-Td-OzD">
-                                <rect key="frame" x="207" y="155" width="187" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="187" id="1yI-q4-zia"/>
                                     <constraint firstAttribute="height" constant="30" id="rsB-7y-ruD"/>
                                 </constraints>
                                 <state key="normal" title="open queue list 2">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="openView2:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Pmd-dt-Bg2"/>
+                                    <action selector="openView2WithSender:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="jfq-nr-fbY"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="CkY-Td-OzD" secondAttribute="centerX" id="Fj7-hP-Ord"/>
                             <constraint firstItem="CkY-Td-OzD" firstAttribute="top" secondItem="sIE-Ul-TA4" secondAttribute="bottom" constant="48" id="TZp-Rv-zHR"/>

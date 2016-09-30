@@ -9,18 +9,18 @@
 import UIKit
 import LKCodingObject
 
-public class LKPostingEntry: LKCodingObject {
+open class LKPostingEntry: LKCodingObject {
    
-    public var title: String?
-    public var subTitle: String?
-    public var size: Int64 = 0
-    public var backImagePath: String?
+    open var title: String?
+    open var subTitle: String?
+    open var size: Int64 = 0
+    open var backImagePath: String?
 
-    public func cleanup() {
+    open func cleanup() {
         // should be overridden
     }
     
-    public func filePaths() -> [String] {
+    open func filePaths() -> [String] {
         // should be overridden
         return [String]()
     }

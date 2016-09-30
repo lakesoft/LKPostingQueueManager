@@ -9,10 +9,10 @@
 import UIKit
 import LKQueue
 
-public class LKPostingQueueViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+open class LKPostingQueueViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     // models
-    var selectedIndexPath: NSIndexPath!
+    var selectedIndexPath: IndexPath!
     var postingQueueManager: LKPostingQueueManager!
 
     // tableview
@@ -59,33 +59,33 @@ public class LKPostingQueueViewController: UIViewController, UITableViewDataSour
 
     }
     
-    override public func viewDidLoad() {
+    override open func viewDidLoad() {
         super.viewDidLoad()
         
         title = NSLocalizedString("ListTitle", bundle:postingQueueManagerBundle(), comment:"")
         
-        tableView.registerNib(UINib(nibName: "LKPostingQueueTableViewCell", bundle: postingQueueManagerBundle()), forCellReuseIdentifier: "LKPostingQueueTableViewCell")
+        tableView.register(UINib(nibName: "LKPostingQueueTableViewCell", bundle: postingQueueManagerBundle()), forCellReuseIdentifier: "LKPostingQueueTableViewCell")
         
         
         toolbarHeightCOnstraint.constant = postingQueueManager.toolbarHidden ? 0.0 : 44.0
-        toolbarView.hidden = postingQueueManager.toolbarHidden
+        toolbarView.isHidden = postingQueueManager.toolbarHidden
         view.layoutIfNeeded()
         
-        let nc = NSNotificationCenter.defaultCenter()
-        nc.addObserver(self, selector: "updated:", name: kLKPostingQueueManagerNotificationUpdatedEntries, object: nil)
-        nc.addObserver(self, selector: "willPost:", name: kLKPostingQueueManagerNotificationWillPostEntries, object: nil)
-        nc.addObserver(self, selector: "didPost:", name: kLKPostingQueueManagerNotificationDidPostEntries, object: nil)
-        nc.addObserver(self, selector: "didAdd:", name: kLKPostingQueueManagerNotificationDidAddEntries, object: nil)
-        nc.addObserver(self, selector: "failed:", name: kLKPostingQueueManagerNotificationFailed, object: nil)
-        nc.addObserver(self, selector: "started:", name: kLKPostingQueueManagerNotificationStarted, object: nil)
-        nc.addObserver(self, selector: "finished:", name: kLKPostingQueueManagerNotificationFinished, object: nil)
+        let nc = NotificationCenter.default
+        nc.addObserver(self, selector: #selector(LKPostingQueueViewController.updated(_:)), name: NSNotification.Name(rawValue: kLKPostingQueueManagerNotificationUpdatedEntries), object: nil)
+        nc.addObserver(self, selector: #selector(LKPostingQueueViewController.willPost(_:)), name: NSNotification.Name(rawValue: kLKPostingQueueManagerNotificationWillPostEntries), object: nil)
+        nc.addObserver(self, selector: #selector(LKPostingQueueViewController.didPost(_:)), name: NSNotification.Name(rawValue: kLKPostingQueueManagerNotificationDidPostEntries), object: nil)
+        nc.addObserver(self, selector: #selector(LKPostingQueueViewController.didAdd(_:)), name: NSNotification.Name(rawValue: kLKPostingQueueManagerNotificationDidAddEntries), object: nil)
+        nc.addObserver(self, selector: #selector(LKPostingQueueViewController.failed(_:)), name: NSNotification.Name(rawValue: kLKPostingQueueManagerNotificationFailed), object: nil)
+        nc.addObserver(self, selector: #selector(LKPostingQueueViewController.started(_:)), name: NSNotification.Name(rawValue: kLKPostingQueueManagerNotificationStarted), object: nil)
+        nc.addObserver(self, selector: #selector(LKPostingQueueViewController.finished(_:)), name: NSNotification.Name(rawValue: kLKPostingQueueManagerNotificationFinished), object: nil)
         
-        rightButtonItem = UIBarButtonItem(title: NSLocalizedString("Resume", bundle:postingQueueManagerBundle(), comment:""), style: UIBarButtonItemStyle.Plain, target: self, action: "resume:")
+        rightButtonItem = UIBarButtonItem(title: NSLocalizedString("Resume", bundle:postingQueueManagerBundle(), comment:""), style: UIBarButtonItemStyle.plain, target: self, action: #selector(LKPostingQueueViewController.resume(_:)))
         navigationItem.rightBarButtonItem = rightButtonItem
         
-        modeSegment.setTitle(LKPostingQueueTransmitMode.Auto.description(), forSegmentAtIndex: 0)
-        modeSegment.setTitle(LKPostingQueueTransmitMode.Wifi.description(), forSegmentAtIndex: 1)
-        modeSegment.setTitle(LKPostingQueueTransmitMode.Manual.description(), forSegmentAtIndex: 2)
+        modeSegment.setTitle(LKPostingQueueTransmitMode.auto.description(), forSegmentAt: 0)
+        modeSegment.setTitle(LKPostingQueueTransmitMode.wifi.description(), forSegmentAt: 1)
+        modeSegment.setTitle(LKPostingQueueTransmitMode.manual.description(), forSegmentAt: 2)
         modeSegment.selectedSegmentIndex = LKPostingQueueTransmitMode.defaultMode().rawValue
         
         emptyLabel.text = NSLocalizedString("Empty.Title", bundle:postingQueueManagerBundle(), comment: "")
@@ -94,37 +94,37 @@ public class LKPostingQueueViewController: UIViewController, UITableViewDataSour
         updateUI()
     }
     
-    override public func viewWillAppear(animated: Bool) {
+    override open func viewWillAppear(_ animated: Bool) {
         updateUI()
     }
     
     deinit {
-        NSNotificationCenter.defaultCenter().removeObserver(self)
+        NotificationCenter.default.removeObserver(self)
     }
     
-    override public func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let controller = segue.destinationViewController as! LKPostingQueueLogViewController
-        let indexPath = tableView.indexPathForCell(sender as! LKPostingQueueTableViewCell)!
-        controller.index = indexPath.row
+    override open func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let controller = segue.destination as! LKPostingQueueLogViewController
+        let indexPath = tableView.indexPath(for: sender as! LKPostingQueueTableViewCell)!
+        controller.index = (indexPath as NSIndexPath).row
         controller.postingQueueManager = postingQueueManager
     }
     
-    override public func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
-        let indexPath = tableView.indexPathForCell(sender as! LKPostingQueueTableViewCell)!
-        return postingQueueManager.hasLogExisted(indexPath.row)
+    override open func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        let indexPath = tableView.indexPath(for: sender as! LKPostingQueueTableViewCell)!
+        return postingQueueManager.hasLogExisted((indexPath as NSIndexPath).row)
     }
     
     // MARK: - Table view data source
     
-    public func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    open func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return postingQueueManager.count
     }
     
     
-    public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("LKPostingQueueTableViewCell", forIndexPath: indexPath) as! LKPostingQueueTableViewCell
+    open func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "LKPostingQueueTableViewCell", for: indexPath) as! LKPostingQueueTableViewCell
         
-        let postingEntry = postingQueueManager.postingEntries[indexPath.row]
+        let postingEntry = postingQueueManager.postingEntries[(indexPath as NSIndexPath).row]
         if let title = postingEntry.title {
             cell.label.text = title
         } else {
@@ -134,7 +134,7 @@ public class LKPostingQueueViewController: UIViewController, UITableViewDataSour
         if postingEntry.size == 0 {
             cell.sizelabel.text = ""
         } else {
-            cell.sizelabel.text = NSByteCountFormatter.stringFromByteCount(postingEntry.size, countStyle: .File)
+            cell.sizelabel.text = ByteCountFormatter.string(fromByteCount: postingEntry.size, countStyle: .file)
         }
         if let backImagePath = postingEntry.backImagePath {
             if let image = UIImage(contentsOfFile: backImagePath) {
@@ -146,17 +146,17 @@ public class LKPostingQueueViewController: UIViewController, UITableViewDataSour
             cell.backImageView.image = nil
         }
         
-        let queueEntry:LKQueueEntry = postingQueueManager.queue.entryAtIndex(indexPath.row)
+        let queueEntry:LKQueueEntry = postingQueueManager.queue.entry(at: (indexPath as NSIndexPath).row)
         let proccessing = (queueEntry.state.rawValue == LKQueueEntryStateProcessing.rawValue)
         
         if (proccessing) {
-            cell.accessoryType = UITableViewCellAccessoryType.None;
+            cell.accessoryType = UITableViewCellAccessoryType.none;
             cell.indicator.startAnimating()
         } else {
-            if postingQueueManager.hasLogExisted(indexPath.row) {
-                cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator;
+            if postingQueueManager.hasLogExisted((indexPath as NSIndexPath).row) {
+                cell.accessoryType = UITableViewCellAccessoryType.disclosureIndicator;
             } else {
-                cell.accessoryType = UITableViewCellAccessoryType.None;
+                cell.accessoryType = UITableViewCellAccessoryType.none;
             }
             cell.indicator.stopAnimating()
         }
@@ -182,113 +182,113 @@ public class LKPostingQueueViewController: UIViewController, UITableViewDataSour
         return cell
     }
     
-    public func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
+    open func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
             selectedIndexPath = indexPath
             
-            let alertController = UIAlertController(title: NSLocalizedString("RemoveTitle", bundle:postingQueueManagerBundle(), comment:""), message: nil, preferredStyle: .Alert)
+            let alertController = UIAlertController(title: NSLocalizedString("RemoveTitle", bundle:postingQueueManagerBundle(), comment:""), message: nil, preferredStyle: .alert)
 
-            alertController.addAction(UIAlertAction(title: NSLocalizedString("Cancel", bundle: postingQueueManagerBundle(), comment:""), style: .Default, handler:nil))
+            alertController.addAction(UIAlertAction(title: NSLocalizedString("Cancel", bundle: postingQueueManagerBundle(), comment:""), style: .default, handler:nil))
             
-            alertController.addAction(UIAlertAction(title: NSLocalizedString("Remove", bundle:postingQueueManagerBundle(), comment:""), style: .Default, handler: { (alertAction) -> Void in
-                tableView.editing = false
+            alertController.addAction(UIAlertAction(title: NSLocalizedString("Remove", bundle:postingQueueManagerBundle(), comment:""), style: .default, handler: { (alertAction) -> Void in
+                tableView.isEditing = false
                 let queue = self.postingQueueManager.queue
-                if let queueEntry = queue.entryAtIndex(self.selectedIndexPath.row) {
+                if let queueEntry = queue.entry(at: self.selectedIndexPath.row) {
                     if let postingEntry = queueEntry.info as? LKPostingEntry {
                         postingEntry.cleanup()
                         queue.removeEntry(queueEntry)
                         
-                        tableView.deleteRowsAtIndexPaths([self.selectedIndexPath], withRowAnimation: .Left)
+                        tableView.deleteRows(at: [self.selectedIndexPath], with: .left)
                         self.selectedIndexPath = nil
                         
-                        NSNotificationCenter.defaultCenter().postNotificationName(kLKPostingQueueManagerNotificationUpdatedEntries, object: nil)
+                        NotificationCenter.default.post(name: Notification.Name(rawValue: kLKPostingQueueManagerNotificationUpdatedEntries), object: nil)
                     }
                 }
             }))
             
-            presentViewController(alertController, animated: true, completion: nil)
+            present(alertController, animated: true, completion: nil)
         }
     }
     
-    public func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+    open func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return !postingQueueManager.running
     }
     
     // MARK: - Table view delegate
-    public func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let cell = tableView.cellForRowAtIndexPath(indexPath)
-        performSegueWithIdentifier("LKPostingQueueLogViewController", sender: cell)
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    open func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath)
+        performSegue(withIdentifier: "LKPostingQueueLogViewController", sender: cell)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
-    public func tableView(tableView: UITableView, shouldHighlightRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        return postingQueueManager.hasLogExisted(indexPath.row)
+    open func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
+        return postingQueueManager.hasLogExisted((indexPath as NSIndexPath).row)
     }
     
     
     // MARK: - Privates (UI)
     func updateUI() {
-        rightButtonItem.enabled = !postingQueueManager.running && postingQueueManager.count > 0
-        emptyView.hidden = postingQueueManager.count > 0
+        rightButtonItem.isEnabled = !postingQueueManager.running && postingQueueManager.count > 0
+        emptyView.isHidden = postingQueueManager.count > 0
     }
     
     // MARK: - Privates (Notification)
-    func updated(notification:NSNotification) {
+    func updated(_ notification:Notification) {
         tableView.reloadData()
         updateUI()
     }
-    func willPost(notification:NSNotification) {
+    func willPost(_ notification:Notification) {
         if let indexes = notification.object as? [Int] {
-            let indexPaths = indexes.map({ (index) -> NSIndexPath in
-                NSIndexPath(forRow: index, inSection: 0)
+            let indexPaths = indexes.map({ (index) -> IndexPath in
+                IndexPath(row: index, section: 0)
             })
-            tableView.reloadRowsAtIndexPaths(indexPaths, withRowAnimation: UITableViewRowAnimation.Fade)
+            tableView.reloadRows(at: indexPaths, with: UITableViewRowAnimation.fade)
         }
     }
-    func didPost(notification:NSNotification) {
+    func didPost(_ notification:Notification) {
         if let indexes = notification.object as? [Int] {
-            let indexPaths = indexes.map({ (index) -> NSIndexPath in
-                NSIndexPath(forRow: index, inSection: 0)
+            let indexPaths = indexes.map({ (index) -> IndexPath in
+                IndexPath(row: index, section: 0)
             })
-            tableView.deleteRowsAtIndexPaths(indexPaths, withRowAnimation: UITableViewRowAnimation.Automatic)
+            tableView.deleteRows(at: indexPaths, with: UITableViewRowAnimation.automatic)
         }
         updateUI()
     }
-    func didAdd(notification:NSNotification) {
+    func didAdd(_ notification:Notification) {
 //        let indexPath = NSIndexPath(forRow: postingQueueManager.count-1, inSection: 0)
 //        tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Fade)
         tableView.reloadData()
         updateUI()
     }
 
-    func failed(notification:NSNotification) {
+    func failed(_ notification:Notification) {
         if let indexes = notification.object as? [Int] {
-            let indexPaths = indexes.map({ (index) -> NSIndexPath in
-                NSIndexPath(forRow: index, inSection: 0)
+            let indexPaths = indexes.map({ (index) -> IndexPath in
+                IndexPath(row: index, section: 0)
             })
-            tableView.reloadRowsAtIndexPaths(indexPaths, withRowAnimation: UITableViewRowAnimation.Fade)
+            tableView.reloadRows(at: indexPaths, with: UITableViewRowAnimation.fade)
         }
         updateUI()
     }
-    func started(notification:NSNotification) {
+    func started(_ notification:Notification) {
         for cell in tableView.visibleCells {
             cell.setEditing(false, animated: true)
         }
         tableView.reloadData()
         updateUI()
     }
-    func finished(notification:NSNotification) {
+    func finished(_ notification:Notification) {
         tableView.reloadData()
         updateUI()
     }
     
     // MARK: - Privates (Action)
-    func resume(sender:UIBarButtonItem) {
+    func resume(_ sender:UIBarButtonItem) {
         postingQueueManager.resume(true)
         updateUI()
     }
     
     // MARK: - Actions
-    @IBAction func onModeSegment(segment: UISegmentedControl) {
+    @IBAction func onModeSegment(_ segment: UISegmentedControl) {
         if let mode = LKPostingQueueTransmitMode(rawValue: segment.selectedSegmentIndex) {
             mode.saveAsDefault()
         }

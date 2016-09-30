@@ -9,32 +9,32 @@
 import UIKit
 
 public enum LKPostingQueueTransmitMode:Int {
-    case Auto
-    case Wifi
-    case Manual
+    case auto
+    case wifi
+    case manual
     
     public func description() -> String  {
         switch self {
-        case Auto:
+        case .auto:
             return NSLocalizedString("Mode.Auto", bundle:postingQueueManagerBundle(), comment:"")
-        case Wifi:
+        case .wifi:
             return NSLocalizedString("Mode.Wifi", bundle:postingQueueManagerBundle(), comment:"")
-        case Manual:
+        case .manual:
             return NSLocalizedString("Mode.Manual", bundle:postingQueueManagerBundle(), comment:"")
         }
     }
     
     public static func defaultMode() -> LKPostingQueueTransmitMode {
-        if let intObj = NSUserDefaults.standardUserDefaults().objectForKey("LKPostingQueueTransmitMode") as? Int {
+        if let intObj = UserDefaults.standard.object(forKey: "LKPostingQueueTransmitMode") as? Int {
             if let mode = LKPostingQueueTransmitMode(rawValue: intObj) {
                 return mode
             }
         }
-        return .Auto
+        return .auto
     }
     
     public func saveAsDefault() {
-        NSUserDefaults.standardUserDefaults().setObject(self.rawValue, forKey: "LKPostingQueueTransmitMode")
-        NSUserDefaults.standardUserDefaults().synchronize()
+        UserDefaults.standard.set(self.rawValue, forKey: "LKPostingQueueTransmitMode")
+        UserDefaults.standard.synchronize()
     }
 }

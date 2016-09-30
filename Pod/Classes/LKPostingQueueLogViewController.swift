@@ -10,8 +10,8 @@ import UIKit
 import MessageUI
 
 extension String {
-    func stringByAppendingPathComponent(path: String) -> String {
-        return (self as NSString).stringByAppendingPathComponent(path)
+    func stringByAppendingPathComponent(_ path: String) -> String {
+        return (self as NSString).appendingPathComponent(path)
     }
     var pathExtension: String {
         return (self as NSString).pathExtension
@@ -52,13 +52,13 @@ class LKPostingQueueLogViewController: UIViewController, MFMailComposeViewContro
         textView.text = postingQueueManager.log(index)
         title = NSLocalizedString("LogTitle", bundle:postingQueueManagerBundle(), comment: "")
         
-        let nc = NSNotificationCenter.defaultCenter()
-        nc.addObserver(self, selector: "started:", name: kLKPostingQueueManagerNotificationStarted, object: nil)
+        let nc = NotificationCenter.default
+        nc.addObserver(self, selector: #selector(LKPostingQueueLogViewController.started(_:)), name: NSNotification.Name(rawValue: kLKPostingQueueManagerNotificationStarted), object: nil)
 
     }
     
-    func started(notification:NSNotification) {
-        self.dismissViewControllerAnimated(true, completion: nil)
+    func started(_ notification:Notification) {
+        self.dismiss(animated: true, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -68,8 +68,8 @@ class LKPostingQueueLogViewController: UIViewController, MFMailComposeViewContro
     
     
     // MARK: - Privates
-    func mimeTypeForFilePath(filePath: String) -> String {
-        switch filePath.pathExtension.lowercaseString {
+    func mimeTypeForFilePath(_ filePath: String) -> String {
+        switch filePath.pathExtension.lowercased() {
         case "gif":
             return "image/gif"
         case "png":
@@ -85,14 +85,14 @@ class LKPostingQueueLogViewController: UIViewController, MFMailComposeViewContro
     
     // MARK: - Actions
     
-    @IBAction func onSendMail(sender: AnyObject) {
+    @IBAction func onSendMail(_ sender: AnyObject) {
         
         let controller = UIAlertController(
             title: NSLocalizedString("Notification", bundle:postingQueueManagerBundle(), comment: ""),
             message:NSLocalizedString("Mail.Message", bundle:postingQueueManagerBundle(), comment: ""),
-            preferredStyle: .Alert)
+            preferredStyle: .alert)
         
-        let otherAction = UIAlertAction(title: NSLocalizedString("Mail.Open", bundle:postingQueueManagerBundle(), comment: ""), style: .Default) {
+        let otherAction = UIAlertAction(title: NSLocalizedString("Mail.Open", bundle:postingQueueManagerBundle(), comment: ""), style: .default) {
             action in
             // check if can send an email
             if MFMailComposeViewController.canSendMail()==false {
@@ -108,48 +108,48 @@ class LKPostingQueueLogViewController: UIViewController, MFMailComposeViewContro
             // TODO:
             for filePath in postingEntry.filePaths() {
                 let mimeType = self.mimeTypeForFilePath(filePath)
-                if let data = NSFileManager.defaultManager().contentsAtPath(filePath) {
+                if let data = FileManager.default.contents(atPath: filePath) {
                     controller.addAttachmentData(data, mimeType: mimeType, fileName: filePath.lastPathComponent)
                 }
             }
-            self.presentViewController(controller, animated: true, completion: nil)
+            self.present(controller, animated: true, completion: nil)
             
         }
-        let cancelAction = UIAlertAction(title: NSLocalizedString("Cancel", bundle:postingQueueManagerBundle(), comment: ""), style: .Cancel, handler: nil)
+        let cancelAction = UIAlertAction(title: NSLocalizedString("Cancel", bundle:postingQueueManagerBundle(), comment: ""), style: .cancel, handler: nil)
         controller.addAction(otherAction)
         controller.addAction(cancelAction)
-        presentViewController(controller, animated: true, completion: nil)
+        present(controller, animated: true, completion: nil)
     }
     
-    @IBAction func onCopy(sender: AnyObject) {
-        UIPasteboard.generalPasteboard().string = postingQueueManager.log(index)
+    @IBAction func onCopy(_ sender: AnyObject) {
+        UIPasteboard.general.string = postingQueueManager.log(index)
         
         let controller = UIAlertController(
             title: NSLocalizedString("Notification", bundle:postingQueueManagerBundle(), comment: ""),
             message:NSLocalizedString("CopiedLog", bundle:postingQueueManagerBundle(), comment: ""),
-            preferredStyle: .Alert)
-        let defaultAction = UIAlertAction(title:  NSLocalizedString("Ok", comment: ""), style: .Default, handler: nil)
+            preferredStyle: .alert)
+        let defaultAction = UIAlertAction(title:  NSLocalizedString("Ok", comment: ""), style: .default, handler: nil)
         controller.addAction(defaultAction)
-        presentViewController(controller, animated: true, completion: nil)
+        present(controller, animated: true, completion: nil)
     }
     
     // MARK: - MFMailComposeViewControllerDelegate
-    func mailComposeController(controller: MFMailComposeViewController, didFinishWithResult result: MFMailComposeResult, error: NSError?) {
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         
         switch result.rawValue {
-        case MFMailComposeResultCancelled.rawValue:
+        case MFMailComposeResult.cancelled.rawValue:
             break
-        case MFMailComposeResultSaved.rawValue:
+        case MFMailComposeResult.saved.rawValue:
             break
-        case MFMailComposeResultSent.rawValue:
+        case MFMailComposeResult.sent.rawValue:
             break
-        case MFMailComposeResultFailed.rawValue:
+        case MFMailComposeResult.failed.rawValue:
             break
         default:
             break
         }
         
-        self.dismissViewControllerAnimated(true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
     }
 
 }
