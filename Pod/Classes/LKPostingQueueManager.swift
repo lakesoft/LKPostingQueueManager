@@ -136,9 +136,9 @@ open class LKPostingQueueManager: NSObject {
     
     // MARK: Initializers and Factories
     let queueName = "LKPostingQueueManager"
-    let handler:([LKPostingEntry], _ completion:([LKPostingEntry])->Void, _ failure:(NSError)->Void)->Void
+    let handler:([LKPostingEntry], _ completion:@escaping ([LKPostingEntry])->Void, _ failure:@escaping (NSError)->Void)->Void
 
-    public init(handler:@escaping ([LKPostingEntry], _ completion:([LKPostingEntry])->Void, _ failure:(NSError)->Void)->Void) {
+    public init(handler:@escaping ([LKPostingEntry], _ completion:@escaping ([LKPostingEntry])->Void, _ failure:@escaping (NSError)->Void)->Void) {
         self.handler = handler
         super.init()
         NotificationCenter.default.addObserver(self, selector: #selector(LKPostingQueueManager.updatedNetwork(_:)), name: NSNotification.Name(rawValue: FBNetworkReachabilityDidChangeNotification), object: nil)
