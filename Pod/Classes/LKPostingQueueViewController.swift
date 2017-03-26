@@ -182,31 +182,41 @@ open class LKPostingQueueViewController: UIViewController, UITableViewDataSource
         return cell
     }
     
+    fileprivate func _removeEntry() {
+        tableView.isEditing = false
+        let queue = self.postingQueueManager.queue
+        if let queueEntry = queue.entry(at: self.selectedIndexPath.row) {
+            if let postingEntry = queueEntry.info as? LKPostingEntry {
+                postingEntry.cleanup()
+                queue.removeEntry(queueEntry)
+                
+                tableView.deleteRows(at: [self.selectedIndexPath], with: .left)
+                self.selectedIndexPath = nil
+                
+                NotificationCenter.default.post(name: Notification.Name(rawValue: kLKPostingQueueManagerNotificationUpdatedEntries), object: nil)
+            }
+        }
+    }
+    
     open func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             selectedIndexPath = indexPath
             
-            let alertController = UIAlertController(title: NSLocalizedString("RemoveTitle", bundle:postingQueueManagerBundle(), comment:""), message: nil, preferredStyle: .alert)
-
-            alertController.addAction(UIAlertAction(title: NSLocalizedString("Cancel", bundle: postingQueueManagerBundle(), comment:""), style: .default, handler:nil))
-            
-            alertController.addAction(UIAlertAction(title: NSLocalizedString("Remove", bundle:postingQueueManagerBundle(), comment:""), style: .default, handler: { (alertAction) -> Void in
-                tableView.isEditing = false
-                let queue = self.postingQueueManager.queue
-                if let queueEntry = queue.entry(at: self.selectedIndexPath.row) {
-                    if let postingEntry = queueEntry.info as? LKPostingEntry {
-                        postingEntry.cleanup()
-                        queue.removeEntry(queueEntry)
-                        
-                        tableView.deleteRows(at: [self.selectedIndexPath], with: .left)
-                        self.selectedIndexPath = nil
-                        
-                        NotificationCenter.default.post(name: Notification.Name(rawValue: kLKPostingQueueManagerNotificationUpdatedEntries), object: nil)
-                    }
+            if let delegate = postingQueueManager.delegate {
+                delegate.handleRmoveEntry {
+                    self._removeEntry()
                 }
-            }))
-            
-            present(alertController, animated: true, completion: nil)
+            } else {
+                let alertController = UIAlertController(title: NSLocalizedString("RemoveTitle", bundle:postingQueueManagerBundle(), comment:""), message: nil, preferredStyle: .alert)
+                
+                alertController.addAction(UIAlertAction(title: NSLocalizedString("Cancel", bundle: postingQueueManagerBundle(), comment:""), style: .default, handler:nil))
+                
+                alertController.addAction(UIAlertAction(title: NSLocalizedString("Remove", bundle:postingQueueManagerBundle(), comment:""), style: .default, handler: { (alertAction) -> Void in
+                    self._removeEntry()
+                }))
+                
+                present(alertController, animated: true, completion: nil)
+            }
         }
     }
     

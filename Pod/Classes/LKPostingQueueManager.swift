@@ -27,6 +27,10 @@ public let kLKPostingQueueManagerNotificationFailed = "LKPostingQueueManagerNoti
 public let kLKPostingQueueManagerNotificationStarted = "LKPostingQueueManagerNotificationStarted"
 public let kLKPostingQueueManagerNotificationFinished = "LKPostingQueueManagerNotificationFinished"
 
+public protocol LKPostingQueueManagerDelegate {
+    func handleRmoveEntry(doRemove: ()->Void)
+}
+
 
 open class LKPostingQueueManager: NSObject {
     
@@ -70,6 +74,8 @@ open class LKPostingQueueManager: NSObject {
     }
 
     // MARK: Members
+    open var delegate: LKPostingQueueManagerDelegate?
+
     open var runningMode: RunningMode = .skipFailedEntry
 
     fileprivate var _state: State = .stopping

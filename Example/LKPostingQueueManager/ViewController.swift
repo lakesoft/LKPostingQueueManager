@@ -9,7 +9,7 @@
 import UIKit
 import LKPostingQueueManager
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, LKPostingQueueManagerDelegate {
     
     let postingQueueManager = LKPostingQueueManager { (postingEntries, completion, failure) -> Void in
         
@@ -40,6 +40,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
      
+        postingQueueManager.delegate = self
+        
         let appearance = LKPostingQueueManager.Appearance()
         appearance.backColor = UIColor.black
         appearance.barColor = UIColor.black
@@ -108,6 +110,10 @@ class ViewController: UIViewController {
         let viewController = postingQueueManager.instantiateViewController()
         let naviController = UINavigationController(rootViewController: viewController)
         self.present(naviController, animated: true, completion: nil)
+    }
+    
+    func handleRmoveEntry(doRemove: () -> Void) {
+        doRemove()
     }
 }
 
