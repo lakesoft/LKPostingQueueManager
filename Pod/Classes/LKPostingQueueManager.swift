@@ -28,7 +28,7 @@ public let kLKPostingQueueManagerNotificationStarted = "LKPostingQueueManagerNot
 public let kLKPostingQueueManagerNotificationFinished = "LKPostingQueueManagerNotificationFinished"
 
 public protocol LKPostingQueueManagerDelegate {
-    func handleRmoveEntry(view: UIView, doRemove: ()->Void)
+    func handleRmoveEntry(view: UIView, doRemove: @escaping ()->Void)
 }
 
 
