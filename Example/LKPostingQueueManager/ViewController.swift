@@ -112,7 +112,7 @@ class ViewController: UIViewController, LKPostingQueueManagerDelegate {
         self.present(naviController, animated: true, completion: nil)
     }
     
-    func handleRmoveEntry(doRemove: () -> Void) {
+    func handleRmoveEntry(view: UIView, doRemove: () -> Void) {
         doRemove()
     }
 }

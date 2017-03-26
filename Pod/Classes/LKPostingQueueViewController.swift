@@ -203,7 +203,7 @@ open class LKPostingQueueViewController: UIViewController, UITableViewDataSource
             selectedIndexPath = indexPath
             
             if let delegate = postingQueueManager.delegate {
-                delegate.handleRmoveEntry {
+                delegate.handleRmoveEntry(view: view) {
                     self._removeEntry()
                 }
             } else {
