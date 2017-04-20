@@ -352,7 +352,7 @@ open class LKPostingQueueManager: NSObject {
     
     // MARK: Privates (Notification)
     func updatedNetwork(_ notification:Notification) {
-        print("[INFO] network changed:\(notification.object)")
+        print("[INFO] network changed:\(String(describing: notification.object))")
 
         if let r = notification.object as? FBNetworkReachability {
             let mode = LKPostingQueueTransmitMode.defaultMode()
