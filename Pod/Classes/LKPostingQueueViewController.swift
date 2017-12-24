@@ -242,11 +242,11 @@ open class LKPostingQueueViewController: UIViewController, UITableViewDataSource
     }
     
     // MARK: - Privates (Notification)
-    func updated(_ notification:Notification) {
+    @objc func updated(_ notification:Notification) {
         tableView.reloadData()
         updateUI()
     }
-    func willPost(_ notification:Notification) {
+    @objc func willPost(_ notification:Notification) {
         if let indexes = notification.object as? [Int] {
             let indexPaths = indexes.map({ (index) -> IndexPath in
                 IndexPath(row: index, section: 0)
@@ -254,7 +254,7 @@ open class LKPostingQueueViewController: UIViewController, UITableViewDataSource
             tableView.reloadRows(at: indexPaths, with: UITableViewRowAnimation.fade)
         }
     }
-    func didPost(_ notification:Notification) {
+    @objc func didPost(_ notification:Notification) {
         if let indexes = notification.object as? [Int] {
             let indexPaths = indexes.map({ (index) -> IndexPath in
                 IndexPath(row: index, section: 0)
@@ -263,14 +263,14 @@ open class LKPostingQueueViewController: UIViewController, UITableViewDataSource
         }
         updateUI()
     }
-    func didAdd(_ notification:Notification) {
+    @objc func didAdd(_ notification:Notification) {
 //        let indexPath = NSIndexPath(forRow: postingQueueManager.count-1, inSection: 0)
 //        tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Fade)
         tableView.reloadData()
         updateUI()
     }
 
-    func failed(_ notification:Notification) {
+    @objc func failed(_ notification:Notification) {
         if let indexes = notification.object as? [Int] {
             let indexPaths = indexes.map({ (index) -> IndexPath in
                 IndexPath(row: index, section: 0)
@@ -279,20 +279,20 @@ open class LKPostingQueueViewController: UIViewController, UITableViewDataSource
         }
         updateUI()
     }
-    func started(_ notification:Notification) {
+    @objc func started(_ notification:Notification) {
         for cell in tableView.visibleCells {
             cell.setEditing(false, animated: true)
         }
         tableView.reloadData()
         updateUI()
     }
-    func finished(_ notification:Notification) {
+    @objc func finished(_ notification:Notification) {
         tableView.reloadData()
         updateUI()
     }
     
     // MARK: - Privates (Action)
-    func resume(_ sender:UIBarButtonItem) {
+    @objc func resume(_ sender:UIBarButtonItem) {
         postingQueueManager.resume(true)
         updateUI()
     }

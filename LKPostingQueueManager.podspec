@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "LKPostingQueueManager"
-  s.version          = "1.0.5"
+  s.version          = "1.1.0"
   s.summary          = "Queue manager for posting"
   s.description      = <<-DESC
   Queue manager for posting
@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
   s.source           = { :git => "https://github.com/lakesoft/LKPostingQueueManager.git", :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.platform     = :ios, '9.0'
+  s.platform     = :ios, '10.0'
   s.requires_arc = true
 
   s.source_files = 'Pod/Classes/**/*'

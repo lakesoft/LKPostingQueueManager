@@ -98,7 +98,7 @@ class ViewController: UIViewController, LKPostingQueueManagerDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    func did(n:NSNotification) {
+    @objc func did(n:NSNotification) {
         print(n)
     }
 

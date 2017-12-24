@@ -18,6 +18,7 @@ import Foundation
 import FBNetworkReachability
 import LKTaskCompletion
 import LKQueue
+import UserNotifications
 
 public let kLKPostingQueueManagerNotificationUpdatedEntries = "LKPostingQueueManagerNotificationUpdatedEntrries"
 public let kLKPostingQueueManagerNotificationWillPostEntries = "LKPostingQueueManagerNotificationWillPostEntries"
@@ -155,7 +156,7 @@ open class LKPostingQueueManager: NSObject {
         nc.addObserver(self, selector: #selector(LKPostingQueueManager.updated(_:)), name: NSNotification.Name(rawValue: kLKPostingQueueManagerNotificationUpdatedEntries), object: nil)
     }
     
-    func updated(_ notification:Notification) {
+    @objc func updated(_ notification:Notification) {
         UIApplication.shared.applicationIconBadgeNumber = NSInteger(queue.count())
     }
 
@@ -164,11 +165,12 @@ open class LKPostingQueueManager: NSObject {
     }
     
     // MARK: API
-    open static func setup() {
-        let settings = UIUserNotificationSettings(
-            types: UIUserNotificationType.badge,
-            categories: nil)
-        UIApplication.shared.registerUserNotificationSettings(settings);
+    open static func setup(_ completionHandler: ((Bool, Error?) -> Void)? = nil) {
+        UNUserNotificationCenter.current().requestAuthorization(options: [.badge]) { (granted, error) in
+            if let completionHandler = completionHandler {
+                completionHandler(granted, error)
+            }
+        }
     }
 
     open func addPostingEntries(_ postingEntries:[LKPostingEntry]) {
@@ -351,7 +353,7 @@ open class LKPostingQueueManager: NSObject {
     }
     
     // MARK: Privates (Notification)
-    func updatedNetwork(_ notification:Notification) {
+    @objc func updatedNetwork(_ notification:Notification) {
         print("[INFO] network changed:\(String(describing: notification.object))")
 
         if let r = notification.object as? FBNetworkReachability {

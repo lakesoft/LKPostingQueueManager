@@ -14,12 +14,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
-    @nonobjc private func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
-        
-        LKPostingQueueManager.setup()
-
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+//        LKPostingQueueManager.setup()
+        LKPostingQueueManager.setup { (granted, _) in
+            print("granted: \(granted)")
+        }
         return true
     }
 

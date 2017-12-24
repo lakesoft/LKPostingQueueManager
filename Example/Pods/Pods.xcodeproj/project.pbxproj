@@ -7,172 +7,171 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		03A58BC366B7B45905AEDEB8AEB49156 /* en.lproj in Resources */ = {isa = PBXBuildFile; fileRef = E7DA3F9A742612DF95E0B5D0FF65D1D4 /* en.lproj */; };
-		0BF8C15AACE5D0A2F09E900F4F2886E3 /* LKPostingQueueTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E0F2B463AD98700F5AE21CD199E4663 /* LKPostingQueueTableViewCell.xib */; };
-		0EBA377709345F4E2EFBDFECCA659EEF /* LKCodingObject-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 030DC78FE573DD097E60A3DA60FC8A5A /* LKCodingObject-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		150C29B26770DD4B5C6EB7DF7444E1A4 /* LKCodingObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 66FF97BE448D5AFA7FB35E73829DD9E3 /* LKCodingObject.m */; };
-		1885A635C9863917CC44259AF86153CC /* LKCodingObject-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E82DF03433E0939F2183715A396A6B38 /* LKCodingObject-dummy.m */; };
-		1E260CB6DAD952D7D9A56BB99E08E63F /* LKCodingObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 361B93CB5C51191894B18B4456274035 /* LKCodingObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3521EFD32F070CC3245395B2FF7A74EE /* LKPostingQueueLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CBDC36EEC25CB938DDEA578FBFA400 /* LKPostingQueueLogViewController.swift */; };
-		389E8EF4FE33B23EDCA8F68FF9688F67 /* Pods-LKPostingQueueManager_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B89866757267500FDB11667558F721BE /* Pods-LKPostingQueueManager_Example-dummy.m */; };
-		3F0E728C1501FDAAB3325AA346A73DCF /* LKPostingQueueManager.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 899CA65A132BE988BD6C0DB6004CD552 /* LKPostingQueueManager.storyboard */; };
-		412A726D2046B336DE8296B9D5A84F7D /* LKQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = D473D2BE77C01D1D2176CFFDD5BA423C /* LKQueue.m */; };
-		42D28802137015F0E2893B1FE0EDDABC /* FBNetworkReachability-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C1692503EC44886A73BF9B9DE4540E4A /* FBNetworkReachability-dummy.m */; };
-		497686BECD4221C63D4DD1EC593F5727 /* LKCodingObject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00D803D07BB67EBE4AEB8B1369AB3971 /* LKCodingObject.framework */; };
-		4AC75E0D780E9524564728A45408A4A5 /* FBNetworkReachability.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F174CB5A32C741B5CAE063FCFC9BAED /* FBNetworkReachability.framework */; };
-		4B9A5B13659C5C7CF1B1C64BF5C2325D /* LKQueue-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D3253C00EB2EDD02A68789790740EE0 /* LKQueue-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4EF8ECB17931BA3E84DC86265990126B /* LKPostingQueueManager-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B742F0401F33D640767AFE05BC7E0448 /* LKPostingQueueManager-dummy.m */; };
-		5154607B0F5A4A0C7F8C508E6C0EC5B6 /* LKTaskCompletion.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F2206E3B1C0A17E05F1B98FFFAFB1FA /* LKTaskCompletion.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		52B0C51F4E79B517D43B37343B417509 /* LKPostingQueueTransmitMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A385C13A152628B4437358575B78C13E /* LKPostingQueueTransmitMode.swift */; };
-		5797982A82319E440BFD39B79841DBCA /* ja.lproj in Resources */ = {isa = PBXBuildFile; fileRef = FC858266CE87B2042081DC4817B7477F /* ja.lproj */; };
-		581A9E74F40C2CFFD74BA6CF319A50E5 /* LKTaskCompletion-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D3F77651188FF03CC9DF452A95B233B9 /* LKTaskCompletion-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		584484263B8391DDCA9752E21B42BC15 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01A7774B4C99BC35E64E3042A78AD9A2 /* Foundation.framework */; };
-		58E5A3C0BEA2FFAEF8FF15E36DB96351 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01A7774B4C99BC35E64E3042A78AD9A2 /* Foundation.framework */; };
-		5E1ACCEF2C8F9A2C76223D3CCCFA4A6A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01A7774B4C99BC35E64E3042A78AD9A2 /* Foundation.framework */; };
-		60EC4C62FFE44527DC6577530638FFB5 /* LKQueue-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 553866BBDF909676F895DF19C1822361 /* LKQueue-dummy.m */; };
-		65D411E5511515A8215832FC39BD9A32 /* LKPostingEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53B140924D04325B66BA88702512840 /* LKPostingEntry.swift */; };
-		6C09E4B6B36F7A020127B37F162D1B6A /* LKQueueEntryOperator.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F28384FD1A90247883C44C6D985CDA5 /* LKQueueEntryOperator.m */; };
-		6EAD98BF4C1DFDEF6DF722C84621587C /* LKQueueEntry.h in Headers */ = {isa = PBXBuildFile; fileRef = 12B9AC366DEA262BC9C7F48AF7D810E1 /* LKQueueEntry.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6F1D55DDE8E4ABC71BE978DF26768034 /* LKPostingQueueManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F7C2C7AC9F16DC37F0140ABCFC307A /* LKPostingQueueManager.swift */; };
-		7129F5895E7BAF0984F138575D72FA68 /* Pods-LKPostingQueueManager_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 13F5C757AA21177528659D3F233E2EC0 /* Pods-LKPostingQueueManager_Tests-dummy.m */; };
-		726FF6740E879CA5156F077F896D5733 /* FBNetworkReachability-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 08C219B6994D97CDA4C21FAC14AD9003 /* FBNetworkReachability-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		78DDA85B2D717E8A1B65E50673FDCF62 /* LKQueue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EDBEE1550C4055D5ED43C47BA73EB3A /* LKQueue.framework */; };
-		798583B05261BF95AB588514F9DEBFA3 /* LKPostingQueueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F94BB841D0A5AC32FE600FCDDBC5E9 /* LKPostingQueueViewController.swift */; };
-		7A24E14C65D9476FEE8D8479D3082371 /* LKQueueManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8704122C41099E2415D3A6887A58A00A /* LKQueueManager.m */; };
-		843AD0EA5A70916614C9528A9AA24650 /* LKPostingQueueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B887CC203F001D2040414119C47CE0 /* LKPostingQueueTableViewCell.swift */; };
-		8532DFC0ED7F5C998A63CDAE68444A9D /* Pods-LKPostingQueueManager_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EC331C4DC2939FBCC4951DCEF44EB19B /* Pods-LKPostingQueueManager_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9558DCB2763815B552AFA276630FCFDA /* LKQueueManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A3D76863601C83FCD01ADF5FEFAA7C5 /* LKQueueManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		963734F523AA7157FD1F3C307DE3BADD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01A7774B4C99BC35E64E3042A78AD9A2 /* Foundation.framework */; };
-		98B8833EC9E908B879E9FDF6ABC53DCB /* LKPostingQueueManager.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 215C4E56E4B6FCE527CFA556F8CEB2E0 /* LKPostingQueueManager.bundle */; };
-		9AEA96938176D01658DB752B94CA72A7 /* IconEmpty@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 020CFB66F5CE25C6F32EB9F6CAA277EE /* IconEmpty@3x.png */; };
-		9C080B00A3F9441BC3D0F032E61804C0 /* LKTaskCompletion.m in Sources */ = {isa = PBXBuildFile; fileRef = B9D1D080A399CC4AD27760B134C52AB3 /* LKTaskCompletion.m */; };
-		9E6EB21A490136C32069A8D065A6FA2C /* LKTaskCompletion-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 70A98DD77441549979B51017AC16473E /* LKTaskCompletion-dummy.m */; };
-		9ED6C6FB6A2BF5DC7AE0EF4345BDBB30 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01A7774B4C99BC35E64E3042A78AD9A2 /* Foundation.framework */; };
-		AAA4F61F9D2799D407A7D621A02DC07A /* FBNetworkReachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A07F0097D341C9EBFA28AF1AD0F3250 /* FBNetworkReachability.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AC0D9ACFFFDCCC8261361FEF50C26CF3 /* LKPostingQueueManager-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 20785B0B12D3827E7A7B7CC32E361BDA /* LKPostingQueueManager-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		ADC2C94A1D90AABA3BF47895CFBF6585 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01A7774B4C99BC35E64E3042A78AD9A2 /* Foundation.framework */; };
-		B4C53B9C602C92FE2EFE0CAB46C044E2 /* LKQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = A895B927E9D04EDBEB00DD1EA20450B7 /* LKQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C15066790EF03493DD4BDA5695541370 /* Pods-LKPostingQueueManager_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A0C30DDAF3A18775CADB1ED2AB44CF25 /* Pods-LKPostingQueueManager_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CDE0116366F5AB04817976BB06C71727 /* FBNetworkReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = B01001F1CC0863DCDE8077EE6DD3DFA8 /* FBNetworkReachability.m */; };
-		CF00A5E1DC8AE1AB6D1FFCACBCC7EFA6 /* LKTaskCompletion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5EE51C45FF9CF8630DC7E2545FCB38D /* LKTaskCompletion.framework */; };
-		D2582CCAE1BE687ECD64AABBC89D9DCE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01A7774B4C99BC35E64E3042A78AD9A2 /* Foundation.framework */; };
-		D5A37E41D071463A7A23F348BF5E2322 /* LKQueueEntryOperator.h in Headers */ = {isa = PBXBuildFile; fileRef = B9DAA39E38F23AE6400A86795FB1A50E /* LKQueueEntryOperator.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F40AF0118401B2F2E1A28769E2EB1C8B /* LKQueueEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2A3EF7DDDF33697ADD29250C309C41 /* LKQueueEntry.m */; };
+		04847FDEE698446774CC5355E6F0A953 /* FBNetworkReachability-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C1692503EC44886A73BF9B9DE4540E4A /* FBNetworkReachability-dummy.m */; };
+		0541F6C33C2EB7C96ACF4A1C13EE9D58 /* FBNetworkReachability-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 08C219B6994D97CDA4C21FAC14AD9003 /* FBNetworkReachability-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D7CD77D314450032354F243433CBCF5 /* IconEmpty@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 03FCC1A38BB425316BF829910A27EAF5 /* IconEmpty@3x.png */; };
+		1D4096D92EA64875BD5129C29DFBC484 /* LKQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = A895B927E9D04EDBEB00DD1EA20450B7 /* LKQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		264938EDF96A9E22A09C2F2924908C05 /* LKTaskCompletion.m in Sources */ = {isa = PBXBuildFile; fileRef = B9D1D080A399CC4AD27760B134C52AB3 /* LKTaskCompletion.m */; };
+		295AF496A745EF787D2D6741E47FA41B /* LKCodingObject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00D803D07BB67EBE4AEB8B1369AB3971 /* LKCodingObject.framework */; };
+		29AD6D2B7242BE1029D1B697E629FC4D /* LKQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = D473D2BE77C01D1D2176CFFDD5BA423C /* LKQueue.m */; };
+		2CE225EB31E9807B46B4FEE7CC9BAB05 /* FBNetworkReachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A07F0097D341C9EBFA28AF1AD0F3250 /* FBNetworkReachability.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		301DE8B3F37C42510678F421BCE681F7 /* LKQueueEntry.h in Headers */ = {isa = PBXBuildFile; fileRef = 12B9AC366DEA262BC9C7F48AF7D810E1 /* LKQueueEntry.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		32FB3D9F6A65F4F0D060E46A71A44714 /* LKTaskCompletion-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D3F77651188FF03CC9DF452A95B233B9 /* LKTaskCompletion-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B992DAB6B02EE9B6D9BB488777D8A35 /* LKPostingQueueManager-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AC5CEC62D1B5A16708FBD8C74B1E576A /* LKPostingQueueManager-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3F5A925683F1206C4E74CA2ACD98E6B4 /* Pods-LKPostingQueueManager_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 13F5C757AA21177528659D3F233E2EC0 /* Pods-LKPostingQueueManager_Tests-dummy.m */; };
+		3FD780BC793FDDAB0CCC83F3B448C33F /* LKQueueEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2A3EF7DDDF33697ADD29250C309C41 /* LKQueueEntry.m */; };
+		404CDD7E19DD5AE087BE51BF3E067BE4 /* LKTaskCompletion.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F2206E3B1C0A17E05F1B98FFFAFB1FA /* LKTaskCompletion.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4172BF15C90BCCC57B031496AFD07BAD /* LKPostingQueueManager.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26F13A496DC49E3FB562E102FFCFC77C /* LKPostingQueueManager.storyboard */; };
+		47753310A5DD42B35512731ABEC61EB0 /* FBNetworkReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = B01001F1CC0863DCDE8077EE6DD3DFA8 /* FBNetworkReachability.m */; };
+		4AFD96F69E0291939F5B035E7D3E4688 /* LKPostingQueueTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F9CC1D3DAD0AD80FE954D78AAFCEBAF /* LKPostingQueueTableViewCell.xib */; };
+		4AFFF82D072888366E0BBFEFABF0C8E9 /* LKQueue-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 553866BBDF909676F895DF19C1822361 /* LKQueue-dummy.m */; };
+		4BB2F7E05E7C79826307FF0945073823 /* Pods-LKPostingQueueManager_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B89866757267500FDB11667558F721BE /* Pods-LKPostingQueueManager_Example-dummy.m */; };
+		4C90454FDE3A640C27B0CAD39F26783C /* LKPostingEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C6109A572762605377680A3AC9C4D4 /* LKPostingEntry.swift */; };
+		4CA9E9518983B3F5CA7F946FA716DFB6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8434AE246565FDA3F029283279D68E9F /* Foundation.framework */; };
+		5433C73B8F6046130315B36D2CF2F41E /* LKPostingQueueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC9681E929214EA6F7419078629BCAF /* LKPostingQueueViewController.swift */; };
+		56118883F00C4773EB28B5552EAADA66 /* LKPostingQueueTransmitMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA7C3013F9224B0C707F5F9046A1E0B /* LKPostingQueueTransmitMode.swift */; };
+		56841B5FA0B8E7D1061D9F647DC88B57 /* LKQueue-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D3253C00EB2EDD02A68789790740EE0 /* LKQueue-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5D9D0A9D4BC1195825EF36CB429ACEB5 /* LKQueueEntryOperator.h in Headers */ = {isa = PBXBuildFile; fileRef = B9DAA39E38F23AE6400A86795FB1A50E /* LKQueueEntryOperator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6621DBDE1E4D0A56BAA1A491B419D8EB /* LKPostingQueueManager-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BC9673F9B73F2A0820A636EFD453F56 /* LKPostingQueueManager-dummy.m */; };
+		7629523F0ABE555C06E54DC944DF40FA /* LKTaskCompletion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5EE51C45FF9CF8630DC7E2545FCB38D /* LKTaskCompletion.framework */; };
+		7BEC10EBBE0A46A2401A3B70EDC92E6A /* LKPostingQueueManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C199F039D34AA023C2090041D95DF1 /* LKPostingQueueManager.swift */; };
+		7F469E7A3BAC42A3A4A6CAE10D1B861F /* LKCodingObject-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E82DF03433E0939F2183715A396A6B38 /* LKCodingObject-dummy.m */; };
+		8659F856699B9855F49E3F4719BED637 /* LKQueueManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A3D76863601C83FCD01ADF5FEFAA7C5 /* LKQueueManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		89A19CCA619A026CB7980C903DC47996 /* en.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 2060DD2F9F0E1164D0598796B08F1E0B /* en.lproj */; };
+		980B800A66113722774B6C2EE2D87444 /* LKQueueEntryOperator.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F28384FD1A90247883C44C6D985CDA5 /* LKQueueEntryOperator.m */; };
+		984618DD35A0C59F0D003031254C91BD /* LKPostingQueueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DEBA0D5BA98403C02E43D65D070BDE0 /* LKPostingQueueTableViewCell.swift */; };
+		A5115BEC0FAFFA5D44F77A643253FF8A /* LKQueueManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8704122C41099E2415D3A6887A58A00A /* LKQueueManager.m */; };
+		AA81E8E8260668F33DC19E7C79F935ED /* Pods-LKPostingQueueManager_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EC331C4DC2939FBCC4951DCEF44EB19B /* Pods-LKPostingQueueManager_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B32D2C2634C4A63A0C44C415531F64BA /* ja.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 472AAF0BE10989EBC1A722BEEC92E838 /* ja.lproj */; };
+		B7724EA710BE6783608E0B1263BF2D6D /* LKCodingObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 361B93CB5C51191894B18B4456274035 /* LKCodingObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BB225B605C83B2EAF8EAC5B9A481EA50 /* LKQueue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EDBEE1550C4055D5ED43C47BA73EB3A /* LKQueue.framework */; };
+		BFC83B908688194B19A3E5174B7707BA /* LKCodingObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 66FF97BE448D5AFA7FB35E73829DD9E3 /* LKCodingObject.m */; };
+		C36C6BEA86FA0B897DA1F1F1CDDC72AF /* LKTaskCompletion-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 70A98DD77441549979B51017AC16473E /* LKTaskCompletion-dummy.m */; };
+		C386F07DB4F75EBD09EBECFF57A6C62B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8434AE246565FDA3F029283279D68E9F /* Foundation.framework */; };
+		CF2A8D5EB831F044F3978A78B1F67964 /* FBNetworkReachability.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F174CB5A32C741B5CAE063FCFC9BAED /* FBNetworkReachability.framework */; };
+		D3F9BBCE82697A2E8FA8751C507A169A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8434AE246565FDA3F029283279D68E9F /* Foundation.framework */; };
+		D49A8A495C67EA9BA91C8DB3C17EC56E /* Pods-LKPostingQueueManager_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A0C30DDAF3A18775CADB1ED2AB44CF25 /* Pods-LKPostingQueueManager_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E332A92651EEDFED90115905E6D5D3FC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8434AE246565FDA3F029283279D68E9F /* Foundation.framework */; };
+		F01076DE7840C28A6C180CB7BED0880A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8434AE246565FDA3F029283279D68E9F /* Foundation.framework */; };
+		F2420F548ACC58A3E2AB2940C1F9535F /* LKPostingQueueManager.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 215C4E56E4B6FCE527CFA556F8CEB2E0 /* LKPostingQueueManager.bundle */; };
+		F6A229D6E7F3EC40F3F27127B1AC04EE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8434AE246565FDA3F029283279D68E9F /* Foundation.framework */; };
+		F8253D0517B094B76A60822017972C91 /* LKCodingObject-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 030DC78FE573DD097E60A3DA60FC8A5A /* LKCodingObject-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F8CAF1546FA63276FC2E7AEADA7FCE52 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8434AE246565FDA3F029283279D68E9F /* Foundation.framework */; };
+		FD6657E6FE9285CC6079FC3E2349393D /* LKPostingQueueLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7867B41D3325606FA9488F76A0AEE9E /* LKPostingQueueLogViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		00A894AAF4EDEC15784633750D65D93B /* PBXContainerItemProxy */ = {
+		090E2F3FDAD0E108C3D061219EC7CF4D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = A148F96C7FC0A52C4CA8F7F5A0202141;
-			remoteInfo = FBNetworkReachability;
-		};
-		05AAD4D54BEF202F70DAA05F01324EF8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E2DAEC6BC763EFA6D75DD1EF19E61F24;
-			remoteInfo = LKPostingQueueManager;
-		};
-		1D031CA0AC68427403E2F97E9D378FC2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B07B3353E39E54478AC18F1D0111DFA1;
+			remoteGlobalIDString = 7C0AACA1AA9B756BD69FB1CBB802B8F1;
 			remoteInfo = LKCodingObject;
 		};
-		277B3D7FFF904C4F4AD6F29D0F6909DF /* PBXContainerItemProxy */ = {
+		0A3E911BF9C863EE34C3115281CDBBDE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = B07B3353E39E54478AC18F1D0111DFA1;
-			remoteInfo = LKCodingObject;
-		};
-		43285F5FFE59B48C837491C0260B4F19 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 044C56D92CDDBAF7A8B591ACB13BE22F;
-			remoteInfo = LKTaskCompletion;
-		};
-		4B2A18C1ED66246849CD3FC7C129C82A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 371C35C0780EBD076C6AEDF35ED9FA23;
+			remoteGlobalIDString = 3E471D3D32BC4A37C45D3171DC20206F;
 			remoteInfo = LKQueue;
 		};
-		50CBCD3097FE379FAEDB8BB5F85678C1 /* PBXContainerItemProxy */ = {
+		2539B9B5E393F27241697A14C5CC5B61 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 044C56D92CDDBAF7A8B591ACB13BE22F;
-			remoteInfo = LKTaskCompletion;
-		};
-		9379FA343FDB82CBCDB283F07F962BFE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B07B3353E39E54478AC18F1D0111DFA1;
+			remoteGlobalIDString = 7C0AACA1AA9B756BD69FB1CBB802B8F1;
 			remoteInfo = LKCodingObject;
 		};
-		A68CA2B8D3E63A32C876C55641F63FE7 /* PBXContainerItemProxy */ = {
+		2A612BF24F92945ABA187175E2F2000D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 371C35C0780EBD076C6AEDF35ED9FA23;
+			remoteGlobalIDString = 7C0AACA1AA9B756BD69FB1CBB802B8F1;
+			remoteInfo = LKCodingObject;
+		};
+		46C58676A06EFB7ADDC054EBE83034AC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AC6C881F31625948099C246A2833DC26;
+			remoteInfo = FBNetworkReachability;
+		};
+		5A2544889F9FDAF22E0F563BC9D0C681 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3E471D3D32BC4A37C45D3171DC20206F;
 			remoteInfo = LKQueue;
 		};
-		ACB004B0BBC146BE7365E12385C882D8 /* PBXContainerItemProxy */ = {
+		6525B52C54050CF8C13911A49FE2A57C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = A148F96C7FC0A52C4CA8F7F5A0202141;
-			remoteInfo = FBNetworkReachability;
-		};
-		B7E55543FDBBE464C3C3CADCE1D917F5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A148F96C7FC0A52C4CA8F7F5A0202141;
-			remoteInfo = FBNetworkReachability;
-		};
-		CF91AA8A4832E673932BE6EF216DB886 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 044C56D92CDDBAF7A8B591ACB13BE22F;
-			remoteInfo = LKTaskCompletion;
-		};
-		D03E5FE3581E4183B6647BCE39C54665 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E2DAEC6BC763EFA6D75DD1EF19E61F24;
+			remoteGlobalIDString = A8776E71C7517CF91EAA6FB0988F4CB4;
 			remoteInfo = LKPostingQueueManager;
 		};
-		D9E48BA3081AA7F5A7550F97B9F9AA61 /* PBXContainerItemProxy */ = {
+		86E9310CFE44F0C87EA79DFEEEBA2475 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 6BF9C6566161E12038E0B673228C2FD7;
+			remoteGlobalIDString = 3E471D3D32BC4A37C45D3171DC20206F;
+			remoteInfo = LKQueue;
+		};
+		B33ADB4BB48EDE219DAED458F70DC241 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A8776E71C7517CF91EAA6FB0988F4CB4;
+			remoteInfo = LKPostingQueueManager;
+		};
+		B3589BF6BA6C28E56FD218E68907D4C9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A002BA8418F50A4708955DA8347365A2;
 			remoteInfo = "LKPostingQueueManager-LKPostingQueueManager";
 		};
-		EA28496180F9B2B1832A4F1D572527D8 /* PBXContainerItemProxy */ = {
+		B63491A42B566981EE7C0C03E1C1FD44 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 371C35C0780EBD076C6AEDF35ED9FA23;
-			remoteInfo = LKQueue;
+			remoteGlobalIDString = AC6C881F31625948099C246A2833DC26;
+			remoteInfo = FBNetworkReachability;
+		};
+		B812EFA2A1AD366260F84B57E460F774 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52A0933C986D044AD3F6FF6EEDD3912A;
+			remoteInfo = LKTaskCompletion;
+		};
+		D1B793E1B7B2C91505F8B3021802CD54 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AC6C881F31625948099C246A2833DC26;
+			remoteInfo = FBNetworkReachability;
+		};
+		DF45BFC9C04D644B5A15AEFD7A4EB0C8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52A0933C986D044AD3F6FF6EEDD3912A;
+			remoteInfo = LKTaskCompletion;
+		};
+		EE2DE32423EB996D7A9831F46EBFADFA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52A0933C986D044AD3F6FF6EEDD3912A;
+			remoteInfo = LKTaskCompletion;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		00D803D07BB67EBE4AEB8B1369AB3971 /* LKCodingObject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LKCodingObject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		01A7774B4C99BC35E64E3042A78AD9A2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		020CFB66F5CE25C6F32EB9F6CAA277EE /* IconEmpty@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "IconEmpty@3x.png"; sourceTree = "<group>"; };
 		030DC78FE573DD097E60A3DA60FC8A5A /* LKCodingObject-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LKCodingObject-umbrella.h"; sourceTree = "<group>"; };
+		03FCC1A38BB425316BF829910A27EAF5 /* IconEmpty@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "IconEmpty@3x.png"; path = "Pod/Assets/IconEmpty@3x.png"; sourceTree = "<group>"; };
 		0790DF5D289ECA37A5648A573775DEE8 /* FBNetworkReachability.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FBNetworkReachability.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		08C219B6994D97CDA4C21FAC14AD9003 /* FBNetworkReachability-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FBNetworkReachability-umbrella.h"; sourceTree = "<group>"; };
 		12B9AC366DEA262BC9C7F48AF7D810E1 /* LKQueueEntry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LKQueueEntry.h; path = Classes/LKQueueEntry.h; sourceTree = "<group>"; };
@@ -181,21 +180,23 @@
 		1B020B59C1619225B9CA905232D8F0D4 /* LKCodingObject-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LKCodingObject-prefix.pch"; sourceTree = "<group>"; };
 		1BD2A77B2764D5FBB3CD4E206C25F130 /* LKCodingObject.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LKCodingObject.xcconfig; sourceTree = "<group>"; };
 		1D8FEB619BD088BF9348D8486A32BEF3 /* Pods-LKPostingQueueManager_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LKPostingQueueManager_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		20785B0B12D3827E7A7B7CC32E361BDA /* LKPostingQueueManager-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LKPostingQueueManager-umbrella.h"; sourceTree = "<group>"; };
+		2060DD2F9F0E1164D0598796B08F1E0B /* en.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = en.lproj; path = Pod/Assets/en.lproj; sourceTree = "<group>"; };
 		215C4E56E4B6FCE527CFA556F8CEB2E0 /* LKPostingQueueManager.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LKPostingQueueManager.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		2201532769DCD2A39225FD8047EE5F25 /* LKPostingQueueManager-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LKPostingQueueManager-prefix.pch"; sourceTree = "<group>"; };
+		22B576BB34CEDBCF483EF047AFDB647B /* LKPostingQueueManager.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LKPostingQueueManager.xcconfig; sourceTree = "<group>"; };
 		255EDC48B8F5A5025896FD7DEE07CFE1 /* LKPostingQueueManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LKPostingQueueManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2E0F2B463AD98700F5AE21CD199E4663 /* LKPostingQueueTableViewCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = LKPostingQueueTableViewCell.xib; sourceTree = "<group>"; };
+		26F13A496DC49E3FB562E102FFCFC77C /* LKPostingQueueManager.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; name = LKPostingQueueManager.storyboard; path = Pod/Assets/LKPostingQueueManager.storyboard; sourceTree = "<group>"; };
 		312D1C2C7660D22D7BCAEDAEF2B31F8E /* LKQueue-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LKQueue-prefix.pch"; sourceTree = "<group>"; };
 		340B4AA37CF9A1F8250CC62393952EA2 /* Pods-LKPostingQueueManager_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LKPostingQueueManager_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		361B93CB5C51191894B18B4456274035 /* LKCodingObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LKCodingObject.h; path = Classes/LKCodingObject.h; sourceTree = "<group>"; };
 		3A9F7655D0BF79EA91DBFFC9D0C3BA58 /* LKTaskCompletion-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LKTaskCompletion-prefix.pch"; sourceTree = "<group>"; };
 		3C4865FB4FE1E251548708B836B472E1 /* LKTaskCompletion.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LKTaskCompletion.xcconfig; sourceTree = "<group>"; };
 		3D2A3EF7DDDF33697ADD29250C309C41 /* LKQueueEntry.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LKQueueEntry.m; path = Classes/LKQueueEntry.m; sourceTree = "<group>"; };
+		3EC9681E929214EA6F7419078629BCAF /* LKPostingQueueViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LKPostingQueueViewController.swift; path = Pod/Classes/LKPostingQueueViewController.swift; sourceTree = "<group>"; };
 		3F2206E3B1C0A17E05F1B98FFFAFB1FA /* LKTaskCompletion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LKTaskCompletion.h; path = Classes/LKTaskCompletion.h; sourceTree = "<group>"; };
 		40C5D40B6B04BCF34A6B65A912D852E7 /* Pods-LKPostingQueueManager_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LKPostingQueueManager_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		41ADBD15EDB4B1764196646C511F8746 /* Pods-LKPostingQueueManager_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-LKPostingQueueManager_Example.modulemap"; sourceTree = "<group>"; };
 		42918C6F6B6D1CF922E82D4724FACBC8 /* Pods_LKPostingQueueManager_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LKPostingQueueManager_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		472AAF0BE10989EBC1A722BEEC92E838 /* ja.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = ja.lproj; path = Pod/Assets/ja.lproj; sourceTree = "<group>"; };
 		479FAEE506D37BD6D9CC8C1CA71D609A /* LKCodingObject.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = LKCodingObject.modulemap; sourceTree = "<group>"; };
 		4A07F0097D341C9EBFA28AF1AD0F3250 /* FBNetworkReachability.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBNetworkReachability.h; path = Classes/FBNetworkReachability.h; sourceTree = "<group>"; };
 		5266837448ACA0598CD56BA2E6A071BF /* Pods-LKPostingQueueManager_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LKPostingQueueManager_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -203,129 +204,128 @@
 		56CE0B786D8879B066B8847F3FCA5EBC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		571BF7898EE8D67ACB774776E892F691 /* LKQueue.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LKQueue.xcconfig; sourceTree = "<group>"; };
 		5C97C0A1F8877B5C5FE4BECFE7510A1E /* Pods-LKPostingQueueManager_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LKPostingQueueManager_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		5D0656F4AC3E4566FAF09892505D264E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5DA7C3013F9224B0C707F5F9046A1E0B /* LKPostingQueueTransmitMode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LKPostingQueueTransmitMode.swift; path = Pod/Classes/LKPostingQueueTransmitMode.swift; sourceTree = "<group>"; };
 		5DF7CCCB39A11CA13B23911C21917204 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		64F94BB841D0A5AC32FE600FCDDBC5E9 /* LKPostingQueueViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LKPostingQueueViewController.swift; sourceTree = "<group>"; };
 		6654ADC28A998B99E37A931673F1853C /* LKQueue.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LKQueue.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		66AD4D690EC8367AB5F9638FE35F87D7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		66FF97BE448D5AFA7FB35E73829DD9E3 /* LKCodingObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LKCodingObject.m; path = Classes/LKCodingObject.m; sourceTree = "<group>"; };
 		6A09D19F3FEE0F6173AA0DA15CF4706B /* Pods-LKPostingQueueManager_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-LKPostingQueueManager_Tests.modulemap"; sourceTree = "<group>"; };
 		6A3D76863601C83FCD01ADF5FEFAA7C5 /* LKQueueManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LKQueueManager.h; path = Classes/LKQueueManager.h; sourceTree = "<group>"; };
+		6DEBA0D5BA98403C02E43D65D070BDE0 /* LKPostingQueueTableViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LKPostingQueueTableViewCell.swift; path = Pod/Classes/LKPostingQueueTableViewCell.swift; sourceTree = "<group>"; };
 		6F28384FD1A90247883C44C6D985CDA5 /* LKQueueEntryOperator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LKQueueEntryOperator.m; path = Classes/LKQueueEntryOperator.m; sourceTree = "<group>"; };
 		70A98DD77441549979B51017AC16473E /* LKTaskCompletion-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LKTaskCompletion-dummy.m"; sourceTree = "<group>"; };
-		70C115FF44678E55E0B7FD2E6BA5AEC9 /* ResourceBundle-LKPostingQueueManager-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-LKPostingQueueManager-Info.plist"; sourceTree = "<group>"; };
+		7191C0EB4F35A101C310D0F84407586C /* LKPostingQueueManager-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LKPostingQueueManager-prefix.pch"; sourceTree = "<group>"; };
 		7A779778C7813A9E084D592C74B3571E /* LKQueue.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = LKQueue.modulemap; sourceTree = "<group>"; };
+		7BC9673F9B73F2A0820A636EFD453F56 /* LKPostingQueueManager-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LKPostingQueueManager-dummy.m"; sourceTree = "<group>"; };
 		7CAED9D55F3E6AB10A1BE62055EE0185 /* Pods-LKPostingQueueManager_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LKPostingQueueManager_Tests-resources.sh"; sourceTree = "<group>"; };
 		7D3253C00EB2EDD02A68789790740EE0 /* LKQueue-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LKQueue-umbrella.h"; sourceTree = "<group>"; };
-		7D494D6787CEAEB4B6E38492F1C55D20 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		82FA37CF68B88755A6423065D09885B8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8434AE246565FDA3F029283279D68E9F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		8704122C41099E2415D3A6887A58A00A /* LKQueueManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LKQueueManager.m; path = Classes/LKQueueManager.m; sourceTree = "<group>"; };
 		88EFD0DCF3E749318F1E6E9A3A6FC8DD /* Pods-LKPostingQueueManager_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LKPostingQueueManager_Example-resources.sh"; sourceTree = "<group>"; };
-		899CA65A132BE988BD6C0DB6004CD552 /* LKPostingQueueManager.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = LKPostingQueueManager.storyboard; sourceTree = "<group>"; };
 		8ADA4C6FF24C737FBB5A013C758BD93A /* Pods-LKPostingQueueManager_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LKPostingQueueManager_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		8AF13DD1E25DD7A6BB6583C94E8C7435 /* LKCodingObject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LKCodingObject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B24623D3456513C5435A314CC5FDA43 /* FBNetworkReachability.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBNetworkReachability.xcconfig; sourceTree = "<group>"; };
+		8F9CC1D3DAD0AD80FE954D78AAFCEBAF /* LKPostingQueueTableViewCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = LKPostingQueueTableViewCell.xib; path = Pod/Assets/LKPostingQueueTableViewCell.xib; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		95465111585516AE8B308A668C82B387 /* LKTaskCompletion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LKTaskCompletion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A9FF317CCB9526EB90235F1C9D4D35A /* Pods-LKPostingQueueManager_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LKPostingQueueManager_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		9EDBEE1550C4055D5ED43C47BA73EB3A /* LKQueue.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LKQueue.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F174CB5A32C741B5CAE063FCFC9BAED /* FBNetworkReachability.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FBNetworkReachability.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0C30DDAF3A18775CADB1ED2AB44CF25 /* Pods-LKPostingQueueManager_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LKPostingQueueManager_Tests-umbrella.h"; sourceTree = "<group>"; };
-		A385C13A152628B4437358575B78C13E /* LKPostingQueueTransmitMode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LKPostingQueueTransmitMode.swift; sourceTree = "<group>"; };
+		A47EF97E23730AEDB9BA9CD497B9340A /* ResourceBundle-LKPostingQueueManager-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-LKPostingQueueManager-Info.plist"; sourceTree = "<group>"; };
 		A557BD58AB287CA60F049AF6F5575E90 /* Pods-LKPostingQueueManager_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LKPostingQueueManager_Example.release.xcconfig"; sourceTree = "<group>"; };
 		A895B927E9D04EDBEB00DD1EA20450B7 /* LKQueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LKQueue.h; path = Classes/LKQueue.h; sourceTree = "<group>"; };
-		A9B887CC203F001D2040414119C47CE0 /* LKPostingQueueTableViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LKPostingQueueTableViewCell.swift; sourceTree = "<group>"; };
+		AC5CEC62D1B5A16708FBD8C74B1E576A /* LKPostingQueueManager-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LKPostingQueueManager-umbrella.h"; sourceTree = "<group>"; };
 		ADA555891B35581BDC7CF58F96199874 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B01001F1CC0863DCDE8077EE6DD3DFA8 /* FBNetworkReachability.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBNetworkReachability.m; path = Classes/FBNetworkReachability.m; sourceTree = "<group>"; };
 		B5D7A8AC8113E4E37993DE9B1F23D8F3 /* Pods-LKPostingQueueManager_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LKPostingQueueManager_Example-frameworks.sh"; sourceTree = "<group>"; };
-		B742F0401F33D640767AFE05BC7E0448 /* LKPostingQueueManager-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LKPostingQueueManager-dummy.m"; sourceTree = "<group>"; };
-		B7F7C2C7AC9F16DC37F0140ABCFC307A /* LKPostingQueueManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LKPostingQueueManager.swift; sourceTree = "<group>"; };
 		B89866757267500FDB11667558F721BE /* Pods-LKPostingQueueManager_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LKPostingQueueManager_Example-dummy.m"; sourceTree = "<group>"; };
 		B9D1D080A399CC4AD27760B134C52AB3 /* LKTaskCompletion.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LKTaskCompletion.m; path = Classes/LKTaskCompletion.m; sourceTree = "<group>"; };
 		B9DAA39E38F23AE6400A86795FB1A50E /* LKQueueEntryOperator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LKQueueEntryOperator.h; path = Classes/LKQueueEntryOperator.h; sourceTree = "<group>"; };
 		BD27AEC8C64FB2DE2DEE42F0EC775758 /* FBNetworkReachability-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FBNetworkReachability-prefix.pch"; sourceTree = "<group>"; };
 		C1692503EC44886A73BF9B9DE4540E4A /* FBNetworkReachability-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FBNetworkReachability-dummy.m"; sourceTree = "<group>"; };
-		C25685F9E1A0D99164E7D5D9F7DBB5F3 /* LKPostingQueueManager.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LKPostingQueueManager.xcconfig; sourceTree = "<group>"; };
-		C53B140924D04325B66BA88702512840 /* LKPostingEntry.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LKPostingEntry.swift; sourceTree = "<group>"; };
+		C8C199F039D34AA023C2090041D95DF1 /* LKPostingQueueManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LKPostingQueueManager.swift; path = Pod/Classes/LKPostingQueueManager.swift; sourceTree = "<group>"; };
 		D3F77651188FF03CC9DF452A95B233B9 /* LKTaskCompletion-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LKTaskCompletion-umbrella.h"; sourceTree = "<group>"; };
 		D473D2BE77C01D1D2176CFFDD5BA423C /* LKQueue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LKQueue.m; path = Classes/LKQueue.m; sourceTree = "<group>"; };
+		D4C6109A572762605377680A3AC9C4D4 /* LKPostingEntry.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LKPostingEntry.swift; path = Pod/Classes/LKPostingEntry.swift; sourceTree = "<group>"; };
+		D7867B41D3325606FA9488F76A0AEE9E /* LKPostingQueueLogViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LKPostingQueueLogViewController.swift; path = Pod/Classes/LKPostingQueueLogViewController.swift; sourceTree = "<group>"; };
 		D7A6253FADA2ACE804FBEB82116F9111 /* FBNetworkReachability.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = FBNetworkReachability.modulemap; sourceTree = "<group>"; };
-		DD8CE4BFB8C00CB02CFEE790628B8682 /* LKPostingQueueManager.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = LKPostingQueueManager.modulemap; sourceTree = "<group>"; };
-		E3CBDC36EEC25CB938DDEA578FBFA400 /* LKPostingQueueLogViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LKPostingQueueLogViewController.swift; sourceTree = "<group>"; };
 		E3ECFEDA7A90BAFDE34EA393585D996C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E64DEBA81A8ED6CDCCEEE8DF8A84700B /* Pods_LKPostingQueueManager_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LKPostingQueueManager_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E7DA3F9A742612DF95E0B5D0FF65D1D4 /* en.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; path = en.lproj; sourceTree = "<group>"; };
 		E82DF03433E0939F2183715A396A6B38 /* LKCodingObject-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LKCodingObject-dummy.m"; sourceTree = "<group>"; };
 		EC331C4DC2939FBCC4951DCEF44EB19B /* Pods-LKPostingQueueManager_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LKPostingQueueManager_Example-umbrella.h"; sourceTree = "<group>"; };
+		F5D4746314F6B37B5733B6E4AF4A37D7 /* LKPostingQueueManager.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = LKPostingQueueManager.modulemap; sourceTree = "<group>"; };
 		F5EE51C45FF9CF8630DC7E2545FCB38D /* LKTaskCompletion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LKTaskCompletion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FC858266CE87B2042081DC4817B7477F /* ja.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; path = ja.lproj; sourceTree = "<group>"; };
 		FF0D30F7EDD63281D57908537EA8FD36 /* LKTaskCompletion.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = LKTaskCompletion.modulemap; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		028BFE31A55A02790071C6C189301CD7 /* Frameworks */ = {
+		085B6EBD7D38D778C2DEE10026009ECA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E1ACCEF2C8F9A2C76223D3CCCFA4A6A /* Foundation.framework in Frameworks */,
+				F6A229D6E7F3EC40F3F27127B1AC04EE /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		19907AAE6541E058DD91825D3153E869 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9ED6C6FB6A2BF5DC7AE0EF4345BDBB30 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		47E33AEFF0A3CAACF000757195C9FDB9 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D2582CCAE1BE687ECD64AABBC89D9DCE /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		66857413268A081B32E6E3E5687837AB /* Frameworks */ = {
+		0CBF6CEA9C9D2B024678EF3A18501087 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A133A6E790AC8021C1704F1EC635A3D2 /* Frameworks */ = {
+		2B4B0992C3159D6A7A25E9B4BB754EBF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				584484263B8391DDCA9752E21B42BC15 /* Foundation.framework in Frameworks */,
+				D3F9BBCE82697A2E8FA8751C507A169A /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A53A8FF25C71DB587ECDC476C7B37A63 /* Frameworks */ = {
+		A5FEC2A1934BBDAADA7C832310A73A39 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADC2C94A1D90AABA3BF47895CFBF6585 /* Foundation.framework in Frameworks */,
+				C386F07DB4F75EBD09EBECFF57A6C62B /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B2F903A5187F0E0046B1E478065A6BB6 /* Frameworks */ = {
+		AFCF8905C50104995603462E78444906 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				58E5A3C0BEA2FFAEF8FF15E36DB96351 /* Foundation.framework in Frameworks */,
+				E332A92651EEDFED90115905E6D5D3FC /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C904DA53D9C2275F5F2BD9D7F250DEF1 /* Frameworks */ = {
+		B9506D90DE1355311CE3C7774D883BF9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4AC75E0D780E9524564728A45408A4A5 /* FBNetworkReachability.framework in Frameworks */,
-				963734F523AA7157FD1F3C307DE3BADD /* Foundation.framework in Frameworks */,
-				497686BECD4221C63D4DD1EC593F5727 /* LKCodingObject.framework in Frameworks */,
-				78DDA85B2D717E8A1B65E50673FDCF62 /* LKQueue.framework in Frameworks */,
-				CF00A5E1DC8AE1AB6D1FFCACBCC7EFA6 /* LKTaskCompletion.framework in Frameworks */,
+				CF2A8D5EB831F044F3978A78B1F67964 /* FBNetworkReachability.framework in Frameworks */,
+				4CA9E9518983B3F5CA7F946FA716DFB6 /* Foundation.framework in Frameworks */,
+				295AF496A745EF787D2D6741E47FA41B /* LKCodingObject.framework in Frameworks */,
+				BB225B605C83B2EAF8EAC5B9A481EA50 /* LKQueue.framework in Frameworks */,
+				7629523F0ABE555C06E54DC944DF40FA /* LKTaskCompletion.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEB3E62C0B67BB6DC8FCFC1870D7B0AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8CAF1546FA63276FC2E7AEADA7FCE52 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAA09AA92220F9AEB6FE186509BFACBE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F01076DE7840C28A6C180CB7BED0880A /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,14 +411,6 @@
 			path = "Target Support Files/Pods-LKPostingQueueManager_Tests";
 			sourceTree = "<group>";
 		};
-		38DFEA027B00A549D89DA00DB730D272 /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				A0C5907F7BC97B19E26CB542D11113A5 /* LKPostingQueueManager */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
 		4021FFA303D2A69371519C3181608B28 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -433,12 +425,19 @@
 			path = "../Target Support Files/LKQueue";
 			sourceTree = "<group>";
 		};
-		41E49EC22EC155A3D33A099FDD0C94CA /* iOS */ = {
+		4540C50102F9B586A718D24259433787 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				01A7774B4C99BC35E64E3042A78AD9A2 /* Foundation.framework */,
+				5D0656F4AC3E4566FAF09892505D264E /* Info.plist */,
+				F5D4746314F6B37B5733B6E4AF4A37D7 /* LKPostingQueueManager.modulemap */,
+				22B576BB34CEDBCF483EF047AFDB647B /* LKPostingQueueManager.xcconfig */,
+				7BC9673F9B73F2A0820A636EFD453F56 /* LKPostingQueueManager-dummy.m */,
+				7191C0EB4F35A101C310D0F84407586C /* LKPostingQueueManager-prefix.pch */,
+				AC5CEC62D1B5A16708FBD8C74B1E576A /* LKPostingQueueManager-umbrella.h */,
+				A47EF97E23730AEDB9BA9CD497B9340A /* ResourceBundle-LKPostingQueueManager-Info.plist */,
 			);
-			name = iOS;
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/LKPostingQueueManager";
 			sourceTree = "<group>";
 		};
 		464C487068B288CEE6D8039232785B67 /* Pods */ = {
@@ -505,7 +504,7 @@
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				38DFEA027B00A549D89DA00DB730D272 /* Development Pods */,
+				865848B3C2C7EBFC44F685EF0F2B273F /* Development Pods */,
 				B13246ACF103B46BFBD123D855BB55B4 /* Frameworks */,
 				464C487068B288CEE6D8039232785B67 /* Pods */,
 				197491B9CA3A6449AC96FDDBDB08DD8D /* Products */,
@@ -513,32 +512,12 @@
 			);
 			sourceTree = "<group>";
 		};
-		8D62E2ECE38099B2DFAC44AE2307AB3A /* Support Files */ = {
+		865848B3C2C7EBFC44F685EF0F2B273F /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				7D494D6787CEAEB4B6E38492F1C55D20 /* Info.plist */,
-				DD8CE4BFB8C00CB02CFEE790628B8682 /* LKPostingQueueManager.modulemap */,
-				C25685F9E1A0D99164E7D5D9F7DBB5F3 /* LKPostingQueueManager.xcconfig */,
-				B742F0401F33D640767AFE05BC7E0448 /* LKPostingQueueManager-dummy.m */,
-				2201532769DCD2A39225FD8047EE5F25 /* LKPostingQueueManager-prefix.pch */,
-				20785B0B12D3827E7A7B7CC32E361BDA /* LKPostingQueueManager-umbrella.h */,
-				70C115FF44678E55E0B7FD2E6BA5AEC9 /* ResourceBundle-LKPostingQueueManager-Info.plist */,
+				D97F22CB0CE224FEE49C598707DE595C /* LKPostingQueueManager */,
 			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/LKPostingQueueManager";
-			sourceTree = "<group>";
-		};
-		93A6B140FA714ED21C01FB50F4CAACD7 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				C53B140924D04325B66BA88702512840 /* LKPostingEntry.swift */,
-				E3CBDC36EEC25CB938DDEA578FBFA400 /* LKPostingQueueLogViewController.swift */,
-				B7F7C2C7AC9F16DC37F0140ABCFC307A /* LKPostingQueueManager.swift */,
-				A9B887CC203F001D2040414119C47CE0 /* LKPostingQueueTableViewCell.swift */,
-				A385C13A152628B4437358575B78C13E /* LKPostingQueueTransmitMode.swift */,
-				64F94BB841D0A5AC32FE600FCDDBC5E9 /* LKPostingQueueViewController.swift */,
-			);
-			path = Classes;
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 		9E4FDBB43497D874BC1F4FA564204505 /* FBNetworkReachability */ = {
@@ -551,17 +530,6 @@
 			path = FBNetworkReachability;
 			sourceTree = "<group>";
 		};
-		A0C5907F7BC97B19E26CB542D11113A5 /* LKPostingQueueManager */ = {
-			isa = PBXGroup;
-			children = (
-				B7511E6763787502B2D430B076DC0DCE /* Pod */,
-				B89ABE04677478844CD08A284D41A35E /* Resources */,
-				8D62E2ECE38099B2DFAC44AE2307AB3A /* Support Files */,
-			);
-			name = LKPostingQueueManager;
-			path = ../..;
-			sourceTree = "<group>";
-		};
 		B13246ACF103B46BFBD123D855BB55B4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -569,45 +537,45 @@
 				00D803D07BB67EBE4AEB8B1369AB3971 /* LKCodingObject.framework */,
 				9EDBEE1550C4055D5ED43C47BA73EB3A /* LKQueue.framework */,
 				F5EE51C45FF9CF8630DC7E2545FCB38D /* LKTaskCompletion.framework */,
-				41E49EC22EC155A3D33A099FDD0C94CA /* iOS */,
+				DC1FC0DFD5949CECECD7B73D57ABF599 /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		B7511E6763787502B2D430B076DC0DCE /* Pod */ = {
+		D97F22CB0CE224FEE49C598707DE595C /* LKPostingQueueManager */ = {
 			isa = PBXGroup;
 			children = (
-				93A6B140FA714ED21C01FB50F4CAACD7 /* Classes */,
+				D4C6109A572762605377680A3AC9C4D4 /* LKPostingEntry.swift */,
+				D7867B41D3325606FA9488F76A0AEE9E /* LKPostingQueueLogViewController.swift */,
+				C8C199F039D34AA023C2090041D95DF1 /* LKPostingQueueManager.swift */,
+				6DEBA0D5BA98403C02E43D65D070BDE0 /* LKPostingQueueTableViewCell.swift */,
+				5DA7C3013F9224B0C707F5F9046A1E0B /* LKPostingQueueTransmitMode.swift */,
+				3EC9681E929214EA6F7419078629BCAF /* LKPostingQueueViewController.swift */,
+				E132ECEF56D6CA7EC6F3180409874C6A /* Resources */,
+				4540C50102F9B586A718D24259433787 /* Support Files */,
 			);
-			path = Pod;
+			name = LKPostingQueueManager;
+			path = ../..;
 			sourceTree = "<group>";
 		};
-		B89ABE04677478844CD08A284D41A35E /* Resources */ = {
+		DC1FC0DFD5949CECECD7B73D57ABF599 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				CDF54F9D57CCAC8FD825CA74D235882E /* Pod */,
+				8434AE246565FDA3F029283279D68E9F /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		E132ECEF56D6CA7EC6F3180409874C6A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2060DD2F9F0E1164D0598796B08F1E0B /* en.lproj */,
+				03FCC1A38BB425316BF829910A27EAF5 /* IconEmpty@3x.png */,
+				472AAF0BE10989EBC1A722BEEC92E838 /* ja.lproj */,
+				26F13A496DC49E3FB562E102FFCFC77C /* LKPostingQueueManager.storyboard */,
+				8F9CC1D3DAD0AD80FE954D78AAFCEBAF /* LKPostingQueueTableViewCell.xib */,
 			);
 			name = Resources;
-			sourceTree = "<group>";
-		};
-		CDF54F9D57CCAC8FD825CA74D235882E /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				D6F7FB89186D085FD8F40F1EE62F0719 /* Assets */,
-			);
-			path = Pod;
-			sourceTree = "<group>";
-		};
-		D6F7FB89186D085FD8F40F1EE62F0719 /* Assets */ = {
-			isa = PBXGroup;
-			children = (
-				E7DA3F9A742612DF95E0B5D0FF65D1D4 /* en.lproj */,
-				020CFB66F5CE25C6F32EB9F6CAA277EE /* IconEmpty@3x.png */,
-				FC858266CE87B2042081DC4817B7477F /* ja.lproj */,
-				899CA65A132BE988BD6C0DB6004CD552 /* LKPostingQueueManager.storyboard */,
-				2E0F2B463AD98700F5AE21CD199E4663 /* LKPostingQueueTableViewCell.xib */,
-			);
-			path = Assets;
 			sourceTree = "<group>";
 		};
 		EE42D94E93E75EEE9C018E736F9C017C /* LKCodingObject */ = {
@@ -623,118 +591,101 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		3105E3911CB56DA11FB7098DFE4760A5 /* Headers */ = {
+		1793E582CF2F2889B144962F11D2BA69 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C15066790EF03493DD4BDA5695541370 /* Pods-LKPostingQueueManager_Tests-umbrella.h in Headers */,
+				AA81E8E8260668F33DC19E7C79F935ED /* Pods-LKPostingQueueManager_Example-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5A1146D65EB1DA949FC77F94173E0E78 /* Headers */ = {
+		20EA87983F02B737ABDF8B4708292BA2 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8532DFC0ED7F5C998A63CDAE68444A9D /* Pods-LKPostingQueueManager_Example-umbrella.h in Headers */,
+				3B992DAB6B02EE9B6D9BB488777D8A35 /* LKPostingQueueManager-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5F06720CA8E8F11E158C806CE301C2D6 /* Headers */ = {
+		2B71D6283CA2C7D3E251FA2C1CBBF750 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				726FF6740E879CA5156F077F896D5733 /* FBNetworkReachability-umbrella.h in Headers */,
-				AAA4F61F9D2799D407A7D621A02DC07A /* FBNetworkReachability.h in Headers */,
+				32FB3D9F6A65F4F0D060E46A71A44714 /* LKTaskCompletion-umbrella.h in Headers */,
+				404CDD7E19DD5AE087BE51BF3E067BE4 /* LKTaskCompletion.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6E38CD14500ED62611C2F36FBA08F957 /* Headers */ = {
+		69686AC27028740C44ADDA7D9D3780A1 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				581A9E74F40C2CFFD74BA6CF319A50E5 /* LKTaskCompletion-umbrella.h in Headers */,
-				5154607B0F5A4A0C7F8C508E6C0EC5B6 /* LKTaskCompletion.h in Headers */,
+				56841B5FA0B8E7D1061D9F647DC88B57 /* LKQueue-umbrella.h in Headers */,
+				1D4096D92EA64875BD5129C29DFBC484 /* LKQueue.h in Headers */,
+				301DE8B3F37C42510678F421BCE681F7 /* LKQueueEntry.h in Headers */,
+				5D9D0A9D4BC1195825EF36CB429ACEB5 /* LKQueueEntryOperator.h in Headers */,
+				8659F856699B9855F49E3F4719BED637 /* LKQueueManager.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8D5AA767DE0D59FA5B09AE52BCCFF45C /* Headers */ = {
+		6CD57528B09AD59EF429944ADBE6CFB0 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B9A5B13659C5C7CF1B1C64BF5C2325D /* LKQueue-umbrella.h in Headers */,
-				B4C53B9C602C92FE2EFE0CAB46C044E2 /* LKQueue.h in Headers */,
-				6EAD98BF4C1DFDEF6DF722C84621587C /* LKQueueEntry.h in Headers */,
-				D5A37E41D071463A7A23F348BF5E2322 /* LKQueueEntryOperator.h in Headers */,
-				9558DCB2763815B552AFA276630FCFDA /* LKQueueManager.h in Headers */,
+				D49A8A495C67EA9BA91C8DB3C17EC56E /* Pods-LKPostingQueueManager_Tests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A2B2B549BCF411780BB9979C8B1C9822 /* Headers */ = {
+		8049E566CD26EBA609A951ED3B4D976B /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0EBA377709345F4E2EFBDFECCA659EEF /* LKCodingObject-umbrella.h in Headers */,
-				1E260CB6DAD952D7D9A56BB99E08E63F /* LKCodingObject.h in Headers */,
+				0541F6C33C2EB7C96ACF4A1C13EE9D58 /* FBNetworkReachability-umbrella.h in Headers */,
+				2CE225EB31E9807B46B4FEE7CC9BAB05 /* FBNetworkReachability.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F661F48E85F5C4F6892AE4104086F9E7 /* Headers */ = {
+		AFC85609568CBCF517FB32ED64EAAFAA /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC0D9ACFFFDCCC8261361FEF50C26CF3 /* LKPostingQueueManager-umbrella.h in Headers */,
+				F8253D0517B094B76A60822017972C91 /* LKCodingObject-umbrella.h in Headers */,
+				B7724EA710BE6783608E0B1263BF2D6D /* LKCodingObject.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		044C56D92CDDBAF7A8B591ACB13BE22F /* LKTaskCompletion */ = {
+		0DE049785010BB7AD43C54A7BC9F45EE /* Pods-LKPostingQueueManager_Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 58D885AFC141AEC3E249C2DC52D632C1 /* Build configuration list for PBXNativeTarget "LKTaskCompletion" */;
+			buildConfigurationList = E911912F9051842994FB3DFBB690F99B /* Build configuration list for PBXNativeTarget "Pods-LKPostingQueueManager_Tests" */;
 			buildPhases = (
-				B4A872C68233A2A46588EACF221CEF1F /* Sources */,
-				47E33AEFF0A3CAACF000757195C9FDB9 /* Frameworks */,
-				6E38CD14500ED62611C2F36FBA08F957 /* Headers */,
+				E1F3E86250B4D0C5FCF84A7ED1286749 /* Sources */,
+				AFCF8905C50104995603462E78444906 /* Frameworks */,
+				6CD57528B09AD59EF429944ADBE6CFB0 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-			);
-			name = LKTaskCompletion;
-			productName = LKTaskCompletion;
-			productReference = 95465111585516AE8B308A668C82B387 /* LKTaskCompletion.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		133B8DAAA9FCA0912CB059B146C5217B /* Pods-LKPostingQueueManager_Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B8246AC9F8E502A1F47977F77C3F82DB /* Build configuration list for PBXNativeTarget "Pods-LKPostingQueueManager_Tests" */;
-			buildPhases = (
-				096BEF53DE273C90ED89989EA3416293 /* Sources */,
-				B2F903A5187F0E0046B1E478065A6BB6 /* Frameworks */,
-				3105E3911CB56DA11FB7098DFE4760A5 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				132B7CEE106E2D7B810E6D18D940A478 /* PBXTargetDependency */,
-				15D03D1158964D3A9B53696D7857D5A2 /* PBXTargetDependency */,
-				2536B80C9D5242E28470AC1D0F507B9E /* PBXTargetDependency */,
-				3D1482493B7275705183A88BDCCB68FD /* PBXTargetDependency */,
-				74D7C988B32B1D3AD2D67A746DD74523 /* PBXTargetDependency */,
+				93195B5A4FB2B893A91C91AD25FC1240 /* PBXTargetDependency */,
+				6BE5D4874E08BC1DF6896E552071C118 /* PBXTargetDependency */,
+				4F43FA33A121D94F9FF25E44C62E091A /* PBXTargetDependency */,
+				759ADA2E02782C6F407E7F6F2FAB9117 /* PBXTargetDependency */,
+				CE72ABF5D26007F4873A78A9B8863FB5 /* PBXTargetDependency */,
 			);
 			name = "Pods-LKPostingQueueManager_Tests";
 			productName = "Pods-LKPostingQueueManager_Tests";
 			productReference = E64DEBA81A8ED6CDCCEEE8DF8A84700B /* Pods_LKPostingQueueManager_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		371C35C0780EBD076C6AEDF35ED9FA23 /* LKQueue */ = {
+		3E471D3D32BC4A37C45D3171DC20206F /* LKQueue */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1634114632811D6C6691439158E70C7F /* Build configuration list for PBXNativeTarget "LKQueue" */;
+			buildConfigurationList = 18AD144E43EB7E112F41B09C43841C01 /* Build configuration list for PBXNativeTarget "LKQueue" */;
 			buildPhases = (
-				94A5E4FB339EB52C83BADD773ACF9B2C /* Sources */,
-				028BFE31A55A02790071C6C189301CD7 /* Frameworks */,
-				8D5AA767DE0D59FA5B09AE52BCCFF45C /* Headers */,
+				EFD7C95E1ACC7149CED52D7C05A77124 /* Sources */,
+				CEB3E62C0B67BB6DC8FCFC1870D7B0AC /* Frameworks */,
+				69686AC27028740C44ADDA7D9D3780A1 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -745,69 +696,52 @@
 			productReference = 6654ADC28A998B99E37A931673F1853C /* LKQueue.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		6BF9C6566161E12038E0B673228C2FD7 /* LKPostingQueueManager-LKPostingQueueManager */ = {
+		449F6B106CA9CD4C0E0AEB7B321A9E7C /* Pods-LKPostingQueueManager_Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7952C3CAC242F10E92914BCF1A0888A9 /* Build configuration list for PBXNativeTarget "LKPostingQueueManager-LKPostingQueueManager" */;
+			buildConfigurationList = 471CD62D45D883A1C6B93E2E14CC5AA6 /* Build configuration list for PBXNativeTarget "Pods-LKPostingQueueManager_Example" */;
 			buildPhases = (
-				6BBD786758BA687119D17874863A4411 /* Sources */,
-				66857413268A081B32E6E3E5687837AB /* Frameworks */,
-				59CD52D8DE1CA902F670DACF3E063BA9 /* Resources */,
+				9BB34824803CF40788335C52045A1697 /* Sources */,
+				2B4B0992C3159D6A7A25E9B4BB754EBF /* Frameworks */,
+				1793E582CF2F2889B144962F11D2BA69 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-			);
-			name = "LKPostingQueueManager-LKPostingQueueManager";
-			productName = "LKPostingQueueManager-LKPostingQueueManager";
-			productReference = 215C4E56E4B6FCE527CFA556F8CEB2E0 /* LKPostingQueueManager.bundle */;
-			productType = "com.apple.product-type.bundle";
-		};
-		891EE0F1FEA7E7B75E4318A1DCAAFA12 /* Pods-LKPostingQueueManager_Example */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5821374D6E4B65E6B5EEC51665C32C15 /* Build configuration list for PBXNativeTarget "Pods-LKPostingQueueManager_Example" */;
-			buildPhases = (
-				A99839726C61B170B09A7418B04CB36F /* Sources */,
-				19907AAE6541E058DD91825D3153E869 /* Frameworks */,
-				5A1146D65EB1DA949FC77F94173E0E78 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F68CC43568B45EFCFD2FE9269B646AC2 /* PBXTargetDependency */,
-				D650A80A073ED3742E94C99166E8F9D3 /* PBXTargetDependency */,
-				6AD07C53458B7CEAEEFE0E7BAF7FD39F /* PBXTargetDependency */,
-				E6FFC868B6146429DD7F4D7BEC44F9AE /* PBXTargetDependency */,
-				156047D54A9124DFD262B520249F91D6 /* PBXTargetDependency */,
+				AA63055099B436145A640AD1D6042AF2 /* PBXTargetDependency */,
+				CC1A6740C65D0D0B3B568AFB5BA39CAE /* PBXTargetDependency */,
+				4FD1507DC510E5CDBD9F246817169654 /* PBXTargetDependency */,
+				BE7C730BDE85F70E6602E5CE7213469A /* PBXTargetDependency */,
+				B570A7032E2D1E7DA731F2F84585EE45 /* PBXTargetDependency */,
 			);
 			name = "Pods-LKPostingQueueManager_Example";
 			productName = "Pods-LKPostingQueueManager_Example";
 			productReference = 42918C6F6B6D1CF922E82D4724FACBC8 /* Pods_LKPostingQueueManager_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		A148F96C7FC0A52C4CA8F7F5A0202141 /* FBNetworkReachability */ = {
+		52A0933C986D044AD3F6FF6EEDD3912A /* LKTaskCompletion */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A713B510B907D9CBF21905D0295A37E2 /* Build configuration list for PBXNativeTarget "FBNetworkReachability" */;
+			buildConfigurationList = F55164E77688E490A33474170C065D69 /* Build configuration list for PBXNativeTarget "LKTaskCompletion" */;
 			buildPhases = (
-				E9FD431FC62E91E3D23D5B932264DE68 /* Sources */,
-				A53A8FF25C71DB587ECDC476C7B37A63 /* Frameworks */,
-				5F06720CA8E8F11E158C806CE301C2D6 /* Headers */,
+				C99C26BDDB18AE1F8BCD5FEA46D22FBC /* Sources */,
+				A5FEC2A1934BBDAADA7C832310A73A39 /* Frameworks */,
+				2B71D6283CA2C7D3E251FA2C1CBBF750 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = FBNetworkReachability;
-			productName = FBNetworkReachability;
-			productReference = 0790DF5D289ECA37A5648A573775DEE8 /* FBNetworkReachability.framework */;
+			name = LKTaskCompletion;
+			productName = LKTaskCompletion;
+			productReference = 95465111585516AE8B308A668C82B387 /* LKTaskCompletion.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		B07B3353E39E54478AC18F1D0111DFA1 /* LKCodingObject */ = {
+		7C0AACA1AA9B756BD69FB1CBB802B8F1 /* LKCodingObject */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3C08E30A6793E495604BB758C562AA51 /* Build configuration list for PBXNativeTarget "LKCodingObject" */;
+			buildConfigurationList = C10DEC99587E09253CAF1F7A4F9883CE /* Build configuration list for PBXNativeTarget "LKCodingObject" */;
 			buildPhases = (
-				127DD460BF2E574CDB2AEA7EAB46CB8B /* Sources */,
-				A133A6E790AC8021C1704F1EC635A3D2 /* Frameworks */,
-				A2B2B549BCF411780BB9979C8B1C9822 /* Headers */,
+				0A9B994FFD1203200A4A69C022653A46 /* Sources */,
+				085B6EBD7D38D778C2DEE10026009ECA /* Frameworks */,
+				AFC85609568CBCF517FB32ED64EAAFAA /* Headers */,
 			);
 			buildRules = (
 			);
@@ -818,27 +752,61 @@
 			productReference = 8AF13DD1E25DD7A6BB6583C94E8C7435 /* LKCodingObject.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		E2DAEC6BC763EFA6D75DD1EF19E61F24 /* LKPostingQueueManager */ = {
+		A002BA8418F50A4708955DA8347365A2 /* LKPostingQueueManager-LKPostingQueueManager */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BD50E96DFB1438C51EC2629F32972815 /* Build configuration list for PBXNativeTarget "LKPostingQueueManager" */;
+			buildConfigurationList = D32E6491F9999F95476054C101969A1F /* Build configuration list for PBXNativeTarget "LKPostingQueueManager-LKPostingQueueManager" */;
 			buildPhases = (
-				B8C92D772C5D5FA9A39005BCF0BFBE7C /* Sources */,
-				C904DA53D9C2275F5F2BD9D7F250DEF1 /* Frameworks */,
-				5D9799F7A2B4F807EA7E95C15C03C127 /* Resources */,
-				F661F48E85F5C4F6892AE4104086F9E7 /* Headers */,
+				AC0189E130851DEFCB8AEA2A2DB5872C /* Sources */,
+				0CBF6CEA9C9D2B024678EF3A18501087 /* Frameworks */,
+				9E8540D462F7AB7A6EE464A4B791F9EE /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				0DC7A0722B7817909009CCF849730E20 /* PBXTargetDependency */,
-				9DE92124AFDD1C507D4C8608EFF06207 /* PBXTargetDependency */,
-				131EC409DA11D12B94394F30EECF85D5 /* PBXTargetDependency */,
-				FC6C57D58D7072A1D7CE996CD486606A /* PBXTargetDependency */,
-				0F89DACC65A4373D2A42DE8622B762B1 /* PBXTargetDependency */,
+			);
+			name = "LKPostingQueueManager-LKPostingQueueManager";
+			productName = "LKPostingQueueManager-LKPostingQueueManager";
+			productReference = 215C4E56E4B6FCE527CFA556F8CEB2E0 /* LKPostingQueueManager.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		A8776E71C7517CF91EAA6FB0988F4CB4 /* LKPostingQueueManager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 945BF93B8F8EA9085C394DD659AB3729 /* Build configuration list for PBXNativeTarget "LKPostingQueueManager" */;
+			buildPhases = (
+				A74F4075258F859589A2EA999E154EC9 /* Sources */,
+				B9506D90DE1355311CE3C7774D883BF9 /* Frameworks */,
+				4B2149238004836E84D214C6F8CE0734 /* Resources */,
+				20EA87983F02B737ABDF8B4708292BA2 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CA4C31BAF695A30406D957ED0625BC0E /* PBXTargetDependency */,
+				4CD7F588CE5C7105DC51CDE50546F4A1 /* PBXTargetDependency */,
+				EA4D72ED1FE3AF0AD244344F043BF82A /* PBXTargetDependency */,
+				34BD665A0F36038C0097A31CCF46525F /* PBXTargetDependency */,
+				65B255BA013021F6EB39F21661B5978B /* PBXTargetDependency */,
 			);
 			name = LKPostingQueueManager;
 			productName = LKPostingQueueManager;
 			productReference = 255EDC48B8F5A5025896FD7DEE07CFE1 /* LKPostingQueueManager.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		AC6C881F31625948099C246A2833DC26 /* FBNetworkReachability */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E8C692141B4576122309AC64BBF938E0 /* Build configuration list for PBXNativeTarget "FBNetworkReachability" */;
+			buildPhases = (
+				DD125E7142B249B4C917326EAEDFDB10 /* Sources */,
+				EAA09AA92220F9AEB6FE186509BFACBE /* Frameworks */,
+				8049E566CD26EBA609A951ED3B4D976B /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FBNetworkReachability;
+			productName = FBNetworkReachability;
+			productReference = 0790DF5D289ECA37A5648A573775DEE8 /* FBNetworkReachability.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -847,7 +815,7 @@
 		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0730;
+				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0700;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
@@ -862,234 +830,233 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A148F96C7FC0A52C4CA8F7F5A0202141 /* FBNetworkReachability */,
-				B07B3353E39E54478AC18F1D0111DFA1 /* LKCodingObject */,
-				E2DAEC6BC763EFA6D75DD1EF19E61F24 /* LKPostingQueueManager */,
-				6BF9C6566161E12038E0B673228C2FD7 /* LKPostingQueueManager-LKPostingQueueManager */,
-				371C35C0780EBD076C6AEDF35ED9FA23 /* LKQueue */,
-				044C56D92CDDBAF7A8B591ACB13BE22F /* LKTaskCompletion */,
-				891EE0F1FEA7E7B75E4318A1DCAAFA12 /* Pods-LKPostingQueueManager_Example */,
-				133B8DAAA9FCA0912CB059B146C5217B /* Pods-LKPostingQueueManager_Tests */,
+				AC6C881F31625948099C246A2833DC26 /* FBNetworkReachability */,
+				7C0AACA1AA9B756BD69FB1CBB802B8F1 /* LKCodingObject */,
+				A8776E71C7517CF91EAA6FB0988F4CB4 /* LKPostingQueueManager */,
+				A002BA8418F50A4708955DA8347365A2 /* LKPostingQueueManager-LKPostingQueueManager */,
+				3E471D3D32BC4A37C45D3171DC20206F /* LKQueue */,
+				52A0933C986D044AD3F6FF6EEDD3912A /* LKTaskCompletion */,
+				449F6B106CA9CD4C0E0AEB7B321A9E7C /* Pods-LKPostingQueueManager_Example */,
+				0DE049785010BB7AD43C54A7BC9F45EE /* Pods-LKPostingQueueManager_Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		59CD52D8DE1CA902F670DACF3E063BA9 /* Resources */ = {
+		4B2149238004836E84D214C6F8CE0734 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03A58BC366B7B45905AEDEB8AEB49156 /* en.lproj in Resources */,
-				9AEA96938176D01658DB752B94CA72A7 /* IconEmpty@3x.png in Resources */,
-				5797982A82319E440BFD39B79841DBCA /* ja.lproj in Resources */,
-				3F0E728C1501FDAAB3325AA346A73DCF /* LKPostingQueueManager.storyboard in Resources */,
-				0BF8C15AACE5D0A2F09E900F4F2886E3 /* LKPostingQueueTableViewCell.xib in Resources */,
+				F2420F548ACC58A3E2AB2940C1F9535F /* LKPostingQueueManager.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5D9799F7A2B4F807EA7E95C15C03C127 /* Resources */ = {
+		9E8540D462F7AB7A6EE464A4B791F9EE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				98B8833EC9E908B879E9FDF6ABC53DCB /* LKPostingQueueManager.bundle in Resources */,
+				89A19CCA619A026CB7980C903DC47996 /* en.lproj in Resources */,
+				0D7CD77D314450032354F243433CBCF5 /* IconEmpty@3x.png in Resources */,
+				B32D2C2634C4A63A0C44C415531F64BA /* ja.lproj in Resources */,
+				4172BF15C90BCCC57B031496AFD07BAD /* LKPostingQueueManager.storyboard in Resources */,
+				4AFD96F69E0291939F5B035E7D3E4688 /* LKPostingQueueTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		096BEF53DE273C90ED89989EA3416293 /* Sources */ = {
+		0A9B994FFD1203200A4A69C022653A46 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7129F5895E7BAF0984F138575D72FA68 /* Pods-LKPostingQueueManager_Tests-dummy.m in Sources */,
+				7F469E7A3BAC42A3A4A6CAE10D1B861F /* LKCodingObject-dummy.m in Sources */,
+				BFC83B908688194B19A3E5174B7707BA /* LKCodingObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		127DD460BF2E574CDB2AEA7EAB46CB8B /* Sources */ = {
+		9BB34824803CF40788335C52045A1697 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1885A635C9863917CC44259AF86153CC /* LKCodingObject-dummy.m in Sources */,
-				150C29B26770DD4B5C6EB7DF7444E1A4 /* LKCodingObject.m in Sources */,
+				4BB2F7E05E7C79826307FF0945073823 /* Pods-LKPostingQueueManager_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6BBD786758BA687119D17874863A4411 /* Sources */ = {
+		A74F4075258F859589A2EA999E154EC9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C90454FDE3A640C27B0CAD39F26783C /* LKPostingEntry.swift in Sources */,
+				FD6657E6FE9285CC6079FC3E2349393D /* LKPostingQueueLogViewController.swift in Sources */,
+				6621DBDE1E4D0A56BAA1A491B419D8EB /* LKPostingQueueManager-dummy.m in Sources */,
+				7BEC10EBBE0A46A2401A3B70EDC92E6A /* LKPostingQueueManager.swift in Sources */,
+				984618DD35A0C59F0D003031254C91BD /* LKPostingQueueTableViewCell.swift in Sources */,
+				56118883F00C4773EB28B5552EAADA66 /* LKPostingQueueTransmitMode.swift in Sources */,
+				5433C73B8F6046130315B36D2CF2F41E /* LKPostingQueueViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC0189E130851DEFCB8AEA2A2DB5872C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		94A5E4FB339EB52C83BADD773ACF9B2C /* Sources */ = {
+		C99C26BDDB18AE1F8BCD5FEA46D22FBC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				60EC4C62FFE44527DC6577530638FFB5 /* LKQueue-dummy.m in Sources */,
-				412A726D2046B336DE8296B9D5A84F7D /* LKQueue.m in Sources */,
-				F40AF0118401B2F2E1A28769E2EB1C8B /* LKQueueEntry.m in Sources */,
-				6C09E4B6B36F7A020127B37F162D1B6A /* LKQueueEntryOperator.m in Sources */,
-				7A24E14C65D9476FEE8D8479D3082371 /* LKQueueManager.m in Sources */,
+				C36C6BEA86FA0B897DA1F1F1CDDC72AF /* LKTaskCompletion-dummy.m in Sources */,
+				264938EDF96A9E22A09C2F2924908C05 /* LKTaskCompletion.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A99839726C61B170B09A7418B04CB36F /* Sources */ = {
+		DD125E7142B249B4C917326EAEDFDB10 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				389E8EF4FE33B23EDCA8F68FF9688F67 /* Pods-LKPostingQueueManager_Example-dummy.m in Sources */,
+				04847FDEE698446774CC5355E6F0A953 /* FBNetworkReachability-dummy.m in Sources */,
+				47753310A5DD42B35512731ABEC61EB0 /* FBNetworkReachability.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B4A872C68233A2A46588EACF221CEF1F /* Sources */ = {
+		E1F3E86250B4D0C5FCF84A7ED1286749 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E6EB21A490136C32069A8D065A6FA2C /* LKTaskCompletion-dummy.m in Sources */,
-				9C080B00A3F9441BC3D0F032E61804C0 /* LKTaskCompletion.m in Sources */,
+				3F5A925683F1206C4E74CA2ACD98E6B4 /* Pods-LKPostingQueueManager_Tests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B8C92D772C5D5FA9A39005BCF0BFBE7C /* Sources */ = {
+		EFD7C95E1ACC7149CED52D7C05A77124 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65D411E5511515A8215832FC39BD9A32 /* LKPostingEntry.swift in Sources */,
-				3521EFD32F070CC3245395B2FF7A74EE /* LKPostingQueueLogViewController.swift in Sources */,
-				4EF8ECB17931BA3E84DC86265990126B /* LKPostingQueueManager-dummy.m in Sources */,
-				6F1D55DDE8E4ABC71BE978DF26768034 /* LKPostingQueueManager.swift in Sources */,
-				843AD0EA5A70916614C9528A9AA24650 /* LKPostingQueueTableViewCell.swift in Sources */,
-				52B0C51F4E79B517D43B37343B417509 /* LKPostingQueueTransmitMode.swift in Sources */,
-				798583B05261BF95AB588514F9DEBFA3 /* LKPostingQueueViewController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E9FD431FC62E91E3D23D5B932264DE68 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				42D28802137015F0E2893B1FE0EDDABC /* FBNetworkReachability-dummy.m in Sources */,
-				CDE0116366F5AB04817976BB06C71727 /* FBNetworkReachability.m in Sources */,
+				4AFFF82D072888366E0BBFEFABF0C8E9 /* LKQueue-dummy.m in Sources */,
+				29AD6D2B7242BE1029D1B697E629FC4D /* LKQueue.m in Sources */,
+				3FD780BC793FDDAB0CCC83F3B448C33F /* LKQueueEntry.m in Sources */,
+				980B800A66113722774B6C2EE2D87444 /* LKQueueEntryOperator.m in Sources */,
+				A5115BEC0FAFFA5D44F77A643253FF8A /* LKQueueManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		0DC7A0722B7817909009CCF849730E20 /* PBXTargetDependency */ = {
+		34BD665A0F36038C0097A31CCF46525F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = FBNetworkReachability;
-			target = A148F96C7FC0A52C4CA8F7F5A0202141 /* FBNetworkReachability */;
-			targetProxy = ACB004B0BBC146BE7365E12385C882D8 /* PBXContainerItemProxy */;
+			name = LKQueue;
+			target = 3E471D3D32BC4A37C45D3171DC20206F /* LKQueue */;
+			targetProxy = 5A2544889F9FDAF22E0F563BC9D0C681 /* PBXContainerItemProxy */;
 		};
-		0F89DACC65A4373D2A42DE8622B762B1 /* PBXTargetDependency */ = {
+		4CD7F588CE5C7105DC51CDE50546F4A1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LKCodingObject;
+			target = 7C0AACA1AA9B756BD69FB1CBB802B8F1 /* LKCodingObject */;
+			targetProxy = 2539B9B5E393F27241697A14C5CC5B61 /* PBXContainerItemProxy */;
+		};
+		4F43FA33A121D94F9FF25E44C62E091A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LKPostingQueueManager;
+			target = A8776E71C7517CF91EAA6FB0988F4CB4 /* LKPostingQueueManager */;
+			targetProxy = B33ADB4BB48EDE219DAED458F70DC241 /* PBXContainerItemProxy */;
+		};
+		4FD1507DC510E5CDBD9F246817169654 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LKPostingQueueManager;
+			target = A8776E71C7517CF91EAA6FB0988F4CB4 /* LKPostingQueueManager */;
+			targetProxy = 6525B52C54050CF8C13911A49FE2A57C /* PBXContainerItemProxy */;
+		};
+		65B255BA013021F6EB39F21661B5978B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = LKTaskCompletion;
-			target = 044C56D92CDDBAF7A8B591ACB13BE22F /* LKTaskCompletion */;
-			targetProxy = 50CBCD3097FE379FAEDB8BB5F85678C1 /* PBXContainerItemProxy */;
+			target = 52A0933C986D044AD3F6FF6EEDD3912A /* LKTaskCompletion */;
+			targetProxy = B812EFA2A1AD366260F84B57E460F774 /* PBXContainerItemProxy */;
 		};
-		131EC409DA11D12B94394F30EECF85D5 /* PBXTargetDependency */ = {
+		6BE5D4874E08BC1DF6896E552071C118 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LKCodingObject;
+			target = 7C0AACA1AA9B756BD69FB1CBB802B8F1 /* LKCodingObject */;
+			targetProxy = 2A612BF24F92945ABA187175E2F2000D /* PBXContainerItemProxy */;
+		};
+		759ADA2E02782C6F407E7F6F2FAB9117 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LKQueue;
+			target = 3E471D3D32BC4A37C45D3171DC20206F /* LKQueue */;
+			targetProxy = 0A3E911BF9C863EE34C3115281CDBBDE /* PBXContainerItemProxy */;
+		};
+		93195B5A4FB2B893A91C91AD25FC1240 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FBNetworkReachability;
+			target = AC6C881F31625948099C246A2833DC26 /* FBNetworkReachability */;
+			targetProxy = D1B793E1B7B2C91505F8B3021802CD54 /* PBXContainerItemProxy */;
+		};
+		AA63055099B436145A640AD1D6042AF2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FBNetworkReachability;
+			target = AC6C881F31625948099C246A2833DC26 /* FBNetworkReachability */;
+			targetProxy = B63491A42B566981EE7C0C03E1C1FD44 /* PBXContainerItemProxy */;
+		};
+		B570A7032E2D1E7DA731F2F84585EE45 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LKTaskCompletion;
+			target = 52A0933C986D044AD3F6FF6EEDD3912A /* LKTaskCompletion */;
+			targetProxy = EE2DE32423EB996D7A9831F46EBFADFA /* PBXContainerItemProxy */;
+		};
+		BE7C730BDE85F70E6602E5CE7213469A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LKQueue;
+			target = 3E471D3D32BC4A37C45D3171DC20206F /* LKQueue */;
+			targetProxy = 86E9310CFE44F0C87EA79DFEEEBA2475 /* PBXContainerItemProxy */;
+		};
+		CA4C31BAF695A30406D957ED0625BC0E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FBNetworkReachability;
+			target = AC6C881F31625948099C246A2833DC26 /* FBNetworkReachability */;
+			targetProxy = 46C58676A06EFB7ADDC054EBE83034AC /* PBXContainerItemProxy */;
+		};
+		CC1A6740C65D0D0B3B568AFB5BA39CAE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LKCodingObject;
+			target = 7C0AACA1AA9B756BD69FB1CBB802B8F1 /* LKCodingObject */;
+			targetProxy = 090E2F3FDAD0E108C3D061219EC7CF4D /* PBXContainerItemProxy */;
+		};
+		CE72ABF5D26007F4873A78A9B8863FB5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LKTaskCompletion;
+			target = 52A0933C986D044AD3F6FF6EEDD3912A /* LKTaskCompletion */;
+			targetProxy = DF45BFC9C04D644B5A15AEFD7A4EB0C8 /* PBXContainerItemProxy */;
+		};
+		EA4D72ED1FE3AF0AD244344F043BF82A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "LKPostingQueueManager-LKPostingQueueManager";
-			target = 6BF9C6566161E12038E0B673228C2FD7 /* LKPostingQueueManager-LKPostingQueueManager */;
-			targetProxy = D9E48BA3081AA7F5A7550F97B9F9AA61 /* PBXContainerItemProxy */;
-		};
-		132B7CEE106E2D7B810E6D18D940A478 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = FBNetworkReachability;
-			target = A148F96C7FC0A52C4CA8F7F5A0202141 /* FBNetworkReachability */;
-			targetProxy = 00A894AAF4EDEC15784633750D65D93B /* PBXContainerItemProxy */;
-		};
-		156047D54A9124DFD262B520249F91D6 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = LKTaskCompletion;
-			target = 044C56D92CDDBAF7A8B591ACB13BE22F /* LKTaskCompletion */;
-			targetProxy = 43285F5FFE59B48C837491C0260B4F19 /* PBXContainerItemProxy */;
-		};
-		15D03D1158964D3A9B53696D7857D5A2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = LKCodingObject;
-			target = B07B3353E39E54478AC18F1D0111DFA1 /* LKCodingObject */;
-			targetProxy = 277B3D7FFF904C4F4AD6F29D0F6909DF /* PBXContainerItemProxy */;
-		};
-		2536B80C9D5242E28470AC1D0F507B9E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = LKPostingQueueManager;
-			target = E2DAEC6BC763EFA6D75DD1EF19E61F24 /* LKPostingQueueManager */;
-			targetProxy = 05AAD4D54BEF202F70DAA05F01324EF8 /* PBXContainerItemProxy */;
-		};
-		3D1482493B7275705183A88BDCCB68FD /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = LKQueue;
-			target = 371C35C0780EBD076C6AEDF35ED9FA23 /* LKQueue */;
-			targetProxy = EA28496180F9B2B1832A4F1D572527D8 /* PBXContainerItemProxy */;
-		};
-		6AD07C53458B7CEAEEFE0E7BAF7FD39F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = LKPostingQueueManager;
-			target = E2DAEC6BC763EFA6D75DD1EF19E61F24 /* LKPostingQueueManager */;
-			targetProxy = D03E5FE3581E4183B6647BCE39C54665 /* PBXContainerItemProxy */;
-		};
-		74D7C988B32B1D3AD2D67A746DD74523 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = LKTaskCompletion;
-			target = 044C56D92CDDBAF7A8B591ACB13BE22F /* LKTaskCompletion */;
-			targetProxy = CF91AA8A4832E673932BE6EF216DB886 /* PBXContainerItemProxy */;
-		};
-		9DE92124AFDD1C507D4C8608EFF06207 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = LKCodingObject;
-			target = B07B3353E39E54478AC18F1D0111DFA1 /* LKCodingObject */;
-			targetProxy = 9379FA343FDB82CBCDB283F07F962BFE /* PBXContainerItemProxy */;
-		};
-		D650A80A073ED3742E94C99166E8F9D3 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = LKCodingObject;
-			target = B07B3353E39E54478AC18F1D0111DFA1 /* LKCodingObject */;
-			targetProxy = 1D031CA0AC68427403E2F97E9D378FC2 /* PBXContainerItemProxy */;
-		};
-		E6FFC868B6146429DD7F4D7BEC44F9AE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = LKQueue;
-			target = 371C35C0780EBD076C6AEDF35ED9FA23 /* LKQueue */;
-			targetProxy = A68CA2B8D3E63A32C876C55641F63FE7 /* PBXContainerItemProxy */;
-		};
-		F68CC43568B45EFCFD2FE9269B646AC2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = FBNetworkReachability;
-			target = A148F96C7FC0A52C4CA8F7F5A0202141 /* FBNetworkReachability */;
-			targetProxy = B7E55543FDBBE464C3C3CADCE1D917F5 /* PBXContainerItemProxy */;
-		};
-		FC6C57D58D7072A1D7CE996CD486606A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = LKQueue;
-			target = 371C35C0780EBD076C6AEDF35ED9FA23 /* LKQueue */;
-			targetProxy = 4B2A18C1ED66246849CD3FC7C129C82A /* PBXContainerItemProxy */;
+			target = A002BA8418F50A4708955DA8347365A2 /* LKPostingQueueManager-LKPostingQueueManager */;
+			targetProxy = B3589BF6BA6C28E56FD218E68907D4C9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		03623A5D550F9A21C21D103DC165DB50 /* Debug */ = {
+		0B02994CB0F2DD44C19372AF91751E12 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5266837448ACA0598CD56BA2E6A071BF /* Pods-LKPostingQueueManager_Tests.debug.xcconfig */;
+			baseConfigurationReference = 1D8FEB619BD088BF9348D8486A32BEF3 /* Pods-LKPostingQueueManager_Tests.release.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "Target Support Files/Pods-LKPostingQueueManager_Tests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-LKPostingQueueManager_Tests/Pods-LKPostingQueueManager_Tests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -1097,423 +1064,490 @@
 				PRODUCT_NAME = Pods_LKPostingQueueManager_Tests;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		0E956AF03B5A227BC26A1F3A2CC3B6DA /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 571BF7898EE8D67ACB774776E892F691 /* LKQueue.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/LKQueue/LKQueue-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/LKQueue/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/LKQueue/LKQueue.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = LKQueue;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		108D9DB36619C778614B6819769064C1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3C4865FB4FE1E251548708B836B472E1 /* LKTaskCompletion.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/LKTaskCompletion/LKTaskCompletion-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/LKTaskCompletion/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/LKTaskCompletion/LKTaskCompletion.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = LKTaskCompletion;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		14FA6971341D1450FDEE626F6AE5FDFF /* Debug */ = {
+		23707A61347EC0F007629518C226D46B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1BD2A77B2764D5FBB3CD4E206C25F130 /* LKCodingObject.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/LKCodingObject/LKCodingObject-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/LKCodingObject/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/LKCodingObject/LKCodingObject.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = LKCodingObject;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		3D669F55BAAE05C1406D1C60E7949D0E /* Release */ = {
+		4674F4C66110DC02FB0BE94FBBC87BAC /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A557BD58AB287CA60F049AF6F5575E90 /* Pods-LKPostingQueueManager_Example.release.xcconfig */;
+			baseConfigurationReference = 3C4865FB4FE1E251548708B836B472E1 /* LKTaskCompletion.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-LKPostingQueueManager_Example/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/LKTaskCompletion/LKTaskCompletion-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LKTaskCompletion/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-LKPostingQueueManager_Example/Pods-LKPostingQueueManager_Example.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_LKPostingQueueManager_Example;
+				MODULEMAP_FILE = "Target Support Files/LKTaskCompletion/LKTaskCompletion.modulemap";
+				PRODUCT_NAME = LKTaskCompletion;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
-		3FA451D268613890FA8A5A03801E11D5 /* Release */ = {
+		46AFD0818FA9301CBE1DA988089CFFC4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B24623D3456513C5435A314CC5FDA43 /* FBNetworkReachability.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/FBNetworkReachability/FBNetworkReachability-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FBNetworkReachability/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/FBNetworkReachability/FBNetworkReachability.modulemap";
+				PRODUCT_NAME = FBNetworkReachability;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		459FD8E1C7522639D17E20558038DB98 /* Debug */ = {
+		491B259B1D8310298EC1CCF669D27642 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8ADA4C6FF24C737FBB5A013C758BD93A /* Pods-LKPostingQueueManager_Example.debug.xcconfig */;
+			baseConfigurationReference = 571BF7898EE8D67ACB774776E892F691 /* LKQueue.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-LKPostingQueueManager_Example/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/LKQueue/LKQueue-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LKQueue/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-LKPostingQueueManager_Example/Pods-LKPostingQueueManager_Example.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_LKPostingQueueManager_Example;
+				MODULEMAP_FILE = "Target Support Files/LKQueue/LKQueue.modulemap";
+				PRODUCT_NAME = LKQueue;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		57795C516C805A0479FF6DF4ACC2C738 /* Release */ = {
+		4DF851549FFE51B0239A3E9F75526A2E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C25685F9E1A0D99164E7D5D9F7DBB5F3 /* LKPostingQueueManager.xcconfig */;
+			baseConfigurationReference = 22B576BB34CEDBCF483EF047AFDB647B /* LKPostingQueueManager.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/LKPostingQueueManager/LKPostingQueueManager-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/LKPostingQueueManager/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/LKPostingQueueManager/LKPostingQueueManager.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = LKPostingQueueManager;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		5E62115DE8C09934BF8D2FE5D15FED1E /* Debug */ = {
+		54565B0C40FBD1F28A54004806CEC368 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 22B576BB34CEDBCF483EF047AFDB647B /* LKPostingQueueManager.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/LKPostingQueueManager";
+				INFOPLIST_FILE = "Target Support Files/LKPostingQueueManager/ResourceBundle-LKPostingQueueManager-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				PRODUCT_NAME = LKPostingQueueManager;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		5F4B871B4AEDAFA3DD79003FE74BB6F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 22B576BB34CEDBCF483EF047AFDB647B /* LKPostingQueueManager.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/LKPostingQueueManager/LKPostingQueueManager-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LKPostingQueueManager/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/LKPostingQueueManager/LKPostingQueueManager.modulemap";
+				PRODUCT_NAME = LKPostingQueueManager;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		61DEAE780B4B505FF1276ACF7743EFA9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A557BD58AB287CA60F049AF6F5575E90 /* Pods-LKPostingQueueManager_Example.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-LKPostingQueueManager_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LKPostingQueueManager_Example/Pods-LKPostingQueueManager_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_LKPostingQueueManager_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7C07ED8089F70A31B83996A8910D7F18 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"POD_CONFIGURATION_DEBUG=1",
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
-		5FD34B6710BD66497195CA6CB32F9F0A /* Release */ = {
+		90E11558B6E8E02AF77C97657F4C7A78 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B24623D3456513C5435A314CC5FDA43 /* FBNetworkReachability.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/FBNetworkReachability/FBNetworkReachability-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FBNetworkReachability/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/FBNetworkReachability/FBNetworkReachability.modulemap";
+				PRODUCT_NAME = FBNetworkReachability;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		98F29E7567052F62660DDD7069ADF73C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		A800362EBD93B982E2513EAB90716D22 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 22B576BB34CEDBCF483EF047AFDB647B /* LKPostingQueueManager.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/LKPostingQueueManager";
+				INFOPLIST_FILE = "Target Support Files/LKPostingQueueManager/ResourceBundle-LKPostingQueueManager-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				PRODUCT_NAME = LKPostingQueueManager;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		AE270510756FAC279F9EB06658BB2B39 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3C4865FB4FE1E251548708B836B472E1 /* LKTaskCompletion.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/LKTaskCompletion/LKTaskCompletion-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/LKTaskCompletion/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/LKTaskCompletion/LKTaskCompletion.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = LKTaskCompletion;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		76296E44EFAD3513C368DC98DDD45694 /* Debug */ = {
+		B8F727AD492389AF9169A7B98D2CB586 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 571BF7898EE8D67ACB774776E892F691 /* LKQueue.xcconfig */;
+			baseConfigurationReference = 1BD2A77B2764D5FBB3CD4E206C25F130 /* LKCodingObject.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/LKQueue/LKQueue-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/LKQueue/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/LKCodingObject/LKCodingObject-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LKCodingObject/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/LKQueue/LKQueue.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = LKQueue;
+				MODULEMAP_FILE = "Target Support Files/LKCodingObject/LKCodingObject.modulemap";
+				PRODUCT_NAME = LKCodingObject;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		AC8FF4644897A02CE98E533B35F0F057 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8B24623D3456513C5435A314CC5FDA43 /* FBNetworkReachability.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/FBNetworkReachability/FBNetworkReachability-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/FBNetworkReachability/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/FBNetworkReachability/FBNetworkReachability.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = FBNetworkReachability;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		AFA26BB4E81292907F3F9E6D3FEA3846 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8B24623D3456513C5435A314CC5FDA43 /* FBNetworkReachability.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/FBNetworkReachability/FBNetworkReachability-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/FBNetworkReachability/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/FBNetworkReachability/FBNetworkReachability.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = FBNetworkReachability;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		B0FA9C4CDA1B01E70D38EE47E2E9E8B0 /* Release */ = {
+		CAA226D5972DA00BB0FDB4839FF4B0C9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1D8FEB619BD088BF9348D8486A32BEF3 /* Pods-LKPostingQueueManager_Tests.release.xcconfig */;
+			baseConfigurationReference = 5266837448ACA0598CD56BA2E6A071BF /* Pods-LKPostingQueueManager_Tests.debug.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "Target Support Files/Pods-LKPostingQueueManager_Tests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-LKPostingQueueManager_Tests/Pods-LKPostingQueueManager_Tests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -1521,118 +1555,87 @@
 				PRODUCT_NAME = Pods_LKPostingQueueManager_Tests;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		C6644E772615C8EE0B046863E2183DAD /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C25685F9E1A0D99164E7D5D9F7DBB5F3 /* LKPostingQueueManager.xcconfig */;
-			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/LKPostingQueueManager";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/LKPostingQueueManager/ResourceBundle-LKPostingQueueManager-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				PRODUCT_NAME = LKPostingQueueManager;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Release;
-		};
-		DC72099FA55A110792E18141A9AA28AB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C25685F9E1A0D99164E7D5D9F7DBB5F3 /* LKPostingQueueManager.xcconfig */;
-			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/LKPostingQueueManager";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/LKPostingQueueManager/ResourceBundle-LKPostingQueueManager-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				PRODUCT_NAME = LKPostingQueueManager;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Debug;
-		};
-		F0C1D1928323EDAEF61EA08F1DCC2089 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1BD2A77B2764D5FBB3CD4E206C25F130 /* LKCodingObject.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/LKCodingObject/LKCodingObject-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/LKCodingObject/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/LKCodingObject/LKCodingObject.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = LKCodingObject;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		F58CC33BFC58502E3DC634DC3EFB0D91 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C25685F9E1A0D99164E7D5D9F7DBB5F3 /* LKPostingQueueManager.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/LKPostingQueueManager/LKPostingQueueManager-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/LKPostingQueueManager/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/LKPostingQueueManager/LKPostingQueueManager.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = LKPostingQueueManager;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		D742B9195026013A777FD4E99ECF3B1E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8ADA4C6FF24C737FBB5A013C758BD93A /* Pods-LKPostingQueueManager_Example.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-LKPostingQueueManager_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LKPostingQueueManager_Example/Pods-LKPostingQueueManager_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_LKPostingQueueManager_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E462C6164A5FBA2D4B29988F4915619D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 571BF7898EE8D67ACB774776E892F691 /* LKQueue.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/LKQueue/LKQueue-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LKQueue/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/LKQueue/LKQueue.modulemap";
+				PRODUCT_NAME = LKQueue;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1634114632811D6C6691439158E70C7F /* Build configuration list for PBXNativeTarget "LKQueue" */ = {
+		18AD144E43EB7E112F41B09C43841C01 /* Build configuration list for PBXNativeTarget "LKQueue" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				76296E44EFAD3513C368DC98DDD45694 /* Debug */,
-				0E956AF03B5A227BC26A1F3A2CC3B6DA /* Release */,
+				491B259B1D8310298EC1CCF669D27642 /* Debug */,
+				E462C6164A5FBA2D4B29988F4915619D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1640,71 +1643,71 @@
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5E62115DE8C09934BF8D2FE5D15FED1E /* Debug */,
-				3FA451D268613890FA8A5A03801E11D5 /* Release */,
+				7C07ED8089F70A31B83996A8910D7F18 /* Debug */,
+				98F29E7567052F62660DDD7069ADF73C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3C08E30A6793E495604BB758C562AA51 /* Build configuration list for PBXNativeTarget "LKCodingObject" */ = {
+		471CD62D45D883A1C6B93E2E14CC5AA6 /* Build configuration list for PBXNativeTarget "Pods-LKPostingQueueManager_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				14FA6971341D1450FDEE626F6AE5FDFF /* Debug */,
-				F0C1D1928323EDAEF61EA08F1DCC2089 /* Release */,
+				D742B9195026013A777FD4E99ECF3B1E /* Debug */,
+				61DEAE780B4B505FF1276ACF7743EFA9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5821374D6E4B65E6B5EEC51665C32C15 /* Build configuration list for PBXNativeTarget "Pods-LKPostingQueueManager_Example" */ = {
+		945BF93B8F8EA9085C394DD659AB3729 /* Build configuration list for PBXNativeTarget "LKPostingQueueManager" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				459FD8E1C7522639D17E20558038DB98 /* Debug */,
-				3D669F55BAAE05C1406D1C60E7949D0E /* Release */,
+				5F4B871B4AEDAFA3DD79003FE74BB6F1 /* Debug */,
+				4DF851549FFE51B0239A3E9F75526A2E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		58D885AFC141AEC3E249C2DC52D632C1 /* Build configuration list for PBXNativeTarget "LKTaskCompletion" */ = {
+		C10DEC99587E09253CAF1F7A4F9883CE /* Build configuration list for PBXNativeTarget "LKCodingObject" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				108D9DB36619C778614B6819769064C1 /* Debug */,
-				5FD34B6710BD66497195CA6CB32F9F0A /* Release */,
+				23707A61347EC0F007629518C226D46B /* Debug */,
+				B8F727AD492389AF9169A7B98D2CB586 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7952C3CAC242F10E92914BCF1A0888A9 /* Build configuration list for PBXNativeTarget "LKPostingQueueManager-LKPostingQueueManager" */ = {
+		D32E6491F9999F95476054C101969A1F /* Build configuration list for PBXNativeTarget "LKPostingQueueManager-LKPostingQueueManager" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DC72099FA55A110792E18141A9AA28AB /* Debug */,
-				C6644E772615C8EE0B046863E2183DAD /* Release */,
+				54565B0C40FBD1F28A54004806CEC368 /* Debug */,
+				A800362EBD93B982E2513EAB90716D22 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A713B510B907D9CBF21905D0295A37E2 /* Build configuration list for PBXNativeTarget "FBNetworkReachability" */ = {
+		E8C692141B4576122309AC64BBF938E0 /* Build configuration list for PBXNativeTarget "FBNetworkReachability" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AC8FF4644897A02CE98E533B35F0F057 /* Debug */,
-				AFA26BB4E81292907F3F9E6D3FEA3846 /* Release */,
+				90E11558B6E8E02AF77C97657F4C7A78 /* Debug */,
+				46AFD0818FA9301CBE1DA988089CFFC4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B8246AC9F8E502A1F47977F77C3F82DB /* Build configuration list for PBXNativeTarget "Pods-LKPostingQueueManager_Tests" */ = {
+		E911912F9051842994FB3DFBB690F99B /* Build configuration list for PBXNativeTarget "Pods-LKPostingQueueManager_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				03623A5D550F9A21C21D103DC165DB50 /* Debug */,
-				B0FA9C4CDA1B01E70D38EE47E2E9E8B0 /* Release */,
+				CAA226D5972DA00BB0FDB4839FF4B0C9 /* Debug */,
+				0B02994CB0F2DD44C19372AF91751E12 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BD50E96DFB1438C51EC2629F32972815 /* Build configuration list for PBXNativeTarget "LKPostingQueueManager" */ = {
+		F55164E77688E490A33474170C065D69 /* Build configuration list for PBXNativeTarget "LKTaskCompletion" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F58CC33BFC58502E3DC634DC3EFB0D91 /* Debug */,
-				57795C516C805A0479FF6DF4ACC2C738 /* Release */,
+				4674F4C66110DC02FB0BE94FBBC87BAC /* Debug */,
+				AE270510756FAC279F9EB06658BB2B39 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

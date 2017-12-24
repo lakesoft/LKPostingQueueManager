@@ -57,7 +57,7 @@ class LKPostingQueueLogViewController: UIViewController, MFMailComposeViewContro
 
     }
     
-    func started(_ notification:Notification) {
+    @objc func started(_ notification:Notification) {
         self.dismiss(animated: true, completion: nil)
     }
 

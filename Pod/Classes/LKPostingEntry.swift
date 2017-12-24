@@ -11,10 +11,10 @@ import LKCodingObject
 
 open class LKPostingEntry: LKCodingObject {
    
-    open var title: String?
-    open var subTitle: String?
-    open var size: Int64 = 0
-    open var backImagePath: String?
+    @objc open var title: String?
+    @objc open var subTitle: String?
+    @objc open var size: Int64 = 0
+    @objc open var backImagePath: String?
 
     open func cleanup() {
         // should be overridden
