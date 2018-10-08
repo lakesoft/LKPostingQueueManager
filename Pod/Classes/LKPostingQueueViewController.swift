@@ -80,7 +80,7 @@ open class LKPostingQueueViewController: UIViewController, UITableViewDataSource
         nc.addObserver(self, selector: #selector(LKPostingQueueViewController.started(_:)), name: NSNotification.Name(rawValue: kLKPostingQueueManagerNotificationStarted), object: nil)
         nc.addObserver(self, selector: #selector(LKPostingQueueViewController.finished(_:)), name: NSNotification.Name(rawValue: kLKPostingQueueManagerNotificationFinished), object: nil)
         
-        rightButtonItem = UIBarButtonItem(title: NSLocalizedString("Resume", bundle:postingQueueManagerBundle(), comment:""), style: UIBarButtonItemStyle.plain, target: self, action: #selector(LKPostingQueueViewController.resume(_:)))
+        rightButtonItem = UIBarButtonItem(title: NSLocalizedString("Resume", bundle:postingQueueManagerBundle(), comment:""), style: UIBarButtonItem.Style.plain, target: self, action: #selector(LKPostingQueueViewController.resume(_:)))
         navigationItem.rightBarButtonItem = rightButtonItem
         
         modeSegment.setTitle(LKPostingQueueTransmitMode.auto.description(), forSegmentAt: 0)
@@ -150,13 +150,13 @@ open class LKPostingQueueViewController: UIViewController, UITableViewDataSource
         let proccessing = (queueEntry.state.rawValue == LKQueueEntryStateProcessing.rawValue)
         
         if (proccessing) {
-            cell.accessoryType = UITableViewCellAccessoryType.none;
+            cell.accessoryType = UITableViewCell.AccessoryType.none;
             cell.indicator.startAnimating()
         } else {
             if postingQueueManager.hasLogExisted((indexPath as NSIndexPath).row) {
-                cell.accessoryType = UITableViewCellAccessoryType.disclosureIndicator;
+                cell.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator;
             } else {
-                cell.accessoryType = UITableViewCellAccessoryType.none;
+                cell.accessoryType = UITableViewCell.AccessoryType.none;
             }
             cell.indicator.stopAnimating()
         }
@@ -198,7 +198,7 @@ open class LKPostingQueueViewController: UIViewController, UITableViewDataSource
         }
     }
     
-    open func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    open func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             selectedIndexPath = indexPath
             
@@ -251,7 +251,7 @@ open class LKPostingQueueViewController: UIViewController, UITableViewDataSource
             let indexPaths = indexes.map({ (index) -> IndexPath in
                 IndexPath(row: index, section: 0)
             })
-            tableView.reloadRows(at: indexPaths, with: UITableViewRowAnimation.fade)
+            tableView.reloadRows(at: indexPaths, with: UITableView.RowAnimation.fade)
         }
     }
     @objc func didPost(_ notification:Notification) {
@@ -259,7 +259,7 @@ open class LKPostingQueueViewController: UIViewController, UITableViewDataSource
             let indexPaths = indexes.map({ (index) -> IndexPath in
                 IndexPath(row: index, section: 0)
             })
-            tableView.deleteRows(at: indexPaths, with: UITableViewRowAnimation.automatic)
+            tableView.deleteRows(at: indexPaths, with: UITableView.RowAnimation.automatic)
         }
         updateUI()
     }
@@ -275,7 +275,7 @@ open class LKPostingQueueViewController: UIViewController, UITableViewDataSource
             let indexPaths = indexes.map({ (index) -> IndexPath in
                 IndexPath(row: index, section: 0)
             })
-            tableView.reloadRows(at: indexPaths, with: UITableViewRowAnimation.fade)
+            tableView.reloadRows(at: indexPaths, with: UITableView.RowAnimation.fade)
         }
         updateUI()
     }

@@ -165,7 +165,7 @@ open class LKPostingQueueManager: NSObject {
     }
     
     // MARK: API
-    open static func setup(_ completionHandler: ((Bool, Error?) -> Void)? = nil) {
+    public static func setup(_ completionHandler: ((Bool, Error?) -> Void)? = nil) {
         UNUserNotificationCenter.current().requestAuthorization(options: [.badge]) { (granted, error) in
             if let completionHandler = completionHandler {
                 completionHandler(granted, error)
@@ -274,7 +274,7 @@ open class LKPostingQueueManager: NSObject {
                         NSLog("[ERROR] %@", error.description)
                         var indexes = [Int]()
                         processingEntries.forEach({ (processingEntry) in
-                            processingEntry.queueEntry.addLog(error.localizedDescription as NSCoding!)
+                            processingEntry.queueEntry.addLog(error.localizedDescription as NSCoding)
                             self.queue.changeEntry(processingEntry.queueEntry, to: LKQueueEntryStateSuspending)
                             indexes += [processingEntry.index]
                         })
